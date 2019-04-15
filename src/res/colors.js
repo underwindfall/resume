@@ -1,24 +1,51 @@
-export const darkBlue = '#11182b';
-export const darkPrimary = '#11182b';
-export const primary = '#3F51B5';
-export const light = '#C5CAE9';
-export const accent = '#2795CB';
-export const divider = '#BDBDBD';
-export const lightDivider = '#E2E2E2';
-export const cardDivider = '#E6E6E6';
-export const darkDivider = '#888888';
-export const titleGrey = '#45474C';
-export const greyTxt = '#757575';
-export const white = '#FFFFFF';
-export const black = '#000000';
-export const backgroundGrey = '#F4F4F4';
-export const bgScreen = '#F1F1F1';
+export const primaryColor = '#04D0F2';
+export const primaryColorDark = '#0399B2';
+export const primaryColorLight = '#04DBFF';
+
+export const accentColor = '#DA0443';
+export const accentColorDark = '#C0043B';
+export const accentColorLight = '#E70447';
+export const accentColorDarkGradient = `linear-gradient(
+  to bottom right,
+  ${accentColor},
+  ${accentColorDark}
+)`;
+export const accentColorLightGradient = `linear-gradient(
+  to bottom right,
+  ${accentColorLight},
+  ${accentColor}
+)`;
+
+export const primaryText = '#FEFEFE';
+export const secondaryText = '#212121';
 export const transparent = 'transparent';
-export const orange = '#EE7F00';
-export const red2 = '#E40001';
-export const green2 = '#499006';
-export const green = '#89B916';
-export const purple = '#9052FF';
-export const blue = '#00A7EE';
-export const lightBlue = '#2895CB';
-export const red = '#ED4D4D';
+
+export const backgroundContrast = '#242A43';
+export const backgroundContrastDark = '#1B2033';
+export const backgroundContrastLight = '#4D5A8F';
+export const backgroundContrastDarkGradient = `linear-gradient(
+  to bottom right,
+  ${backgroundContrast},
+  ${backgroundContrastDark}
+)`;
+export const backgroundContrastLightGradient = `linear-gradient(
+  to bottom right,
+  ${backgroundContrastLight},
+  ${backgroundContrast}
+)`;
+
+export const backgroundColor = '#040424';
+export const backgroundColorDark = '#01011C';
+export const backgroundColorLight = '#060633';
+export const backgroundDarkGradient = `linear-gradient(
+  to bottom right,
+  ${backgroundColor},
+  ${backgroundColorDark}
+)`;
+export const backgroundLightGradient = `linear-gradient(
+  to bottom right,
+  ${backgroundColorLight},
+  ${backgroundColor}
+)`;
+
+export const errorColor = '#C2043C';

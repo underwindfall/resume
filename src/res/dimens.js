@@ -29,5 +29,6 @@ export const fontSize = {
     button: 24,
     description: 65,
     date: 22,
-    cardDate: 12
+    cardDate: 12,
+    socialIcon:24
 };
