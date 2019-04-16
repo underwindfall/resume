@@ -2,6 +2,9 @@ import {createMuiTheme} from '@material-ui/core/es/styles';
 import * as colors from './colors';
 
 export const ResumeTheme = createMuiTheme({
+    typography: {
+        useNextVariants: true
+    },
     palette: {
         primary: {
             light: colors.primaryColorLight,
