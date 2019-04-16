@@ -33,6 +33,9 @@ export const QFText = withStyles(styles)(QFTextContent);
 
 QFText.propTypes = {
     ...Typography.propTypes,
-    className: PropTypes.string,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    className: PropTypes.string
+};
+QFText.defaultProps = {
+    className: undefined
 };
