@@ -15,7 +15,7 @@ export const accentColorLightGradient = `linear-gradient(
   ${accentColorLight},
   ${accentColor}
 )`;
-
+export const white = '#FFFFFF';
 export const primaryText = '#FEFEFE';
 export const secondaryText = '#212121';
 export const transparent = 'transparent';
