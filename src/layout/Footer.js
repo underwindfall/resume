@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import QFText from '../components/QFText';
-import {SocialIconList} from '../components/SocialIconList';
-import {strings} from '../i18n';
+import SocialIconList from '../components/SocialIconList';
+import { strings } from '../i18n';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 
@@ -33,6 +33,7 @@ const styles = {
     }
 };
 export default withStyles(styles)(Footer);
+
 Footer.propTypes = {
-    classes: PropTypes.object
+    classes: PropTypes.object.isRequired
 };

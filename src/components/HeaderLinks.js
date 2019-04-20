@@ -57,7 +57,7 @@ const headerLinksStyle = theme => ({
         paddingLeft: dimens.spacing.zero,
         paddingTop: dimens.spacing.zero,
         paddingBottom: dimens.spacing.zero,
-        color: 'inherit'
+        color: 'inherit',
     },
     listItem: {
         float: 'left',

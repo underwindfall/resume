@@ -11,7 +11,7 @@ export const spacing = {
     sMedium: 6,
     mSmall: 5,
     small: 4,
-    zero:0
+    zero: 0
 };
 
 export const fontSize = {
@@ -21,9 +21,10 @@ export const fontSize = {
     heading4: 15,
     heading5: 13,
     heading6: 10,
-    span:3,
-    link:14,
+    span: 3,
+    link: 14,
     title: 18,
     subTitle: 15,
-    socialIcon: 24
+    socialIcon: 24,
+    drawerWidth: 260
 };
