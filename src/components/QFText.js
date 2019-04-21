@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-const QFText = ({ text, className, font = 'regular', props }) => {
+const QFText = ({ text, classes, className, font = 'regular', ...props }) => {
+    const textClass = classNames({
+        [classes.textStyles[font]]: font,
+        [className]: className
+    });
     return (
-        <Typography
-            style={styles.textStyles[font]}
-            className={className}
-            {...props}
-        >
+        <Typography className={textClass} {...props}>
             {text}
         </Typography>
     );
@@ -34,6 +35,7 @@ export default withStyles(styles)(QFText);
 QFText.propTypes = {
     ...Typography.propTypes,
     text: PropTypes.string.isRequired,
+    classes: PropTypes.object.isRequired,
     className: PropTypes.string
 };
 QFText.defaultProps = {
