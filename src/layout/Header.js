@@ -1,29 +1,38 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import throttle from 'lodash.throttle';
 import { withStyles } from '@material-ui/core/styles';
 import PageContainer from '../container/PageContainer';
 import QFBanner from '../components/QFBanner';
 import QFAppBar from '../components/QFAppBar';
+import QFAvatar from '../components/QFAvatar';
 import BannerInfo from '../components/BannerInfo';
 import { resolver } from '../res/resolver';
 import * as dimens from '../res/dimens';
 
-// export const HEADER_HEIGHT = 62;
+const SCROLL_THROTTLE_VALUE = 10;
 
 class Header extends Component {
+    avatarRef;
     constructor(props) {
         super(props);
         this.state = {
             mobileOpen: false,
-            shouldChangeColor: false
+            shouldChangeColor: false,
+            shouldHideTitle: false,
+            showAvatarLogo: false
         };
+        this.handleScroll = throttle(this.handleScroll, SCROLL_THROTTLE_VALUE);
     }
     componentDidMount() {
-        window.addEventListener('scroll', this.headerColorChange);
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('transitionend', this.handleTransitionEnd);
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.headerColorChange);
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('transitionend', this.handleTransitionEnd);
     }
 
     handleDrawerToggle = () => {
@@ -32,21 +41,50 @@ class Header extends Component {
         }));
     };
 
-    headerColorChange = () => {
+    handleScroll = () => {
         const { changeColorOnScrollHeight } = this.props;
         const windowsScrollTop = window.pageYOffset;
-        this.setState({
-            shouldChangeColor: windowsScrollTop > changeColorOnScrollHeight
-        });
+        this.setState(state => ({
+            shouldChangeColor: windowsScrollTop > changeColorOnScrollHeight,
+            shouldHideTitle: windowsScrollTop > changeColorOnScrollHeight / 2,
+            showAvatarLogo: state.shouldHideTitle
+        }));
+    };
+
+    handleTransitionEnd = () => {
+        if (this.avatarRef) {
+            const { classes } = this.props;
+            const { shouldHideTitle } = this.state;
+            if (shouldHideTitle) {
+                this.avatarRef.classList.add(classes.none);
+            } else {
+                this.avatarRef.classList.remove(classes.none);
+            }
+            this.setState(state => ({
+                showAvatarLogo: state.shouldHideTitle
+            }));
+        }
     };
 
     render() {
-        const { mobileOpen, shouldChangeColor } = this.state;
+        const { classes } = this.props;
+        const {
+            mobileOpen,
+            shouldChangeColor,
+            shouldHideTitle,
+            showAvatarLogo
+        } = this.state;
+        const avatarClass = classNames({
+            [classes.avatar]: true,
+            [classes.hideAvatar]: shouldHideTitle,
+            [classes.showAvatar]: !shouldHideTitle
+        });
         return (
             <PageContainer>
                 <QFAppBar
                     mobileOpen={mobileOpen}
                     shouldChangeColor={shouldChangeColor}
+                    showAvatarLogo={showAvatarLogo}
                 />
                 <QFBanner
                     image={resolver.bannerImage}
@@ -54,6 +92,14 @@ class Header extends Component {
                 >
                     <BannerInfo />
                 </QFBanner>
+                <div
+                    className={avatarClass}
+                    ref={ref => {
+                        this.avatarRef = ref;
+                    }}
+                >
+                    <QFAvatar image={resolver.avatar} />
+                </div>
             </PageContainer>
         );
     }
@@ -62,6 +108,27 @@ class Header extends Component {
 const styles = {
     bannerStyle: {
         justifyContent: 'center'
+    },
+    avatar: {
+        zIndex: 10,
+        marginTop: -dimens.fontSize.avatarSize / 2,
+        textAlign: 'center',
+        '& img': {
+            margin: '0 auto'
+        }
+    },
+    showAvatar: {
+        opacity: 1,
+        transform: 'translate(0, 0)',
+        transition: 'all 1s linear'
+    },
+    hideAvatar: {
+        opacity: 0,
+        transform: `translate(-48%, -120%) scale(0.1)`,
+        transition: 'all 1s linear'
+    },
+    none: {
+        display: 'none'
     }
 };
 

@@ -28,6 +28,7 @@ export const fontSize = {
     socialIcon: 24,
     drawerWidth: 260,
     bannerSize: 600,
-    avatarSize:200,
-    bannerInfoTitle:90
+    avatarSize: 200,
+    logo: 40,
+    bannerInfoTitle: 90
 };

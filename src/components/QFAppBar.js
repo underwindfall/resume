@@ -10,7 +10,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
 import { withStyles } from '@material-ui/core/styles';
 import QFText from './QFText';
+import QFLogo from './QFLogo';
 import { boxShadow, transition } from '../styles';
+import { resolver } from '../res/resolver';
 import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
@@ -23,6 +25,7 @@ class QFAppBar extends Component {
             classes,
             mobileOpen,
             shouldChangeColor,
+            showAvatarLogo,
             ...remainProps
         } = this.props;
         const appBarClasses = classNames({
@@ -33,11 +36,15 @@ class QFAppBar extends Component {
             <AppBar className={appBarClasses} {...remainProps}>
                 <Toolbar className={classes.container}>
                     <div className={classes.flex}>
-                        <QFText
-                            text={strings.header.title}
-                            className={classes.title}
-                            font="bold"
-                        />
+                        {showAvatarLogo ? (
+                            <QFLogo image={resolver.avatar} />
+                        ) : (
+                            <QFText
+                                text={strings.header.title}
+                                className={classes.title}
+                                font="bold"
+                            />
+                        )}
                     </div>
                     <Hidden smDown>
                         <HeaderLinks />
@@ -143,10 +150,12 @@ const styles = {
 QFAppBar.propTypes = {
     mobileOpen: PropTypes.bool.isRequired,
     classes: PropTypes.object.isRequired,
-    shouldChangeColor: PropTypes.bool
+    shouldChangeColor: PropTypes.bool,
+    showAvatarLogo: PropTypes.bool
 };
 QFAppBar.defaultProps = {
-    shouldChangeColor: false
+    shouldChangeColor: false,
+    showAvatarLogo: false
 };
 
 export default withStyles(styles)(QFAppBar);
