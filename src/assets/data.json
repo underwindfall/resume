@@ -52,7 +52,7 @@
     "project-1": {
       "title": "C-Zam & Carrefour Banque",
       "description": "The application allows you to activate, consult and manage your bank accout as your wish.",
-      "client_ico": "assets/czam.png",
+      "client_ico": "img/czam.png",
       "role": "Developer Android",
       "techstack": "Kotlin, Rxjava, JetPack, Coroutines, MVP, Retrofit, Accengage",
       "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
@@ -60,7 +60,7 @@
     "project-2": {
       "title": "Française des jeux (FDJ)",
       "description": "The PSCP application is intended for FdJ business clients and sales teams. The application allows to broadcast on a dedicated channel commercial information (combi bonus, prognosis, news, information on events)",
-      "client_ico": "assets/fdj.png",
+      "client_ico": "img/fdj.png",
       "role": "Developer Mobile and Mini BackOffice",
       "techstack": "React Native, Firebase, FireStore, Prismic, React, Redux, Jest",
       "link": ""
@@ -68,22 +68,22 @@
     "project-3": {
       "title": "Carrefour MarketPay",
       "description": "An application and web help person to realiser a new interaction payment to create value and nurture customer relationships .",
-      "client_ico": "assets/carrefour.png",
+      "client_ico": "img/carrefour.png",
       "role": "Developer Mobile and front",
       "techstack": "React, React-Native",
       "link": "http://marketpay.eu/"
     },
     "project-4": {
       "title": "BEL-Sharing Cities",
-      "client_ico": "assets/bel.png",
+      "client_ico": "img/bel.png",
       "description": "An internal application about implementation of an inventory management application and sales of cheese products for developing countries.",
-      "role": "Developer Mobile",
+      "role": "Mobile Developer",
       "techstack": "React Native, Redux , Node",
       "link": "https://www.groupe-bel.com/fr/"
     },
     "project-5": {
       "title": "Jooboot",
-      "client_ico": "assets/viseo.png",
+      "client_ico": "img/viseo.png",
       "description": "Jooboot is an internal project to view and publish offers and uses Twitter as a database",
       "role": "Developer Android",
       "techstack": "Kotlin, RxKotlin, Redux, Mapbox, Realm",

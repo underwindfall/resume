@@ -7,7 +7,7 @@ import { strings } from '../i18n';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 
-const Footer = ({ classes, props }) => {
+const Footer = ({ classes, ...props }) => {
     return (
         <footer style={styles.container} className={classes.root} {...props}>
             <SocialIconList />
@@ -19,17 +19,18 @@ const styles = {
     root: {
         width: '100%',
         display: 'flex',
-        position: 'fixed',
-        bottom: 0,
-        backgroundColor: colors.primaryColorDark,
-        padding: dimens.spacing.medium,
+        position: 'relative',
         flexDirection: 'column',
         alignItems: 'center',
+        bottom: dimens.spacing.zero,
+        backgroundColor: colors.primaryColorDark,
+        padding: dimens.spacing.medium,
         color: colors.primaryText
     },
     textStyle: {
-        color: '#FFFFFF',
-        align: 'center'
+        textAlign: 'center',
+        color: colors.white,
+        marginTop: dimens.spacing.lMedium
     }
 };
 export default withStyles(styles)(Footer);
