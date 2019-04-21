@@ -22,6 +22,7 @@ const PageContainer = ({
 };
 const styles = {
     container: {
+        flexGrow: 1,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center'
@@ -31,6 +32,7 @@ const styles = {
 PageContainer.propTypes = {
     classes: PropTypes.object.isRequired,
     className: PropTypes.string,
+    children: PropTypes.node,
     style: PropTypes.object
 };
 
