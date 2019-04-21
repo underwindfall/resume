@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core';
 
-export const QFTextContent = ({ text, className, font = 'regular', props }) => {
+const QFText = ({ text, className, font = 'regular', props }) => {
     return (
         <Typography
             style={styles.textStyles[font]}
@@ -29,7 +29,7 @@ const styles = {
     }
 };
 
-export const QFText = withStyles(styles)(QFTextContent);
+export default withStyles(styles)(QFText);
 
 QFText.propTypes = {
     ...Typography.propTypes,

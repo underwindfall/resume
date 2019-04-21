@@ -15,10 +15,11 @@ export const accentColorLightGradient = `linear-gradient(
   ${accentColorLight},
   ${accentColor}
 )`;
-
+export const white = '#FFFFFF';
 export const primaryText = '#FEFEFE';
 export const secondaryText = '#212121';
 export const transparent = 'transparent';
+export const backgroundGrey = 'rgba(200, 200, 200, 0.2)';
 
 export const backgroundContrast = '#242A43';
 export const backgroundContrastDark = '#1B2033';
