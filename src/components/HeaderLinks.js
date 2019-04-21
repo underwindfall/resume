@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { withStyles } from '@material-ui/core/styles';
 import QFText from './QFText';
 import { strings } from '../i18n';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 
-const HeaderLinks = ({ ...props }) => {
-    const { classes } = props;
+const HeaderLinks = ({ classes, ...props }) => {
     return (
-        <List className={classes.list}>
+        <List className={classes.list} {...props}>
             <ListItem className={classes.listItem}>
                 <QFText
                     text={strings.header.list.About}
@@ -57,7 +56,7 @@ const headerLinksStyle = theme => ({
         paddingLeft: dimens.spacing.zero,
         paddingTop: dimens.spacing.zero,
         paddingBottom: dimens.spacing.zero,
-        color: 'inherit',
+        color: 'inherit'
     },
     listItem: {
         float: 'left',

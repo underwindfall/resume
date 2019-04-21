@@ -11,7 +11,7 @@ class App extends Component {
             <MuiThemeProvider theme={ResumeTheme}>
                 <Header />
                 <main style={{ flexGrow: 1, marginTop: HEADER_HEIGHT }}>
-                    hello
+                    <div/>
                 </main>
                 <Footer />
             </MuiThemeProvider>

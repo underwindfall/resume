@@ -22,9 +22,10 @@ export const fontSize = {
     heading5: 13,
     heading6: 10,
     span: 3,
-    link: 14,
+    link: 16,
     title: 18,
     subTitle: 15,
     socialIcon: 24,
-    drawerWidth: 260
+    drawerWidth: 260,
+    bannerSize: 600
 };

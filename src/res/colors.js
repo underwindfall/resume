@@ -1,5 +1,5 @@
 export const primaryColor = '#04D0F2';
-export const primaryColorDark = '#0399B2';
+export const primaryColorDark = '#2E2E2E';
 export const primaryColorLight = '#04DBFF';
 
 export const accentColor = '#DA0443';
@@ -20,6 +20,7 @@ export const primaryText = '#FEFEFE';
 export const secondaryText = '#212121';
 export const transparent = 'transparent';
 export const backgroundGrey = 'rgba(200, 200, 200, 0.2)';
+export const bannerBackGround = 'rgba(0, 0, 0, 0.5)';
 
 export const backgroundContrast = '#242A43';
 export const backgroundContrastDark = '#1B2033';
