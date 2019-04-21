@@ -19,7 +19,7 @@ const styles = {
     root: {
         width: '100%',
         display: 'flex',
-        position: 'fixed',
+        position: 'relative',
         flexDirection: 'column',
         alignItems: 'center',
         bottom: dimens.spacing.zero,

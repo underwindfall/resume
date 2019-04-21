@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import PageContainer from '../container/PageContainer';
-import QfBanner from '../components/QFBanner';
+import QFBanner from '../components/QFBanner';
 import QFAppBar from '../components/QFAppBar';
+import BannerInfo from '../components/BannerInfo';
 import { resolver } from '../res/resolver';
 
-export const HEADER_HEIGHT = 62;
+// export const HEADER_HEIGHT = 62;
 
 class Header extends Component {
     constructor(props) {
@@ -57,7 +58,12 @@ class Header extends Component {
         return (
             <PageContainer {...remainProps}>
                 <QFAppBar mobileOpen={mobileOpen} />
-                <QfBanner image={resolver.bannerImage} />
+                <QFBanner
+                    image={resolver.bannerImage}
+                    style={styles.bannerStyle}
+                >
+                    <BannerInfo />
+                </QFBanner>
             </PageContainer>
         );
     }
@@ -67,6 +73,9 @@ const styles = {
     changeColorOnScroll: {
         height: 200,
         colors: 'white'
+    },
+    bannerStyle: {
+        justifyContent: 'center'
     }
 };
 
