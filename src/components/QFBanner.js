@@ -4,13 +4,17 @@ import { withStyles } from '@material-ui/core/styles';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 
-const QFBanner = ({ classes, image, style, ...remainProps }) => (
-    <div
-        className={classes.banner}
-        style={{ ...style, backgroundImage: 'url(' + image + ')' }}
-        {...remainProps}
-    />
-);
+const QFBanner = ({ classes, image, style, children, ...remainProps }) => {
+    return (
+        <div
+            className={classes.banner}
+            style={{ ...style, backgroundImage: 'url(' + image + ')' }}
+            {...remainProps}
+        >
+            {children}
+        </div>
+    );
+};
 
 const styles = {
     banner: {
@@ -42,8 +46,9 @@ const styles = {
 
 QFBanner.propTypes = {
     classes: PropTypes.object.isRequired,
-    style: PropTypes.string,
-    image: PropTypes.string
+    style: PropTypes.object,
+    image: PropTypes.string,
+    children: PropTypes.node
 };
 
 QFBanner.defaultProps = {

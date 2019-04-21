@@ -12,8 +12,19 @@ const styles = {
     }
 };
 
-const GridContainer = ({ classes, children, className, ...remainProps }) => (
-    <Grid container {...remainProps} className={classes.grid + ' ' + className}>
+const GridContainer = ({
+    classes,
+    children,
+    style,
+    className,
+    ...remainProps
+}) => (
+    <Grid
+        container
+        {...remainProps}
+        className={classes.grid + ' ' + className}
+        style={style}
+    >
         {children}
     </Grid>
 );
@@ -25,7 +36,8 @@ GridContainer.defaultProps = {
 GridContainer.propTypes = {
     classes: PropTypes.object.isRequired,
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    style: PropTypes.object
 };
 
 export default withStyles(styles)(GridContainer);

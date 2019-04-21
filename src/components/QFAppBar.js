@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Hidden from '@material-ui/core/Hidden';
 import HeaderLinks from './HeaderLinks';
 import IconButton from '@material-ui/core/es/IconButton';
-import MenuIcon from '@material-ui/core/SvgIcon/SvgIcon';
+import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
 import { withStyles } from '@material-ui/core/styles';
 import QFText from './QFText';
@@ -18,9 +19,18 @@ const WEB_APP_BAR_HEIGHT = 50;
 
 class QFAppBar extends Component {
     render() {
-        const { classes, mobileOpen, ...remainProps } = this.props;
+        const {
+            classes,
+            mobileOpen,
+            shouldChangeColor,
+            ...remainProps
+        } = this.props;
+        const appBarClasses = classNames({
+            [classes.appBar]: true,
+            [classes.changeColor]: shouldChangeColor
+        });
         return (
-            <AppBar className={classes.appBar} {...remainProps}>
+            <AppBar className={appBarClasses} {...remainProps}>
                 <Toolbar className={classes.container}>
                     <div className={classes.flex}>
                         <QFText
@@ -123,12 +133,20 @@ const styles = {
         fontSize: dimens.fontSize.title,
         color: 'inherit',
         textTransform: 'uppercase'
+    },
+    changeColor: {
+        color: '#555',
+        backgroundColor: '#fff !important'
     }
 };
 
 QFAppBar.propTypes = {
     mobileOpen: PropTypes.bool.isRequired,
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    shouldChangeColor: PropTypes.bool
+};
+QFAppBar.defaultProps = {
+    shouldChangeColor: false
 };
 
 export default withStyles(styles)(QFAppBar);

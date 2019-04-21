@@ -1,3 +1,6 @@
+export const white = '#FFFFFF';
+export const gray = '#999999';
+
 export const primaryColor = '#04D0F2';
 export const primaryColorDark = '#2E2E2E';
 export const primaryColorLight = '#04DBFF';
@@ -15,15 +18,14 @@ export const accentColorLightGradient = `linear-gradient(
   ${accentColorLight},
   ${accentColor}
 )`;
-export const white = '#FFFFFF';
+
 export const primaryText = '#FEFEFE';
 export const secondaryText = '#212121';
 export const transparent = 'transparent';
 export const backgroundGrey = 'rgba(200, 200, 200, 0.2)';
 export const bannerBackGround = 'rgba(0, 0, 0, 0.5)';
-
 export const backgroundContrast = '#242A43';
-export const backgroundContrastDark = '#1B2033';
+export const backgroundContrastDark = '#373737';
 export const backgroundContrastLight = '#4D5A8F';
 export const backgroundContrastDarkGradient = `linear-gradient(
   to bottom right,

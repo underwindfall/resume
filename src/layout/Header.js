@@ -6,6 +6,7 @@ import QFBanner from '../components/QFBanner';
 import QFAppBar from '../components/QFAppBar';
 import BannerInfo from '../components/BannerInfo';
 import { resolver } from '../res/resolver';
+import * as dimens from '../res/dimens';
 
 // export const HEADER_HEIGHT = 62;
 
@@ -13,7 +14,8 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            mobileOpen: false
+            mobileOpen: false,
+            shouldChangeColor: false
         };
     }
     componentDidMount() {
@@ -31,33 +33,21 @@ class Header extends Component {
     };
 
     headerColorChange = () => {
-        const { classes } = this.props;
-        const changeColorOnScroll = classes.changeColorOnScroll;
+        const { changeColorOnScrollHeight } = this.props;
         const windowsScrollTop = window.pageYOffset;
-        if (windowsScrollTop > changeColorOnScroll.height) {
-            document.body
-                .getElementsByTagName('header')[0]
-                .classList.remove(classes.appBarColor);
-            document.body
-                .getElementsByTagName('header')[0]
-                .classList.add(classes[changeColorOnScroll.color]);
-        } else {
-            document.body
-                .getElementsByTagName('header')[0]
-                .classList.add(classes.appBarColor);
-            document.body
-                .getElementsByTagName('header')[0]
-                .classList.remove(classes[changeColorOnScroll.color]);
-        }
+        this.setState({
+            shouldChangeColor: windowsScrollTop > changeColorOnScrollHeight
+        });
     };
 
     render() {
-        const { classes, ...remainProps } = this.props;
-        const { mobileOpen } = this.state;
-
+        const { mobileOpen, shouldChangeColor } = this.state;
         return (
-            <PageContainer {...remainProps}>
-                <QFAppBar mobileOpen={mobileOpen} />
+            <PageContainer>
+                <QFAppBar
+                    mobileOpen={mobileOpen}
+                    shouldChangeColor={shouldChangeColor}
+                />
                 <QFBanner
                     image={resolver.bannerImage}
                     style={styles.bannerStyle}
@@ -70,16 +60,16 @@ class Header extends Component {
 }
 
 const styles = {
-    changeColorOnScroll: {
-        height: 200,
-        colors: 'white'
-    },
     bannerStyle: {
         justifyContent: 'center'
     }
 };
 
 Header.propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    changeColorOnScrollHeight: PropTypes.number
+};
+Header.defaultProps = {
+    changeColorOnScrollHeight: dimens.fontSize.bannerSize
 };
 export default withStyles(styles)(Header);

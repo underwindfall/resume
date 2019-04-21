@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PageContainer from '../container/PageContainer';
 import GridContainer from '../container/GridContainer';
-import QFAvatar from '../components/QFAvatar';
 import { withStyles } from '@material-ui/core/styles';
+import QFAvatar from '../components/QFAvatar';
 import QFGridItem from '../components/QFGridItem';
+import ProfileInfo from '../components/ProfileInfo';
 import { resolver } from '../res/resolver';
-import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
-import ProfileInfo from '../components/ProfileInfo';
 
 class Profile extends Component {
     render() {
