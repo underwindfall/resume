@@ -17,7 +17,7 @@ import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
 
-const WEB_APP_BAR_HEIGHT = 50;
+export const WEB_APP_BAR_HEIGHT = 50;
 
 class QFAppBar extends Component {
     render() {

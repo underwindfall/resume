@@ -9,11 +9,11 @@ import * as dimens from '../res/dimens';
 const socialResources = [
     {
         url: 'https://github.com/underwindfall',
-        bgColor: colors.primaryText
+        bgColor: colors.primaryTextColor
     },
     {
         url: 'https://www.linkedin.com/in/qifan-yang/',
-        bgColor: colors.primaryText
+        bgColor: colors.primaryTextColor
     }
 ];
 
