@@ -1,4 +1,10 @@
 export const en = {
+    netWorkError: {
+        TECH_ISSUE:
+            'We have encountered a problem about downloading data, please try again later',
+        NO_INTERNET:
+            'Your network connection is not very well, please try again later'
+    },
     header: {
         title: 'My Resume',
         list: {
