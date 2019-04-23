@@ -19,7 +19,13 @@ export const en = {
     about: {
         info: {
             author: 'Qifan YANG',
-            title: 'Mobile Developer'
+            title: 'Mobile Developer',
+            description:
+                'Mobile Developer And Graduated Engineer Student. I explain with words and code and looking for a CDI job in Paris.'
         }
+    },
+    experience: {
+        icon: 'experience',
+        title: 'Experience'
     }
 };
