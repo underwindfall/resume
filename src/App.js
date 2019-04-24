@@ -1,26 +1,49 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import { getResumeData } from './repositories/mainRepository';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Profile from './layout/Profile';
 import { ResumeTheme } from './res/theme';
 import './App.css';
-import { getExperiences } from './repositories/mainRepository';
+import { QFLoader } from './components/QFLoader';
+
+const DELAY_SHOW_LOADER = 3000;
 
 class App extends Component {
+    state = {
+        data: {},
+        loading: true
+    };
     async componentDidMount() {
-        const { error, response } = await getExperiences();
-        console.log(error, response);
+        this.setState({ loading: true });
+        const { error, response } = await getResumeData();
+        if (error) {
+            console.log(error);
+        } else {
+            setTimeout(
+                () => this.setState({ loading: false, data: response }),
+                DELAY_SHOW_LOADER
+            );
+        }
     }
 
     render() {
+        const { loading, data } = this.state;
+        const { experiences, educations, projects, skills } = data;
         return (
             <MuiThemeProvider theme={ResumeTheme}>
-                <Header />
-                <main style={{ flexGrow: 1, height: '100vh' }}>
-                    <Profile />
-                </main>
-                <Footer />
+                {loading ? (
+                    <QFLoader />
+                ) : (
+                    <div>
+                        <Header />
+                        <main style={{ flexGrow: 1, height: '100vh' }}>
+                            <Profile />
+                        </main>
+                        <Footer />
+                    </div>
+                )}
             </MuiThemeProvider>
         );
     }

@@ -22,7 +22,6 @@ export const Network = {
         const response = isHttpError(result)
             ? createError('FETCH_ISSUE')
             : await result.json();
-        console.log('parseResponse', result);
         return result.ok
             ? {
                   error,
@@ -34,11 +33,9 @@ export const Network = {
                 : createError('TECH_ISSUE');
     },
     withResponse(apiCall) {
-        console.log(apiCall);
         return new Promise(async resolve => {
             try {
                 const response = await apiCall();
-                console.log('withResponse', response);
                 const parsedResponse = await Network.parseResponse(response);
                 resolve(parsedResponse);
             } catch (err) {

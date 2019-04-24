@@ -74,12 +74,19 @@ export const parseProjects = data => {
 
 export const parseSkills = data => {};
 
+export const parseBlogData = data => keyword => {
+    return data.layer[keyword] && data.layer[keyword].length > 0
+        ? data.layer[keyword].map(experience =>
+              parseExperience(data.content[experience])
+          )
+        : data.layer[keyword];
+};
 export const parseData = data => {
     const { response, error } = data;
-    const { response: experiences } = parseExperiences(response);
-    const { response: educations } = parseEducations(response);
-    const { response: projects } = parseProjects(response);
-    const { response: skills } = parseSkills(response);
+    const experiences = parseBlogData(response)('work');
+    const educations = parseBlogData(response)('education');
+    const projects = parseBlogData(response)('project');
+    const skills = parseBlogData(response)('skills');
 
     return {
         error,
