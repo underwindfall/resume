@@ -1,55 +1,41 @@
-export const white = '#FFFFFF';
-export const gray = '#999999';
+export const primaryColor = '#2E2E2E';
+export const primaryColorDark = '#030303';
+export const primaryColorLight = '#575757';
+export const secondaryColor = '#54968A';
+export const secondaryLightColor = '#84c7ba';
+export const secondaryDarkColor = '#24685d';
+export const primaryTextColor = '#FEFEFE';
+export const primaryTextDarkColor = '#5B4C5C';
+export const secondaryTextColor = '#897F8A';
 
-export const primaryColor = '#04D0F2';
-export const primaryColorDark = '#2E2E2E';
-export const primaryColorLight = '#04DBFF';
+export const accentColor = '#54968A';
+export const accentColorDark = '#24685d';
+export const accentColorLight = '#84c7ba';
 
-export const accentColor = '#DA0443';
-export const accentColorDark = '#C0043B';
-export const accentColorLight = '#E70447';
 export const accentColorDarkGradient = `linear-gradient(
   to bottom right,
   ${accentColor},
   ${accentColorDark}
 )`;
+
 export const accentColorLightGradient = `linear-gradient(
   to bottom right,
   ${accentColorLight},
   ${accentColor}
 )`;
 
-export const primaryText = '#FEFEFE';
-export const secondaryText = '#212121';
+export const gray = '#999999';
+export const white = '#FFFFFF';
+
 export const transparent = 'transparent';
 export const backgroundGrey = 'rgba(200, 200, 200, 0.2)';
 export const bannerBackGround = 'rgba(0, 0, 0, 0.5)';
-export const backgroundContrast = '#242A43';
-export const backgroundContrastDark = '#373737';
-export const backgroundContrastLight = '#4D5A8F';
-export const backgroundContrastDarkGradient = `linear-gradient(
-  to bottom right,
-  ${backgroundContrast},
-  ${backgroundContrastDark}
-)`;
-export const backgroundContrastLightGradient = `linear-gradient(
-  to bottom right,
-  ${backgroundContrastLight},
-  ${backgroundContrast}
-)`;
-
-export const backgroundColor = '#040424';
-export const backgroundColorDark = '#01011C';
-export const backgroundColorLight = '#060633';
-export const backgroundDarkGradient = `linear-gradient(
-  to bottom right,
-  ${backgroundColor},
-  ${backgroundColorDark}
-)`;
+export const backgroundColor = '#1D1D1D';
+export const backgroundColorLight = '#373737';
 export const backgroundLightGradient = `linear-gradient(
   to bottom right,
-  ${backgroundColorLight},
-  ${backgroundColor}
+  ${backgroundColor},
+  ${backgroundColorLight}
 )`;
 
 export const errorColor = '#C2043C';

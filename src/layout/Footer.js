@@ -23,9 +23,9 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
         bottom: dimens.spacing.zero,
-        backgroundColor: colors.primaryColorDark,
+        backgroundColor: colors.primaryColor,
         padding: dimens.spacing.medium,
-        color: colors.primaryText
+        color: colors.primaryTextColor
     },
     textStyle: {
         textAlign: 'center',

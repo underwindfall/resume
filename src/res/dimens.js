@@ -29,6 +29,7 @@ export const fontSize = {
     drawerWidth: 260,
     bannerSize: 600,
     avatarSize: 200,
+    workYearDate: 40,
     logo: 40,
     bannerInfoTitle: 90
 };

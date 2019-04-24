@@ -1,27 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as colors from '../res/colors';
+import Lottie from './Lottie';
+import { resolver } from '../res/resolver';
 
-export const QFLoader = ({
-    style,
-    size = 'large',
-    color = colors.darkPrimary
-}) => (
-    <div style={[styles.container, style]}>
-        <ActivityIndicator size={size} color={color} />
-    </div>
-);
+const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: resolver.lottie
+};
 
-const styles = StyleSheet.create({
+export const QFLoader = ({ style, options, ...remainProps }) => {
+    return (
+        <Lottie
+            options={options}
+            style={[styles.container, style]}
+            {...remainProps}
+        />
+    );
+};
+
+const styles = {
     container: {
+        display: 'flex',
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
     }
-});
+};
 
 QFLoader.propTypes = {
-    ...View.propTypes,
-    size: PropTypes.string,
-    color: PropTypes.string
+    ...Lottie.propTypes,
+    style: PropTypes.object
+};
+QFLoader.defaultProps = {
+    style: {},
+    options: defaultOptions
 };

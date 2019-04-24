@@ -5,7 +5,7 @@ import throttle from 'lodash.throttle';
 import { withStyles } from '@material-ui/core/styles';
 import PageContainer from '../container/PageContainer';
 import QFBanner from '../components/QFBanner';
-import QFAppBar from '../components/QFAppBar';
+import QFAppBar, { WEB_APP_BAR_HEIGHT } from '../components/QFAppBar';
 import QFAvatar from '../components/QFAvatar';
 import BannerInfo from '../components/BannerInfo';
 import { resolver } from '../res/resolver';
@@ -45,7 +45,9 @@ class Header extends Component {
         const { changeColorOnScrollHeight } = this.props;
         const windowsScrollTop = window.pageYOffset;
         this.setState(state => ({
-            shouldChangeColor: windowsScrollTop > changeColorOnScrollHeight,
+            shouldChangeColor:
+                windowsScrollTop >
+                changeColorOnScrollHeight - WEB_APP_BAR_HEIGHT,
             shouldHideTitle: windowsScrollTop > changeColorOnScrollHeight / 2,
             showAvatarLogo: state.shouldHideTitle
         }));
