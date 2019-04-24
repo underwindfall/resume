@@ -23,16 +23,14 @@
                 "I am mainly responsible for the company's official website, the daily operation of the page, management background page optimization- Work is very saturated, but in time to spare time to learn a lot of new frameworks and libraries, AngularJS and JQuery have a certain understanding-During this internship, I've improved my skills especially in developing front-end and back-end"
         },
         "education-1": {
-            "startYear": "10,2017",
-            "endYear": "09,2013",
+            "time": "2013-2017",
             "college": "Université de Technology de Troyes,France",
             "title": "Engineer's Degree :Systems Engineering, Networks and Telecommunications",
             "description":
                 "Ever since I stduied in France, I mainly studied such as operating systems, computer networks, JAVA, Android, assembly language, machine learning and so on- Since university and especially during my French Engineer Program, I've had the chance to work with researchers of various backgrounds on different subjects, mainly regarding systems mobiles,network protocols,website developmen through research projects at school and full-time internships in franch company -It's my pleasure, at an early point of my career, to have been able to discover these exciting projects which has also been helpful to my career planning-"
         },
         "education-2": {
-            "startYear": "06,2014",
-            "endYear": "09,2011",
+            "time": "2011-2014",
             "college": "Shanghai University,China",
             "title": "Bachelor of Engineering : Information and communication engineering",
             "description":
