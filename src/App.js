@@ -5,8 +5,9 @@ import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Profile from './layout/Profile';
 import { ResumeTheme } from './res/theme';
-import './App.css';
 import { QFLoader } from './components/QFLoader';
+import './App.css';
+import Experience from './layout/Experience';
 
 const DELAY_SHOW_LOADER = 3000;
 
@@ -40,6 +41,7 @@ class App extends Component {
                         <Header />
                         <main style={{ flexGrow: 1, height: '100vh' }}>
                             <Profile />
+                            <Experience experiences={experiences} />
                         </main>
                         <Footer />
                     </div>

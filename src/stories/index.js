@@ -6,21 +6,11 @@ import { ScreenContainer } from './container/ScreenContainer';
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import { QFLoader } from '../components/QFLoader';
+import { mockTimeLine } from './mocks/mockTimeLine';
+import QFTimeLine from '../components/QFTimeLine';
 
 storiesOf('Welcome', module).add('to Storybook', () => (
     <Welcome showApp={linkTo('Button')} />
-));
-
-storiesOf('Footer', module).add('responsive Footer', () => (
-    <ScreenContainer>
-        <Footer />
-    </ScreenContainer>
-));
-
-storiesOf('Header', module).add('responsive Header', () => (
-    <ScreenContainer>
-        <Header />
-    </ScreenContainer>
 ));
 
 storiesOf('Loader', module)
@@ -38,5 +28,22 @@ storiesOf('Loader', module)
                     animationData: require('../assets/animation/google.json')
                 }}
             />
+        </ScreenContainer>
+    ));
+
+storiesOf('Layout', module)
+    .add('responsive Footer', () => (
+        <ScreenContainer>
+            <Footer />
+        </ScreenContainer>
+    ))
+    .add('responsive Header', () => (
+        <ScreenContainer>
+            <Header />
+        </ScreenContainer>
+    ))
+    .add('responsive TimeLine', () => (
+        <ScreenContainer>
+            <QFTimeLine items={mockTimeLine} />
         </ScreenContainer>
     ));

@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import RowContainer from './RowContainer';
+import PageContainer from './PageContainer';
 import QFText from '../components/QFText';
 import * as colors from '../res/colors';
+import * as dimens from '../res/dimens';
+import QFButton from '../components/QFButton';
 
-const iconClassName = sectionIcon => () => {
+const iconClassName = sectionIcon => {
     switch (sectionIcon.toLowerCase()) {
         case 'experience':
             return 'suitcase';
@@ -29,26 +32,53 @@ const SectionContainer = ({
     ...remainProps
 }) => {
     return (
-        <div className={classes.container} style={style} {...remainProps}>
-            <RowContainer>
-                <i className={`fab fa-${iconClassName(sectionIcon)}`} />
+        <PageContainer
+            className={classes.container}
+            style={style}
+            {...remainProps}
+        >
+            <RowContainer className={classes.rowContainer}>
+                <QFButton justIcon link className={classes.icon}>
+                    <i className={`fas fa-${iconClassName(sectionIcon)}`} />
+                </QFButton>
                 <QFText
                     variant="h4"
                     font="bold"
-                    className={classes.icon}
+                    className={classes.textIcon}
                     text={sectionTitle}
                 />
             </RowContainer>
-            <div>{children}</div>
-        </div>
+            <PageContainer className={classes.itemContainer}>
+                {children}
+            </PageContainer>
+        </PageContainer>
     );
 };
 const styles = {
     container: {
+        zIndex: '3',
+        alignItems: 'center'
+    },
+    icon: {
+        margin: dimens.spacing.mSmall,
+        color: colors.primaryColorDark
+    },
+    rowContainer: {
+        marginTop: dimens.spacing.mLarge,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    textIcon: {
+        padding: dimens.spacing.zero,
+        marginLeft: dimens.spacing.lMedium
+    },
+    itemContainer: {
         background: colors.white,
         position: 'relative',
-        zIndex: '3',
-        margin: '-60px 30px 0px',
+        marginLeft: dimens.spacing.xxLarge,
+        marginRight: dimens.spacing.xxLarge,
+        marginTop: dimens.spacing.large,
+        padding: dimens.spacing.large,
         borderRadius: '6px',
         boxShadow:
             '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'

@@ -1,5 +1,4 @@
 export const spacing = {
-    bottomSpace: 60,
     xxxLarge: 45,
     xxLarge: 30,
     xLarge: 26,
