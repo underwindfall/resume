@@ -91,7 +91,7 @@
       "description": "The PSCP application is intended for FdJ business clients and sales teams. The application allows to broadcast on a dedicated channel commercial information (combi bonus, prognosis, news, information on events)",
       "client_ico": "img/fdj.png",
       "role": "Developer Mobile and Mini BackOffice",
-      "techstack": ["React Native", "Firebase", "FireStore", ",Prismic","React", "Redux", "Jest"],
+      "techstack": ["React Native", "Firebase", "FireStore", "Prismic","React", "Redux", "Jest"],
       "link": ""
     },
     "project-3": {
