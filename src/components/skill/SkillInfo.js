@@ -1,12 +1,12 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import GridContainer from '../../container/GridContainer';
 import QFText from '../QFText';
 import QFGridItem from '../QFGridItem';
 import SkillChip from './SkillChip';
-import {resolver} from '../../res/resolver';
-import {strings} from '../../i18n';
+import { resolver } from '../../res/resolver';
+import { strings } from '../../i18n';
 import * as dimens from '../../res/dimens';
 
 const SkillRow = ({ classes, items, ...props }) => (
