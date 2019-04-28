@@ -8,7 +8,6 @@ import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 
 const Experience = ({ classes, experiences, ...remainProps }) => {
-    console.log(experiences);
     return (
         <PageContainer className={classes.container}>
             <SectionContainer

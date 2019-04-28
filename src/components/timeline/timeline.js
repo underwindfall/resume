@@ -1,7 +1,6 @@
 import React from 'react';
-import './style.css';
-import RowContainer from '../../container/RowContainer';
 import Tag from '../Tag';
+import './style.css';
 
 export const Timeline = ({ items, ...remainProps }) => (
     <div className="container">

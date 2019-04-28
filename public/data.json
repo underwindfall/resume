@@ -85,8 +85,8 @@
       "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
     },
     "project-2": {
-      "startYear": "12,2017",
-      "endYear": "2,2018",
+      "startYear": "2,2018",
+      "endYear": "12,2017",
       "title": "Française des jeux (FDJ)",
       "description": "The PSCP application is intended for FdJ business clients and sales teams. The application allows to broadcast on a dedicated channel commercial information (combi bonus, prognosis, news, information on events)",
       "client_ico": "img/fdj.png",
@@ -105,8 +105,8 @@
       "link": "http://marketpay.eu/"
     },
     "project-4": {
-      "startYear": "9,2017",
-      "endYear": "10,2017",
+      "startYear": "10,2017",
+      "endYear": "9,2017",
       "title": "BEL-Sharing Cities",
       "client_ico": "img/bel.png",
       "description": "An internal application about implementation of an inventory management application and sales of cheese products for developing countries.",
