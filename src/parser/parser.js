@@ -71,22 +71,27 @@ export const parseProjects = data => {
         }
     };
 };
+export const parseSkills = () => {};
 
-export const parseSkills = data => {};
-
-export const parseBlogData = data => keyword => {
+const parseSkill = data => ({
+    name: data.name,
+    icon: data.icon
+});
+export const parseBlogData = data => keyword => genericParse => {
     return data.layer[keyword] && data.layer[keyword].length > 0
         ? data.layer[keyword].map(experience =>
-              parseExperience(data.content[experience])
+              genericParse(data.content[experience])
           )
         : data.layer[keyword];
 };
 export const parseData = data => {
     const { response, error } = data;
-    const experiences = parseBlogData(response)('work');
-    const educations = parseBlogData(response)('education');
-    const projects = parseBlogData(response)('project');
-    const skills = parseBlogData(response)('skills');
+    const experiences = parseBlogData(response)('work')(parseExperience);
+    const educations = parseBlogData(response)('education')(parseEducation);
+    const projects = parseBlogData(response)('project')(parseProject);
+    const mobile = parseBlogData(response)('mobile')(parseSkill);
+    const front = parseBlogData(response)('front')(parseSkill);
+    const devops = parseBlogData(response)('devops')(parseSkill);
 
     return {
         error,
@@ -94,7 +99,11 @@ export const parseData = data => {
             experiences,
             educations,
             projects,
-            skills
+            skills: {
+                mobile: { ...mobile },
+                front: { ...front },
+                devops: { ...devops }
+            }
         }
     };
 };
