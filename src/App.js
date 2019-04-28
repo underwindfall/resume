@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import { getResumeData } from './repositories/mainRepository';
+import React, {Component, Fragment} from 'react';
+import {MuiThemeProvider} from '@material-ui/core/styles';
+import {getResumeData} from './repositories/mainRepository';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Profile from './layout/Profile';
 import Experience from './layout/Experience';
 import Skills from './layout/Skills';
-import { ResumeTheme } from './res/theme';
-import { QFLoader } from './components/QFLoader';
+import {ResumeTheme} from './res/theme';
+import {QFLoader} from './components/QFLoader';
 import './App.css';
+import Education from './layout/Education';
 
 const DELAY_SHOW_LOADER = 3000;
 
@@ -38,15 +39,16 @@ class App extends Component {
                 {loading ? (
                     <QFLoader />
                 ) : (
-                    <div>
+                    <Fragment>
                         <Header />
                         <main style={{ flexGrow: 1 }}>
                             <Profile />
                             <Experience experiences={experiences} />
                             <Skills skills={skills} />
+                            <Education education={educations} />
                         </main>
                         <Footer />
-                    </div>
+                    </Fragment>
                 )}
             </MuiThemeProvider>
         );

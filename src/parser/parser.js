@@ -23,9 +23,10 @@ export const parseExperiences = data => {
 };
 
 const parseEducation = data => ({
-    time: data.time,
+    time: data.year,
     collegeName: data.college,
     title: data.title,
+    branch: data.branch,
     description: data.description
 });
 
@@ -89,9 +90,6 @@ export const parseData = data => {
     const experiences = parseBlogData(response)('work')(parseExperience);
     const educations = parseBlogData(response)('education')(parseEducation);
     const projects = parseBlogData(response)('project')(parseProject);
-    const mobile = parseBlogData(response)('mobile')(parseSkill);
-    const front = parseBlogData(response)('front')(parseSkill);
-    const devops = parseBlogData(response)('devops')(parseSkill);
 
     return {
         error,
@@ -99,11 +97,7 @@ export const parseData = data => {
             experiences,
             educations,
             projects,
-            skills: {
-                mobile: { ...mobile },
-                front: { ...front },
-                devops: { ...devops }
-            }
+            skills: {}
         }
     };
 };

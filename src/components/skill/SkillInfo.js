@@ -1,42 +1,13 @@
-import React, { Fragment } from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import GridContainer from '../../container/GridContainer';
 import QFText from '../QFText';
 import QFGridItem from '../QFGridItem';
 import SkillChip from './SkillChip';
-import { resolver } from '../../res/resolver';
-import { strings } from '../../i18n';
+import {resolver} from '../../res/resolver';
+import {strings} from '../../i18n';
 import * as dimens from '../../res/dimens';
-
-const SkillTitleRow = ({ classes, ...props }) => (
-    <Fragment {...props}>
-        <QFGridItem xs={12} sm={4} md={4}>
-            <QFText
-                text={strings.skills.mobile}
-                font="bold"
-                variant="h5"
-                className={classes.title}
-            />
-        </QFGridItem>
-        <QFGridItem xs={12} sm={4} md={4}>
-            <QFText
-                text={strings.skills.frontEnd}
-                font="bold"
-                variant="h5"
-                className={classes.title}
-            />
-        </QFGridItem>
-        <QFGridItem xs={12} sm={4} md={4}>
-            <QFText
-                text={strings.skills.devOps}
-                font="bold"
-                variant="h5"
-                className={classes.title}
-            />
-        </QFGridItem>
-    </Fragment>
-);
 
 const SkillRow = ({ classes, items, ...props }) => (
     <Fragment>
@@ -217,14 +188,14 @@ const styles = theme => ({
         paddingLeft: dimens.spacing.sLarge,
         marginRight: 'auto',
         marginLeft: 'auto',
-        [theme.breakpoints.up('sm')]: {
-            width: '750px'
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: '400px'
         },
         [theme.breakpoints.up('md')]: {
-            width: '970px'
+            maxWidth: '750px'
         },
         [theme.breakpoints.up('lg')]: {
-            width: '1084px'
+            maxWidth: '1084px'
         }
     },
     infoContainer: {
