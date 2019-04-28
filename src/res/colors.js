@@ -19,10 +19,12 @@ export const accentColorDarkGradient = `linear-gradient(
 )`;
 
 export const accentColorLightGradient = `linear-gradient(
-  to bottom right,
-  ${accentColorLight},
-  ${accentColor}
+  45deg,
+  ${accentColorLight} 30%,
+  ${accentColor} 90%
 )`;
+
+export const chipGradient = 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)';
 
 export const gray = '#999999';
 export const white = '#FFFFFF';

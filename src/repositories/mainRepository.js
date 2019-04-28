@@ -1,6 +1,19 @@
 import { Network } from '../network/network';
 import { endPoint } from '../network/endPoint';
-import { parseExperiences } from '../parser/parser';
+import {
+    parseData,
+    parseExperiences,
+    parseProjects,
+    parseSkills
+} from '../parser/parser';
+
+export const getResumeData = async () => {
+    const result = await Network.http.get(endPoint);
+    if (!result.error) {
+        return parseData(result);
+    }
+    return result;
+};
 
 const getData = async parseFunction => {
     const result = await Network.http.get(endPoint);
@@ -12,4 +25,16 @@ const getData = async parseFunction => {
 
 export const getExperiences = async () => {
     return await getData(parseExperiences);
+};
+
+export const getEducations = async () => {
+    return await getData(parseExperiences);
+};
+
+export const getProjects = async () => {
+    return await getData(parseProjects);
+};
+
+export const getSkills = async () => {
+    return await getData(parseSkills);
 };

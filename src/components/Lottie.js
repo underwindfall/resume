@@ -30,7 +30,6 @@ export default class Lottie extends Component {
     }
 
     componentWillUpdate(nextProps, nextState, nextContext) {
-        /* Recreate the animation handle if the data is changed */
         if (this.options.animationData !== nextProps.options.animationData) {
             this.deRegisterEvents(this.props.eventListeners);
             this.destroy();
@@ -123,8 +122,6 @@ export default class Lottie extends Component {
 
     render() {
         const {
-            width,
-            height,
             ariaRole,
             ariaLabel,
             isClickToPauseDisabled,
@@ -144,8 +141,8 @@ export default class Lottie extends Component {
         };
 
         const lottieStyles = {
-            width: getSize(width),
-            height: getSize(height),
+            width: '400px',
+            height: '400px',
             overflow: 'hidden',
             margin: '0 auto',
             outline: 'none',
@@ -157,8 +154,6 @@ export default class Lottie extends Component {
             : this.handleClickToPause;
 
         return (
-            // Bug with eslint rules https://github.com/airbnb/javascript/issues/1374
-            // eslint-disable-next-line jsx-a11y/no-static-element-interactions
             <div
                 ref={c => {
                     this.el = c;
@@ -177,8 +172,6 @@ export default class Lottie extends Component {
 Lottie.propTypes = {
     eventListeners: PropTypes.arrayOf(PropTypes.object),
     options: PropTypes.object.isRequired,
-    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     isStopped: PropTypes.bool,
     isPaused: PropTypes.bool,
     speed: PropTypes.number,
@@ -188,7 +181,7 @@ Lottie.propTypes = {
     ariaLabel: PropTypes.string,
     isClickToPauseDisabled: PropTypes.bool,
     title: PropTypes.string,
-    style: PropTypes.string
+    style: PropTypes.object
 };
 
 Lottie.defaultProps = {
@@ -199,5 +192,6 @@ Lottie.defaultProps = {
     ariaRole: 'button',
     ariaLabel: 'animation',
     isClickToPauseDisabled: false,
-    title: ''
+    title: '',
+    style: {}
 };
