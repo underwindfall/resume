@@ -179,6 +179,10 @@ const SkillRow = ({ classes, items, ...props }) => (
                         icon={resolver.jenkins}
                         text={strings.skills.jenkins.name}
                     />
+                    <SkillChip
+                        icon={resolver.firebase}
+                        text={strings.skills.firebase.name}
+                    />
                 </QFGridItem>
             </GridContainer>
         </GridContainer>

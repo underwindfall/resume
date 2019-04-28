@@ -95,6 +95,10 @@ export const en = {
         jenkins: {
             name: 'Jenkins',
             icon: 'jenkins'
+        },
+        firebase: {
+            name: 'Firebase',
+            icon: 'firebase'
         }
     },
     education: {

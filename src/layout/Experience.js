@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Fade} from 'react-reveal';
 import {withStyles} from '@material-ui/core/styles';
 import SectionContainer from '../container/SectionContainer';
 import PageContainer from '../container/PageContainer';
@@ -10,16 +9,14 @@ import * as dimens from '../res/dimens';
 
 const Experience = ({ classes, experiences, ...remainProps }) => {
     return (
-        <Fade top>
-            <PageContainer className={classes.container}>
-                <SectionContainer
-                    sectionIcon={strings.experience.icon}
-                    sectionTitle={strings.experience.title}
-                >
-                    <Timeline items={experiences} {...remainProps} />
-                </SectionContainer>
-            </PageContainer>
-        </Fade>
+        <PageContainer className={classes.container}>
+            <SectionContainer
+                sectionIcon={strings.experience.icon}
+                sectionTitle={strings.experience.title}
+            >
+                <Timeline items={experiences} {...remainProps} />
+            </SectionContainer>
+        </PageContainer>
     );
 };
 const styles = {

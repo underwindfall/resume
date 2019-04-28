@@ -16,5 +16,6 @@ export const resolver = {
     jekyll: require('../assets/img/skills/jekyll.png'),
     html: require('../assets/img/skills/html.png'),
     ruby: require('../assets/img/skills/ruby.png'),
-    jenkins: require('../assets/img/skills/jenkins.png')
+    jenkins: require('../assets/img/skills/jenkins.png'),
+    firebase: require('../assets/img/skills/firebase.jpeg')
 };
