@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './style.css';
-import * as colors from '../../res/colors';
-import QFButton from '../QFButton';
 
 export const Timeline = ({ items, ...remainProps }) => (
     <div className="container">

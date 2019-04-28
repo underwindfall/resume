@@ -4,10 +4,11 @@ import { getResumeData } from './repositories/mainRepository';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Profile from './layout/Profile';
+import Experience from './layout/Experience';
+import Skills from './layout/Skills';
 import { ResumeTheme } from './res/theme';
 import { QFLoader } from './components/QFLoader';
 import './App.css';
-import Experience from './layout/Experience';
 
 const DELAY_SHOW_LOADER = 3000;
 
@@ -39,9 +40,10 @@ class App extends Component {
                 ) : (
                     <div>
                         <Header />
-                        <main style={{ flexGrow: 1, height: '100vh' }}>
+                        <main style={{ flexGrow: 1 }}>
                             <Profile />
                             <Experience experiences={experiences} />
+                            <Skills skills={skills} />
                         </main>
                         <Footer />
                     </div>

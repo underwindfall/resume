@@ -8,9 +8,15 @@ import Header from '../layout/Header';
 import { QFLoader } from '../components/QFLoader';
 import { mockTimeLine } from './mocks/mockTimeLine';
 import QFTimeLine from '../components/QFTimeLine';
+import SkillChip from '../components/skill/SkillChip';
+import { resolver } from '../res/resolver';
 
 storiesOf('Welcome', module).add('to Storybook', () => (
     <Welcome showApp={linkTo('Button')} />
+));
+
+storiesOf('Chip', module).add('Skill Chip', () => (
+    <SkillChip icon={resolver.css} text={'Deletable Secondary Chip'} />
 ));
 
 storiesOf('Loader', module)

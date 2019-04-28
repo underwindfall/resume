@@ -33,5 +33,76 @@ export const en = {
     experience: {
         icon: 'experience',
         title: 'Experience'
+    },
+    skills: {
+        icon: 'skills',
+        title: 'Skills',
+        mobile: 'MOBILE-END',
+        frontEnd: 'FRONT-END',
+        devOps: 'DEVOPS',
+        android: {
+            name: 'Android',
+            icon: 'android'
+        },
+        kotlin: {
+            name: 'Kotlin',
+            icon: 'kotlin'
+        },
+        java: {
+            name: 'Java',
+            icon: 'java'
+        },
+        rn: {
+            name: 'React Native',
+            icon: 'react'
+        },
+        react: {
+            name: 'React JS',
+            icon: 'react'
+        },
+        javascript: {
+            name: 'JavaScript',
+            icon: 'javascript'
+        },
+        css: {
+            name: 'Css',
+            icon: 'css'
+        },
+        html: {
+            name: 'Html',
+            icon: 'html'
+        },
+        webpack: {
+            name: 'Webpack',
+            icon: 'webpack'
+        },
+        ruby: {
+            name: 'Ruby',
+            icon: 'ruby'
+        },
+        git: {
+            name: 'Git',
+            icon: 'git'
+        },
+        heroku: {
+            name: 'Heroku',
+            icon: 'heroku'
+        },
+        jekyll: {
+            name: 'Jekyll',
+            icon: 'jekyll'
+        },
+        jenkins: {
+            name: 'Jenkins',
+            icon: 'jenkins'
+        }
+    },
+    education: {
+        icon: 'education',
+        title: 'Education'
+    },
+    project: {
+        icon: 'project',
+        title: 'Project'
     }
 };
