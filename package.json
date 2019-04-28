@@ -21,7 +21,6 @@
     "react-localization": "^1.0.13",
     "react-reveal": "^1.2.2",
     "react-scripts": "2.1.8",
-    "react-scroll": "^1.7.11",
     "react-social-icons": "^4.1.0",
     "recompose": "^0.30.0"
   },
