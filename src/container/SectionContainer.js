@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import RowContainer from './RowContainer';
 import PageContainer from './PageContainer';
 import QFText from '../components/QFText';
@@ -42,7 +42,7 @@ const SectionContainer = ({
                     <i className={`fas fa-${iconClassName(sectionIcon)}`} />
                 </QFButton>
                 <QFText
-                    variant="h4"
+                    variant="h3"
                     font="bold"
                     className={classes.textIcon}
                     text={sectionTitle}
@@ -69,6 +69,7 @@ const styles = {
         justifyContent: 'center'
     },
     textIcon: {
+        fontWeight: 700,
         padding: dimens.spacing.zero,
         marginLeft: dimens.spacing.lMedium
     },

@@ -43,74 +43,144 @@ const SkillRow = ({ classes, items, ...props }) => (
         <GridContainer
             container
             item
-            xs={4}
+            xs={12}
             sm={4}
             md={4}
-            className={classes.iconContainer}
+            className={classes.infoContainer}
         >
-            <QFGridItem xs={6} sm={6} md={6}>
-                <SkillChip
-                    icon={resolver.android}
-                    text={strings.skills.android.name}
-                />
-                <SkillChip
-                    icon={resolver.kotlin}
-                    text={strings.skills.kotlin.name}
-                />
-                <SkillChip
-                    icon={resolver.java}
-                    text={strings.skills.java.name}
+            <QFGridItem xs={12}>
+                <QFText
+                    text={strings.skills.mobile}
+                    font="bold"
+                    variant="h5"
+                    className={classes.title}
                 />
             </QFGridItem>
-            <QFGridItem xs={6} sm={6} md={6}>
-                <SkillChip icon={resolver.rn} text={strings.skills.rn.name} />
-                <SkillChip
-                    icon={resolver.react}
-                    text={strings.skills.react.name}
-                />
-                <SkillChip
-                    icon={resolver.javascript}
-                    text={strings.skills.javascript.name}
-                />
-            </QFGridItem>
+            <GridContainer
+                container
+                item
+                xs={12}
+                className={classes.iconContainer}
+            >
+                <QFGridItem xs={12} sm={6} md={6}>
+                    <SkillChip
+                        icon={resolver.android}
+                        text={strings.skills.android.name}
+                    />
+                    <SkillChip
+                        icon={resolver.kotlin}
+                        text={strings.skills.kotlin.name}
+                    />
+                    <SkillChip
+                        icon={resolver.java}
+                        text={strings.skills.java.name}
+                    />
+                </QFGridItem>
+
+                <QFGridItem xs={12} sm={6} md={6}>
+                    <SkillChip
+                        icon={resolver.rn}
+                        text={strings.skills.rn.name}
+                    />
+                    <SkillChip
+                        icon={resolver.react}
+                        text={strings.skills.react.name}
+                    />
+                    <SkillChip
+                        icon={resolver.javascript}
+                        text={strings.skills.javascript.name}
+                    />
+                </QFGridItem>
+            </GridContainer>
         </GridContainer>
-        <GridContainer container item xs={4} sm={4} md={4}>
-            <QFGridItem xs={6} sm={6} md={6}>
-                <SkillChip icon={resolver.css} text={strings.skills.css.name} />
-                <SkillChip
-                    icon={resolver.html}
-                    text={strings.skills.html.name}
-                />
-                <SkillChip
-                    icon={resolver.ruby}
-                    text={strings.skills.ruby.name}
-                />
-            </QFGridItem>
-            <QFGridItem xs={6} sm={6} md={6}>
-                <SkillChip
-                    icon={resolver.webpack}
-                    text={strings.skills.webpack.name}
+        <GridContainer
+            container
+            item
+            xs={12}
+            sm={4}
+            md={4}
+            className={classes.infoContainer}
+        >
+            <QFGridItem xs={12}>
+                <QFText
+                    text={strings.skills.frontEnd}
+                    font="bold"
+                    variant="h5"
+                    className={classes.title}
                 />
             </QFGridItem>
+            <GridContainer
+                container
+                item
+                xs={12}
+                className={classes.iconContainer}
+            >
+                <QFGridItem xs={12} sm={6} md={6}>
+                    <SkillChip
+                        icon={resolver.css}
+                        text={strings.skills.css.name}
+                    />
+                    <SkillChip
+                        icon={resolver.html}
+                        text={strings.skills.html.name}
+                    />
+                    <SkillChip
+                        icon={resolver.ruby}
+                        text={strings.skills.ruby.name}
+                    />
+                </QFGridItem>
+                <QFGridItem xs={12} sm={6} md={6}>
+                    <SkillChip
+                        icon={resolver.webpack}
+                        text={strings.skills.webpack.name}
+                    />
+                </QFGridItem>
+            </GridContainer>
         </GridContainer>
-        <GridContainer container item xs={4} sm={4} md={4}>
-            <QFGridItem xs={6} sm={6} md={6}>
-                <SkillChip icon={resolver.git} text={strings.skills.git.name} />
-                <SkillChip
-                    icon={resolver.heroku}
-                    text={strings.skills.heroku.name}
-                />
-                <SkillChip
-                    icon={resolver.jekyll}
-                    text={strings.skills.jekyll.name}
+        <GridContainer
+            container
+            item
+            xs={12}
+            sm={4}
+            md={4}
+            justify="center"
+            className={classes.infoContainer}
+        >
+            <QFGridItem xs={12}>
+                <QFText
+                    text={strings.skills.devOps}
+                    font="bold"
+                    variant="h5"
+                    className={classes.title}
                 />
             </QFGridItem>
-            <QFGridItem xs={6} sm={6} md={6}>
-                <SkillChip
-                    icon={resolver.jenkins}
-                    text={strings.skills.jenkins.name}
-                />
-            </QFGridItem>
+            <GridContainer
+                container
+                item
+                xs={12}
+                className={classes.iconContainer}
+            >
+                <QFGridItem xs={12} sm={6} md={6}>
+                    <SkillChip
+                        icon={resolver.git}
+                        text={strings.skills.git.name}
+                    />
+                    <SkillChip
+                        icon={resolver.heroku}
+                        text={strings.skills.heroku.name}
+                    />
+                    <SkillChip
+                        icon={resolver.jekyll}
+                        text={strings.skills.jekyll.name}
+                    />
+                </QFGridItem>
+                <QFGridItem xs={12} sm={6} md={6}>
+                    <SkillChip
+                        icon={resolver.jenkins}
+                        text={strings.skills.jenkins.name}
+                    />
+                </QFGridItem>
+            </GridContainer>
         </GridContainer>
     </Fragment>
 );
@@ -127,17 +197,6 @@ const SkillInfo = ({ classes, items, ...remainProps }) => {
             <GridContainer
                 container
                 justify="center"
-                alignItems="center"
-                item
-                xs={12}
-                spacing={24}
-                className={classes.infoContainer}
-            >
-                <SkillTitleRow classes={classes} />
-            </GridContainer>
-            <GridContainer
-                container
-                justify="flex-start"
                 alignItems="flex-start"
                 item
                 xs={12}
@@ -170,7 +229,10 @@ const styles = theme => ({
     },
     iconContainer: {
         flexWrap: 'wrap',
-        textAlign: 'start'
+        textAlign: 'start',
+        [theme.breakpoints.down('sm')]: {
+            textAlign: 'center'
+        }
     }
 });
 

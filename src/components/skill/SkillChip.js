@@ -16,7 +16,7 @@ const SkillChip = ({ icon, text, classes, className, ...remainProps }) => {
             {...remainProps}
             avatar={<Avatar src={icon} />}
             label={text}
-            className={classes.chip}
+            className={chipClasses}
             variant="outlined"
             component="div"
         />
