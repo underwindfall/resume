@@ -9,11 +9,12 @@ import Profile from './layout/Profile';
 import Experience from './layout/Experience';
 import Skills from './layout/Skills';
 import Education from './layout/Education';
+import Contact from './layout/Contact';
 import { QFLoader } from './components/QFLoader';
 import { ResumeTheme } from './res/theme';
 import './App.css';
 
-const DELAY_SHOW_LOADER = 3000;
+const DELAY_SHOW_LOADER = 4000;
 
 class App extends Component {
     state = {
@@ -58,6 +59,7 @@ class App extends Component {
                             <Experience experiences={experiences} />
                             <Skills skills={skills} />
                             <Education education={educations} />
+                            <Contact />
                         </main>
                         <Footer />
                         <Snackbar

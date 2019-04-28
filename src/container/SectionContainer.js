@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import QFButton from '../components/QFButton';
 import RowContainer from './RowContainer';
 import PageContainer from './PageContainer';
 import QFText from '../components/QFText';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
-import QFButton from '../components/QFButton';
 
 const iconClassName = sectionIcon => {
     switch (sectionIcon.toLowerCase()) {
@@ -16,8 +16,8 @@ const iconClassName = sectionIcon => {
             return 'palette';
         case 'education':
             return 'graduation-cap';
-        case 'project':
-            return 'rocket';
+        case 'contact':
+            return 'envelope-open';
         default:
             break;
     }
@@ -82,7 +82,7 @@ const styles = theme => ({
         padding: dimens.spacing.large,
         borderRadius: '6px',
         boxShadow:
-            '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)',
+            '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
     }
 });
 
@@ -93,7 +93,7 @@ SectionContainer.propTypes = {
         'experience',
         'skills',
         'education',
-        'project'
+        'contact'
     ]).isRequired,
     children: PropTypes.node,
     style: PropTypes.object

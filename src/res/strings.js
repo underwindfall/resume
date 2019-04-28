@@ -34,6 +34,12 @@ export const en = {
         icon: 'experience',
         title: 'Experience'
     },
+    contact: {
+        icon: 'contact',
+        title: 'Contact',
+        description:
+            "Write a few lines about each one and contact us about any further collaboration and Feel free to contact with me. I'll respond get back to you ASAP. "
+    },
     skills: {
         icon: 'skills',
         title: 'Skills',
