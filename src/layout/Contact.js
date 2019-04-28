@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import SectionContainer from '../container/SectionContainer';
 import PageContainer from '../container/PageContainer';
 import GridContainer from '../container/GridContainer';
@@ -11,46 +13,90 @@ import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
 
-const handleClick = () => {
-    window.location = new URL(
-        'mailto:yangqifan02@gmail.com',
-        window.location
-    ).toString();
-};
-const Contact = ({ classes, ...remainProps }) => {
-    return (
-        <PageContainer className={classes.container}>
-            <SectionContainer
-                sectionIcon={strings.contact.icon}
-                sectionTitle={strings.contact.title}
-            >
-                <div className={classes.section} {...remainProps}>
-                    <GridContainer
-                        justify="center"
-                        alignItems="center"
-                        className={classes.grid}
-                    >
-                        <QFGridItem
-                            cs={12}
-                            sm={12}
-                            md={8}
-                            className={classes.item}
+class Contact extends Component {
+    state = {
+        loading: false,
+        success: false
+    };
+
+    componentWillUnmount() {
+        clearTimeout(this.timer);
+    }
+
+    handleButtonClick = () => {
+        if (!this.state.loading) {
+            this.setState(
+                {
+                    success: false,
+                    loading: true
+                },
+                () => {
+                    this.timer = setTimeout(() => {
+                        this.setState({
+                            loading: false,
+                            success: true
+                        });
+                        window.location = new URL(
+                            'mailto:yangqifan02@gmail.com',
+                            window.location
+                        ).toString();
+                    }, 2000);
+                }
+            );
+        }
+    };
+
+    render() {
+        const { loading, success } = this.state;
+        const { classes, ...remainProps } = this.props;
+        const buttonClassname = classNames({
+            [classes.buttonSuccess]: success
+        });
+        return (
+            <PageContainer className={classes.container}>
+                <SectionContainer
+                    sectionIcon={strings.contact.icon}
+                    sectionTitle={strings.contact.title}
+                >
+                    <div className={classes.section} {...remainProps}>
+                        <GridContainer
+                            justify="center"
+                            alignItems="center"
+                            className={classes.grid}
                         >
-                            <QFText
-                                text={strings.contact.description}
-                                className={classes.description}
-                                variant="h4"
-                            />
-                            <QFButton color="download" onClick={handleClick}>
-                                SEND
-                            </QFButton>
-                        </QFGridItem>
-                    </GridContainer>
-                </div>
-            </SectionContainer>
-        </PageContainer>
-    );
-};
+                            <QFGridItem
+                                cs={12}
+                                sm={12}
+                                md={8}
+                                className={classes.item}
+                            >
+                                <QFText
+                                    text={strings.contact.description}
+                                    className={classes.description}
+                                    variant="h4"
+                                />
+                                <QFButton
+                                    color="download"
+                                    disabled={loading}
+                                    className={buttonClassname}
+                                    onClick={this.handleButtonClick}
+                                >
+                                    SEND
+                                </QFButton>
+                                {loading && (
+                                    <CircularProgress
+                                        size={24}
+                                        className={classes.buttonProgress}
+                                    />
+                                )}
+                            </QFGridItem>
+                        </GridContainer>
+                    </div>
+                </SectionContainer>
+            </PageContainer>
+        );
+    }
+}
 const styles = theme => ({
     container: {
         flex: 1,
@@ -92,6 +138,20 @@ const styles = theme => ({
         textAlign: 'center',
         fontWeight: 400,
         marginBottom: dimens.spacing.large
+    },
+    buttonProgress: {
+        color: colors.accentColorLight,
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        marginTop: -12,
+        marginLeft: -12
+    },
+    buttonSuccess: {
+        backgroundColor: colors.secondaryColor,
+        '&:hover': {
+            backgroundColor: colors.secondaryDarkColor
+        }
     }
 });
 Contact.propTypes = {
