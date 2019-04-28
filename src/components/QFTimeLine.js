@@ -1,15 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import PageContainer from '../container/PageContainer';
 import GridContainer from '../container/GridContainer';
 import QFGridItem from './QFGridItem';
 import QFText from './QFText';
 import { resolver } from '../res/resolver';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
-import RowContainer from '../container/RowContainer';
-import Paper from '@material-ui/core/Paper';
-import PageContainer from '../container/PageContainer';
 
 const TimeLineItem = ({
     classes,

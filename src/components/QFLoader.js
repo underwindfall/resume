@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import lottie from 'lottie-web';
-import { resolver } from '../res/resolver';
 import PageContainer from '../container/PageContainer';
+import { resolver } from '../res/resolver';
 import * as colors from '../res/colors';
 
 const defaultOptions = {
