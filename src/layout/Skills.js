@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Fade} from 'react-reveal';
-import {withStyles} from '@material-ui/core/styles';
+import { Fade } from 'react-reveal';
+import { withStyles } from '@material-ui/core/styles';
 import SectionContainer from '../container/SectionContainer';
 import PageContainer from '../container/PageContainer';
 import SkillInfo from '../components/skill/SkillInfo';
-import {strings} from '../i18n';
+import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 
 const Skills = ({ classes, skills, ...remainProps }) => {

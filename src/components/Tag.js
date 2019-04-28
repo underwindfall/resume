@@ -11,7 +11,7 @@ const Tag = ({ classes, text, ...props }) => {
 const styles = {
     tag: {
         color: colors.secondaryDarkColor,
-        marginLeft: dimens.spacing.mSmall
+        marginRight: dimens.spacing.mSmall
     }
 };
 Tag.propTypes = {

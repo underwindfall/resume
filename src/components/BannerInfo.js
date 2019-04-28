@@ -97,7 +97,7 @@ const styles = {
         ...infoText,
         textAlign: 'center',
         color: colors.white,
-        fontSize: dimens.fontSize.bannerInfoTitle,
+        fontSize: '5em',
         fontWeight: 500
     },
     buttonProgress: {

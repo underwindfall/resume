@@ -20,10 +20,20 @@ import * as colors from '../res/colors';
 export const WEB_APP_BAR_HEIGHT = 50;
 
 class QFAppBar extends Component {
+    state = {
+        mobileOpen: false
+    };
+
+    handleDrawerToggle = () => {
+        this.setState(state => ({
+            mobileOpen: !state.mobileOpen
+        }));
+    };
+
     render() {
+        const { mobileOpen } = this.state;
         const {
             classes,
-            mobileOpen,
             shouldChangeColor,
             showAvatarLogo,
             ...remainProps
@@ -47,7 +57,7 @@ class QFAppBar extends Component {
                         )}
                     </div>
                     <Hidden smDown>
-                        <HeaderLinks />
+                        <HeaderLinks changeColor={mobileOpen} />
                     </Hidden>
                     <Hidden mdUp>
                         <IconButton
@@ -70,7 +80,7 @@ class QFAppBar extends Component {
                         onClose={this.handleDrawerToggle}
                     >
                         <div className={classes.appResponsive}>
-                            <HeaderLinks />
+                            <HeaderLinks changeColor={mobileOpen} />
                         </div>
                     </Drawer>
                 </Hidden>
@@ -148,7 +158,6 @@ const styles = {
 };
 
 QFAppBar.propTypes = {
-    mobileOpen: PropTypes.bool.isRequired,
     classes: PropTypes.object.isRequired,
     shouldChangeColor: PropTypes.bool,
     showAvatarLogo: PropTypes.bool

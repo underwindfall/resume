@@ -18,7 +18,6 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            mobileOpen: false,
             shouldChangeColor: false,
             shouldHideTitle: false,
             showAvatarLogo: false
@@ -34,12 +33,6 @@ class Header extends Component {
         window.removeEventListener('scroll', this.handleScroll);
         window.removeEventListener('transitionend', this.handleTransitionEnd);
     }
-
-    handleDrawerToggle = () => {
-        this.setState(state => ({
-            mobileOpen: !state.mobileOpen
-        }));
-    };
 
     handleScroll = () => {
         const { changeColorOnScrollHeight } = this.props;
@@ -71,7 +64,6 @@ class Header extends Component {
     render() {
         const { classes } = this.props;
         const {
-            mobileOpen,
             shouldChangeColor,
             shouldHideTitle,
             showAvatarLogo
@@ -84,7 +76,6 @@ class Header extends Component {
         return (
             <PageContainer>
                 <QFAppBar
-                    mobileOpen={mobileOpen}
                     shouldChangeColor={shouldChangeColor}
                     showAvatarLogo={showAvatarLogo}
                 />

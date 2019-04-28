@@ -1,45 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import { withStyles } from '@material-ui/core/styles';
 import QFText from './QFText';
 import { strings } from '../i18n';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 
-const HeaderLinks = ({ classes, ...props }) => {
+const HeaderLinks = ({ classes, changeColor, ...props }) => {
+    const listItemClasses = classNames({
+        [classes.listItem]: true,
+        [classes.changeColor]: changeColor
+    });
     return (
         <List className={classes.list} {...props}>
-            <ListItem className={classes.listItem}>
+            <ListItem className={listItemClasses}>
                 <QFText
                     text={strings.header.list.About}
                     className={classes.navLink}
                     font="regular"
                 />
             </ListItem>
-            <ListItem className={classes.listItem}>
+            <ListItem className={listItemClasses}>
                 <QFText
                     text={strings.header.list.Experience}
                     className={classes.navLink}
                     font="regular"
                 />
             </ListItem>
-            <ListItem className={classes.listItem}>
+            <ListItem className={listItemClasses}>
                 <QFText
                     text={strings.header.list.Skills}
                     className={classes.navLink}
                     font="regular"
                 />
             </ListItem>
-            <ListItem className={classes.listItem}>
+            <ListItem className={listItemClasses}>
                 <QFText
                     text={strings.header.list.Education}
                     className={classes.navLink}
                     font="regular"
                 />
             </ListItem>
-            <ListItem className={classes.listItem}>
+            <ListItem className={listItemClasses}>
                 <QFText
                     text={strings.header.list.Contact}
                     className={classes.navLink}
@@ -60,7 +65,6 @@ const headerLinksStyle = theme => ({
     },
     listItem: {
         float: 'left',
-        color: 'inherit',
         position: 'relative',
         display: 'block',
         width: 'auto',
@@ -101,10 +105,14 @@ const headerLinksStyle = theme => ({
                 justifyContent: 'flex-start'
             }
         }
+    },
+    changeColor: {
+        color: colors.secondaryDarkColor
     }
 });
 
 HeaderLinks.propTypes = {
+    changeColor: PropTypes.bool.isRequired,
     classes: PropTypes.object.isRequired
 };
 
