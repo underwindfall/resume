@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import SectionContainer from '../container/SectionContainer';
 import PageContainer from '../container/PageContainer';
-import {Timeline} from '../components/timeline/timeline';
-import {strings} from '../i18n';
+import { Timeline } from '../components/timeline/timeline';
+import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 
 const Experience = ({ classes, experiences, ...remainProps }) => {
+    console.log(experiences);
     return (
         <PageContainer className={classes.container}>
             <SectionContainer

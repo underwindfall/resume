@@ -48,12 +48,13 @@ export const parseEducations = data => {
 };
 
 const parseProject = data => ({
+    ...data,
+    startTime: data.startYear,
+    endTime: data.endYear,
     title: data.title,
-    clientIcon: data.client_ico,
-    clientLink: data.client_link,
     description: data.description,
-    techstack: ['Kotlin, RxKotlin, Redux, Mapbox, Realm'],
-    projectLink: data.link
+    role: data.role,
+    link: data.link
 });
 
 export const parseProjects = data => {

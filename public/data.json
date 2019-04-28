@@ -75,43 +75,53 @@
       "description": "I mainly studied such as C / C + + programming language, data structure, compilation principles etc during my three years in university- These basic knowledge lay a solid foundation for my study abroad in France- Besides, during the school I participated in community activities particularly in the 24-hour innovation contest, I won the second place in Asia's division-"
     },
     "project-1": {
+      "startYear": "Until Now",
+      "endYear": "2,2018",
       "title": "C-Zam & Carrefour Banque",
       "description": "The application allows you to activate, consult and manage your bank accout as your wish.",
       "client_ico": "img/czam.png",
       "role": "Developer Android",
-      "techstack": "Kotlin, Rxjava, JetPack, Coroutines, MVP, Retrofit, Accengage",
+      "techstack": ["Kotlin"," Rxjava", "JetPack", "Coroutines", "MVP"," Retrofit", "Accengage"],
       "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
     },
     "project-2": {
+      "startYear": "12,2017",
+      "endYear": "2,2018",
       "title": "Française des jeux (FDJ)",
       "description": "The PSCP application is intended for FdJ business clients and sales teams. The application allows to broadcast on a dedicated channel commercial information (combi bonus, prognosis, news, information on events)",
       "client_ico": "img/fdj.png",
       "role": "Developer Mobile and Mini BackOffice",
-      "techstack": "React Native, Firebase, FireStore, Prismic, React, Redux, Jest",
+      "techstack": ["React Native", "Firebase", "FireStore", ",Prismic","React", "Redux", "Jest"],
       "link": ""
     },
     "project-3": {
+      "startYear": "3,2018",
+      "endYear": "11,2017",
       "title": "Carrefour MarketPay",
       "description": "An application and web help person to realiser a new interaction payment to create value and nurture customer relationships .",
       "client_ico": "img/carrefour.png",
       "role": "Developer Mobile and front",
-      "techstack": "React, React-Native",
+      "techstack": ["React", "React-Native"],
       "link": "http://marketpay.eu/"
     },
     "project-4": {
+      "startYear": "9,2017",
+      "endYear": "10,2017",
       "title": "BEL-Sharing Cities",
       "client_ico": "img/bel.png",
       "description": "An internal application about implementation of an inventory management application and sales of cheese products for developing countries.",
       "role": "Mobile Developer",
-      "techstack": "React Native, Redux , Node",
+      "techstack": ["React Native","Redux" , "Node"],
       "link": "https://www.groupe-bel.com/fr/"
     },
     "project-5": {
+      "startYear": "9,2017",
+      "endYear": "2,2017",
       "title": "Jooboot",
       "client_ico": "img/viseo.png",
       "description": "Jooboot is an internal project to view and publish offers and uses Twitter as a database",
       "role": "Developer Android",
-      "techstack": "Kotlin, RxKotlin, Redux, Mapbox, Realm",
+      "techstack": ["Kotlin","RxKotlin", "Redux", "Mapbox", "Realm"],
       "link": ""
     },
     "skills-1": {

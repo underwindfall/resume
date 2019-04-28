@@ -8,6 +8,8 @@ import { infoText } from '../styles';
 import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 
+const handleClick = url => () => window.open(url, '_blank');
+
 const ProfileInfo = ({ classes, ...remainProps }) => {
     return (
         <div className={classes.infoContainer} {...remainProps}>
@@ -24,10 +26,22 @@ const ProfileInfo = ({ classes, ...remainProps }) => {
                 variant="h5"
             />
             <RowContainer style={styles.iconContainer}>
-                <QFButton justIcon link className={classes.icon}>
+                <QFButton
+                    justIcon
+                    link
+                    className={classes.icon}
+                    onClick={handleClick('https://github.com/underwindfall')}
+                >
                     <i className={'fab fa-github'} />
                 </QFButton>
-                <QFButton justIcon link className={classes.icon}>
+                <QFButton
+                    justIcon
+                    link
+                    className={classes.icon}
+                    onClick={handleClick(
+                        'https://www.linkedin.com/in/qifan-yang/'
+                    )}
+                >
                     <i className={'fab fa-linkedin'} />
                 </QFButton>
             </RowContainer>

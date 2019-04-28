@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.css';
+import RowContainer from '../../container/RowContainer';
+import Tag from '../Tag';
 
 export const Timeline = ({ items, ...remainProps }) => (
     <div className="container">
@@ -11,9 +13,10 @@ export const TimeLineItem = ({
     style,
     startTime,
     endTime,
-    companyName,
     title,
-    description
+    description,
+    role,
+    techstack
 }) => (
     <div className="row workDetails">
         <div className="col-xs-12 col-sm-3 col-md-2 col-lg-2">
@@ -25,8 +28,15 @@ export const TimeLineItem = ({
         <div className="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
             <div className="arrowpart" />
             <div className="exCon">
-                <h4>{companyName}</h4>
-                <h5>{title}</h5>
+                <h4>{title}</h4>
+                <h5>{role}</h5>
+                {techstack && (
+                    <div className="row">
+                        {techstack.map((item, index) => (
+                            <Tag text={item} key={index} />
+                        ))}
+                    </div>
+                )}
                 <p>{description}</p>
             </div>
         </div>

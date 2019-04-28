@@ -56,7 +56,7 @@ class App extends Component {
                         <Header />
                         <main style={{ flexGrow: 1 }}>
                             <Profile />
-                            <Experience experiences={experiences} />
+                            <Experience experiences={projects} />
                             <Skills skills={skills} />
                             <Education education={educations} />
                             <Contact />
