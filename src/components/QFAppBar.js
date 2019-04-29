@@ -31,8 +31,6 @@ class QFAppBar extends Component {
         }));
     };
 
-    scrollToTop = () => setTimeout(() => window.scrollTo(0, 0), DELAY_SCROLL);
-
     render() {
         const { mobileOpen } = this.state;
         const {

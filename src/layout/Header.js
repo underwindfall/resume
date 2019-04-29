@@ -7,6 +7,7 @@ import PageContainer from '../container/PageContainer';
 import QFBanner from '../components/QFBanner';
 import QFAppBar, { WEB_APP_BAR_HEIGHT } from '../components/QFAppBar';
 import QFAvatar from '../components/QFAvatar';
+import QFFab from '../components/QFFab';
 import BannerInfo from '../components/BannerInfo';
 import { resolver } from '../res/resolver';
 import * as dimens from '../res/dimens';
@@ -20,7 +21,8 @@ class Header extends Component {
         this.state = {
             shouldChangeColor: false,
             shouldHideTitle: false,
-            showAvatarLogo: false
+            showAvatarLogo: false,
+            showFAB: false
         };
         this.handleScroll = throttle(this.handleScroll, SCROLL_THROTTLE_VALUE);
     }
@@ -42,7 +44,8 @@ class Header extends Component {
                 windowsScrollTop >
                 changeColorOnScrollHeight - WEB_APP_BAR_HEIGHT,
             shouldHideTitle: windowsScrollTop > changeColorOnScrollHeight / 2,
-            showAvatarLogo: state.shouldHideTitle
+            showAvatarLogo: state.shouldHideTitle,
+            showFAB: windowsScrollTop > window.innerHeight * 1.2
         }));
     };
 
@@ -66,7 +69,8 @@ class Header extends Component {
         const {
             shouldChangeColor,
             shouldHideTitle,
-            showAvatarLogo
+            showAvatarLogo,
+            showFAB
         } = this.state;
         const avatarClass = classNames({
             [classes.avatar]: true,
@@ -93,6 +97,7 @@ class Header extends Component {
                 >
                     <QFAvatar image={resolver.avatar} />
                 </div>
+                {showFAB && <QFFab />}
             </PageContainer>
         );
     }
