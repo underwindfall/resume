@@ -55,11 +55,21 @@ class App extends Component {
                     <Fragment>
                         <Header />
                         <main style={{ flexGrow: 1 }}>
-                            <Profile />
-                            <Experience experiences={projects} />
-                            <Skills skills={skills} />
-                            <Education education={educations} />
-                            <Contact />
+                            <section id="sectionProfile">
+                                <Profile />
+                            </section>
+                            <section id="sectionExperience">
+                                <Experience experiences={projects} />
+                            </section>
+                            <section id="sectionSkills">
+                                <Skills skills={skills} />
+                            </section>
+                            <section id="sectionEducation">
+                                <Education education={educations} />
+                            </section>
+                            <section id="sectionContact">
+                                <Contact />
+                            </section>
                         </main>
                         <Footer />
                         <Snackbar

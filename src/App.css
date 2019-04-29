@@ -2,3 +2,10 @@
   outline: none;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}

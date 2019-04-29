@@ -1,13 +1,13 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import {Fade} from 'react-reveal';
+import { withStyles } from '@material-ui/core/styles';
+import { Fade } from 'react-reveal';
 import GridContainer from '../container/GridContainer';
 import PageContainer from '../container/PageContainer';
 import QFGridItem from '../components/QFGridItem';
 import ProfileInfo from '../components/ProfileInfo';
 import QFText from '../components/QFText';
-import {strings} from '../i18n';
+import { strings } from '../i18n';
 import * as colors from '../res/colors';
 
 class Profile extends PureComponent {
@@ -65,7 +65,7 @@ const styles = {
     },
     description: {
         color: colors.gray,
-        fontWeight: 400
+        fontWeight: 200
     }
 };
 

@@ -24,7 +24,10 @@ const styles = {
         alignItems: 'center',
         bottom: dimens.spacing.zero,
         backgroundColor: colors.primaryColor,
-        padding: dimens.spacing.medium,
+        paddingLeft: dimens.spacing.medium,
+        paddingRight: dimens.spacing.medium,
+        paddingTop: dimens.spacing.medium,
+        paddingBottom: dimens.spacing.zero,
         color: colors.primaryTextColor
     },
     textStyle: {

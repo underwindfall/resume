@@ -136,7 +136,7 @@ const styles = theme => ({
     description: {
         color: colors.primaryTextDarkColor,
         textAlign: 'center',
-        fontWeight: 400,
+        fontWeight: 200,
         marginBottom: dimens.spacing.large
     },
     buttonProgress: {

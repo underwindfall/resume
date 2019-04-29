@@ -18,6 +18,7 @@ import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
 
 export const WEB_APP_BAR_HEIGHT = 50;
+const DELAY_SCROLL = 300;
 
 class QFAppBar extends Component {
     state = {
@@ -29,6 +30,8 @@ class QFAppBar extends Component {
             mobileOpen: !state.mobileOpen
         }));
     };
+
+    scrollToTop = () => setTimeout(() => window.scrollTo(0, 0), DELAY_SCROLL);
 
     render() {
         const { mobileOpen } = this.state;

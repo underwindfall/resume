@@ -17,39 +17,49 @@ const HeaderLinks = ({ classes, changeColor, ...props }) => {
     return (
         <List className={classes.list} {...props}>
             <ListItem className={listItemClasses}>
-                <QFText
-                    text={strings.header.list.About}
-                    className={classes.navLink}
-                    font="regular"
-                />
+                <a href="#sectionProfile">
+                    <QFText
+                        text={strings.header.list.About}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
             </ListItem>
             <ListItem className={listItemClasses}>
-                <QFText
-                    text={strings.header.list.Experience}
-                    className={classes.navLink}
-                    font="regular"
-                />
+                <a href="#sectionExperience">
+                    <QFText
+                        text={strings.header.list.Experience}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
             </ListItem>
             <ListItem className={listItemClasses}>
-                <QFText
-                    text={strings.header.list.Skills}
-                    className={classes.navLink}
-                    font="regular"
-                />
+                <a href="#sectionSkills">
+                    <QFText
+                        text={strings.header.list.Skills}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
             </ListItem>
             <ListItem className={listItemClasses}>
-                <QFText
-                    text={strings.header.list.Education}
-                    className={classes.navLink}
-                    font="regular"
-                />
+                <a href="#sectionEducation">
+                    <QFText
+                        text={strings.header.list.Education}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
             </ListItem>
             <ListItem className={listItemClasses}>
-                <QFText
-                    text={strings.header.list.Contact}
-                    className={classes.navLink}
-                    font="regular"
-                />
+                <a href="#sectionContact">
+                    <QFText
+                        text={strings.header.list.Contact}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
             </ListItem>
         </List>
     );
