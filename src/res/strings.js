@@ -27,7 +27,7 @@ export const en = {
             author: 'Qifan YANG',
             title: 'Mobile Developer',
             description:
-                'Mobile Developer And Graduated Engineer Student. I explain with words and code and looking for a CDI job in Paris.'
+                'Mobile Developer And Graduated Engineer Student. I explain with words and code currently looking for a CDI job in Paris.'
         }
     },
     experience: {
