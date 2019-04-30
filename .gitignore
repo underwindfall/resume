@@ -87,5 +87,4 @@ buck-out/
 */fastlane/screenshots
 mobile/ios/Pods/
 
-*.pdf
 *.xlsx
