@@ -18,7 +18,6 @@ import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
 
 export const WEB_APP_BAR_HEIGHT = 50;
-const DELAY_SCROLL = 300;
 
 class QFAppBar extends Component {
     state = {

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import { Fade } from 'react-reveal';
+import { withStyles } from '@material-ui/core/styles';
 import GridContainer from '../container/GridContainer';
 import PageContainer from '../container/PageContainer';
 import QFGridItem from '../components/QFGridItem';
@@ -29,7 +29,13 @@ class Profile extends PureComponent {
                         </GridContainer>
                         <div className={classes.descriptionContainer}>
                             <QFText
-                                text={strings.about.info.description}
+                                text={strings.about.info.descriptionOne}
+                                font="regular"
+                                variant="h4"
+                                className={classes.description}
+                            />
+                            <QFText
+                                text={strings.about.info.descriptionTwo}
                                 font="regular"
                                 variant="h4"
                                 className={classes.description}
@@ -65,7 +71,7 @@ const styles = {
     },
     description: {
         color: colors.gray,
-        fontWeight: 200
+        fontWeight: 500
     }
 };
 

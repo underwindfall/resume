@@ -6,7 +6,7 @@ export const en = {
             'Your network connection is not very well, please try again later'
     },
     header: {
-        title: 'My Resume',
+        title: "Qifan's Resume",
         list: {
             About: 'About',
             Experience: 'Experience',
@@ -26,8 +26,9 @@ export const en = {
         info: {
             author: 'Qifan YANG',
             title: 'Mobile Developer',
-            description:
-                'Mobile Developer And Graduated Engineer Student. I explain with words and code currently looking for a CDI job in Paris.'
+            descriptionOne: 'Mobile Developer And Graduated Engineer Student.',
+            descriptionTwo:
+                'I explain with words and code currently looking for a CDI job in Paris.'
         }
     },
     experience: {
