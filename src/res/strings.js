@@ -1,7 +1,7 @@
 export const en = {
     netWorkError: {
         TECH_ISSUE:
-            'We have encountered a problem about downloading data, please try again later',
+            'The site have encountered a problem about downloading data, please try again later',
         NO_INTERNET:
             'Your network connection is not very well, please try again later'
     },
@@ -25,10 +25,9 @@ export const en = {
     about: {
         info: {
             author: 'Qifan YANG',
-            title: 'Mobile Developer',
-            descriptionOne: 'Mobile Developer And Graduated Engineer Student.',
-            descriptionTwo:
-                'I explain with words and code currently looking for a CDI job in Paris.'
+            title: 'Mobile Engineer',
+            descriptionOne: 'I explain with words and code',
+            descriptionTwo: "I'm currently looking for a CDI job in Paris."
         }
     },
     experience: {
@@ -39,7 +38,7 @@ export const en = {
         icon: 'contact',
         title: 'Contact',
         description:
-            "Write a few lines about each one and contact us about any further collaboration and Feel free to contact with me. I'll respond get back to you ASAP. "
+            "Feel free to contact with me about any further collaboration. I'll respond get back to you ASAP. "
     },
     skills: {
         icon: 'skills',
@@ -114,7 +113,9 @@ export const en = {
     },
     project: {
         icon: 'project',
-        title: 'Project'
+        title: 'Project',
+        item: 'Project Detail',
+        itemWIP: 'WIP',
     },
     issuePage: {
         title: "I'll be back soon",

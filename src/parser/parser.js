@@ -54,7 +54,8 @@ const parseProject = data => ({
     title: data.title,
     description: data.description,
     role: data.role,
-    link: data.link
+    link: data.link,
+    playerRole: data.playerRole
 });
 
 export const parseProjects = data => {

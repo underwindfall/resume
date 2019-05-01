@@ -1,6 +1,13 @@
 import React from 'react';
 import Tag from '../Tag';
 import './style.css';
+import { strings } from '../../i18n';
+
+const handleClick = url => () => {
+    if (url) {
+        window.open(url, '_blank');
+    }
+};
 
 export const Timeline = ({ items, ...remainProps }) => {
     return (
@@ -17,7 +24,9 @@ export const TimeLineItem = ({
     title,
     description,
     role,
-    techstack
+    techstack,
+    playRole,
+    link
 }) => (
     <div className="row workDetails">
         <div className="col-xs-12 col-sm-3 col-md-2 col-lg-2">
@@ -31,6 +40,11 @@ export const TimeLineItem = ({
             <div className="exCon">
                 <h4>{title}</h4>
                 <h5>{role}</h5>
+                {link && (
+                    <h6 onClick={handleClick(link)}>
+                        {link ? strings.project.item : strings.project.itemWIP}
+                    </h6>
+                )}
                 {techstack && (
                     <div className="row">
                         {techstack.map((item, index) => (
@@ -39,6 +53,14 @@ export const TimeLineItem = ({
                     </div>
                 )}
                 <p>{description}</p>
+                <ui>
+                    {playRole &&
+                        playRole.map((item, index) => (
+                            <li key={index}>
+                                <p>{item}</p>
+                            </li>
+                        ))}
+                </ui>
             </div>
         </div>
     </div>

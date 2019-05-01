@@ -65,7 +65,7 @@
       "college": "Université de Technology de Troyes, France",
       "title": "Engineer's Degree",
       "branch": " Systems Engineering, Networks and Telecommunications",
-      "description": "Ever since I stduied in France, I mainly studied such as operating systems, computer networks, JAVA, Android, assembly language, machine learning and so on- Since university and especially during my French Engineer Program, I've had the chance to work with researchers of various backgrounds on different subjects, mainly regarding systems mobiles,network protocols,website developmen through research projects at school and full-time internships in franch company -It's my pleasure, at an early point of my career, to have been able to discover these exciting projects which has also been helpful to my career planning."
+      "description": "Ever since I studied in France, I mainly learned such as operating systems, computer networks, JAVA, Android, assembly language, machine learning and so on- Since university and especially during my French Engineer Program, I've had the chance to work with researchers of various backgrounds on different subjects, mainly regarding systems mobiles,network protocols,website development through research projects at school and full-time internships in franch company -It's my pleasure, at an early point of my career, to have been able to discover these exciting projects which has also been helpful to my career planning."
     },
     "education-2": {
       "year": "06,2014 - 09,2011",
@@ -77,32 +77,71 @@
     "project-1": {
       "startYear": "Until Now",
       "endYear": "2,2018",
-      "title": "C-Zam & Carrefour Banque",
+      "title": "Carrefour C-Zam & Carrefour Banque",
       "description": "The application allows you to activate, consult and manage your bank accout as your wish.",
+      "playerRole": [
+        "Played key role in developing and deploying new critical business product which required me to produce in fast development cycles followed by multiple weekly iterations with client for feedback",
+        "Did fundamental architectural change major project by replacing AsyncTaskLoader by Kotlin Coroutine and Rxjava",
+        "Established new standards on departmental level by developing Java & Kotlin modules that I linked to two projects as dependency from common Futures repository"
+      ],
       "client_ico": "img/czam.png",
       "role": "Developer Android",
-      "techstack": ["Kotlin"," Rxjava", "JetPack", "Coroutines", "MVP"," Retrofit", "Accengage"],
+      "techstack": [
+        "Kotlin",
+        "RxJava",
+        "JetPack",
+        "Coroutines",
+        "Dagger",
+        "MVP",
+        "Retrofit",
+        "Accengage",
+        "Espresso",
+        "Robolectric"
+      ],
       "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
     },
     "project-2": {
       "startYear": "2,2018",
       "endYear": "12,2017",
-      "title": "Française des jeux (FDJ)",
-      "description": "The PSCP application is intended for FdJ business clients and sales teams. The application allows to broadcast on a dedicated channel commercial information (combi bonus, prognosis, news, information on events)",
+      "title": "PSCP - Française des jeux (FDJ)",
+      "description": "The PSCP application is intended for FDJ business clients and sales teams. The application allows to broadcast on a dedicated channel commercial information (combi bonus, prognosis, news, information on events)",
       "client_ico": "img/fdj.png",
       "role": "Developer Mobile and Mini BackOffice",
-      "techstack": ["React Native", "Firebase", "FireStore", "Prismic","React", "Redux", "Jest"],
+      "playerRole": [
+        "Developed the application by React Native",
+        "Realized a back office in React JS (management of the users, follow-up of the activity of the users)",
+        "Implemented of Firebase Analytics (hit on articles and user activity)"
+      ],
+      "techstack": [
+        "React Native",
+        "React",
+        "Firebase",
+        "FireStore",
+        "Prismic",
+        "Redux",
+        "Jest"
+      ],
       "link": ""
     },
     "project-3": {
       "startYear": "3,2018",
       "endYear": "11,2017",
       "title": "Carrefour MarketPay",
-      "description": "An application and web help person to realiser a new interaction payment to create value and nurture customer relationships .",
+      "description": "An application and web help person to achieve a new interaction payment to create value and nurture customer relationships.",
       "client_ico": "img/carrefour.png",
       "role": "Developer Mobile and front",
-      "techstack": ["React", "React-Native"],
-      "link": "http://marketpay.eu/"
+      "techstack": [
+        "React",
+        "React-Native",
+        "Rest API",
+        "Jest"
+      ],
+      "playerRole": [
+        "Developed the application by React Native",
+        "Realization of a back office in React JS",
+        "Used Rest API for extraction of user data"
+      ],
+      "link": ""
     },
     "project-4": {
       "startYear": "10,2017",
@@ -111,18 +150,37 @@
       "client_ico": "img/bel.png",
       "description": "An internal application about implementation of an inventory management application and sales of cheese products for developing countries.",
       "role": "Mobile Developer",
-      "techstack": ["React Native","Redux" , "Node"],
-      "link": "https://www.groupe-bel.com/fr/"
+      "techstack": [
+        "React Native",
+        "Redux",
+        "Node"
+      ],
+      "playerRole": [
+        "Developed the application by React Native",
+        "Developed backend by Node.js"
+      ],
+      "link": ""
     },
     "project-5": {
       "startYear": "9,2017",
       "endYear": "2,2017",
       "title": "Jooboot",
       "client_ico": "img/viseo.png",
-      "description": "Jooboot is an internal project to view and publish offers and uses Twitter as a database",
+      "description": "Jooboot is an internal project to view and publish offers and uses Twitter as a database.",
       "role": "Developer Android",
-      "techstack": ["Kotlin","RxKotlin", "Redux", "Mapbox", "Realm"],
-      "link": ""
+      "techstack": [
+        "Kotlin",
+        "RxKotlin",
+        "Redux",
+        "Mapbox",
+        "Realm"
+      ],
+      "link": "",
+      "playerRole": [
+        "Developed the application from scratch",
+        "Storing structured data with newly announced Realm database",
+        "Designed proof of concept with agile user stories and class diagrams for company asset lifecycle management tool"
+      ]
     },
     "skills-1": {
       "name": "Android",
