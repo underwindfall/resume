@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/java.f18eddfe.png"
   },
   {
-    "revision": "50b993969da463a3b1ba",
+    "revision": "ff46fa7577fbc6cc6a5d",
     "url": "/resume/static/css/main.7a970f8e.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/resume/static/js/runtime~main.32a5f7b9.js"
   },
   {
-    "revision": "be2e9b2cec16df88afd1",
-    "url": "/resume/static/js/2.78059a61.chunk.js"
+    "revision": "86327aa7d348fbd60b74",
+    "url": "/resume/static/js/2.63c2d978.chunk.js"
   },
   {
     "revision": "03a485c070109709a5e1f7fc1ce0368d",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/resume/static/media/kotlin.bd5b7b39.png"
   },
   {
-    "revision": "50b993969da463a3b1ba",
-    "url": "/resume/static/js/main.c694360e.chunk.js"
+    "revision": "ff46fa7577fbc6cc6a5d",
+    "url": "/resume/static/js/main.267f9f5f.chunk.js"
   },
   {
     "revision": "d5cc2d8b2bbd43cffd82cd2464e578a7",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/jenkins.489912a1.png"
   },
   {
-    "revision": "b927b37898c0663dff55d2674daa0d79",
+    "revision": "20c648f7b0b541bd855d13476d0651a8",
     "url": "/resume/index.html"
   }
 ];
