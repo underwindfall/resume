@@ -17,5 +17,10 @@ export const resolver = {
     html: require('../assets/img/skills/html.png'),
     ruby: require('../assets/img/skills/ruby.png'),
     jenkins: require('../assets/img/skills/jenkins.png'),
-    firebase: require('../assets/img/skills/firebase.jpeg')
+    firebase: require('../assets/img/skills/firebase.jpeg'),
+    carrefour: require('../assets/img/carrefour.png'),
+    fdj: require('../assets/img/fdj.png'),
+    viseo: require('../assets/img/viseo.png'),
+    bel: require('../assets/img/bel.png'),
+    czam: require('../assets/img/czam.png')
 };

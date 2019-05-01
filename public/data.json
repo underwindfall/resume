@@ -80,11 +80,11 @@
       "title": "Carrefour C-Zam & Carrefour Banque",
       "description": "The application allows you to activate, consult and manage your bank accout as your wish.",
       "playerRole": [
-        "Played key role in developing and deploying new critical business product which required me to produce in fast development cycles followed by multiple weekly iterations with client for feedback",
-        "Did fundamental architectural change major project by replacing AsyncTaskLoader by Kotlin Coroutine and Rxjava",
-        "Established new standards on departmental level by developing Java & Kotlin modules that I linked to two projects as dependency from common Futures repository"
+        "- Played key role in developing and deploying new critical business product which required me to produce in fast development cycles followed by multiple weekly iterations with client for feedback",
+        "- Did fundamental architectural change major project by replacing AsyncTaskLoader by Kotlin Coroutine and Rxjava",
+        "- Established new standards on departmental level by developing Java & Kotlin modules that I linked to two projects as dependency from common Futures repository"
       ],
-      "client_ico": "img/czam.png",
+      "client_ico": "czam",
       "role": "Developer Android",
       "techstack": [
         "Kotlin",
@@ -105,12 +105,12 @@
       "endYear": "12,2017",
       "title": "PSCP - Française des jeux (FDJ)",
       "description": "The PSCP application is intended for FDJ business clients and sales teams. The application allows to broadcast on a dedicated channel commercial information (combi bonus, prognosis, news, information on events)",
-      "client_ico": "img/fdj.png",
+      "client_ico": "fdj",
       "role": "Developer Mobile and Mini BackOffice",
       "playerRole": [
-        "Developed the application by React Native",
-        "Realized a back office in React JS (management of the users, follow-up of the activity of the users)",
-        "Implemented of Firebase Analytics (hit on articles and user activity)"
+        "- Developed the application by React Native",
+        "- Realized a back office in React JS (management of the users, follow-up of the activity of the users)",
+        "- Implemented of Firebase Analytics (hit on articles and user activity)"
       ],
       "techstack": [
         "React Native",
@@ -128,7 +128,7 @@
       "endYear": "11,2017",
       "title": "Carrefour MarketPay",
       "description": "An application and web help person to achieve a new interaction payment to create value and nurture customer relationships.",
-      "client_ico": "img/carrefour.png",
+      "client_ico": "carrefour",
       "role": "Developer Mobile and front",
       "techstack": [
         "React",
@@ -137,9 +137,9 @@
         "Jest"
       ],
       "playerRole": [
-        "Developed the application by React Native",
-        "Realization of a back office in React JS",
-        "Used Rest API for extraction of user data"
+        "- Developed the application by React Native",
+        "- Realization of a back office in React JS",
+        "- Used Rest API for extraction of user data"
       ],
       "link": ""
     },
@@ -147,7 +147,7 @@
       "startYear": "10,2017",
       "endYear": "9,2017",
       "title": "BEL-Sharing Cities",
-      "client_ico": "img/bel.png",
+      "client_ico": "bel",
       "description": "An internal application about implementation of an inventory management application and sales of cheese products for developing countries.",
       "role": "Mobile Developer",
       "techstack": [
@@ -156,8 +156,8 @@
         "Node"
       ],
       "playerRole": [
-        "Developed the application by React Native",
-        "Developed backend by Node.js"
+        "- Developed the application by React Native",
+        "- Developed backend by Node.js"
       ],
       "link": ""
     },
@@ -165,7 +165,7 @@
       "startYear": "9,2017",
       "endYear": "2,2017",
       "title": "Jooboot",
-      "client_ico": "img/viseo.png",
+      "client_ico": "viseo",
       "description": "Jooboot is an internal project to view and publish offers and uses Twitter as a database.",
       "role": "Developer Android",
       "techstack": [
@@ -177,9 +177,9 @@
       ],
       "link": "",
       "playerRole": [
-        "Developed the application from scratch",
-        "Storing structured data with newly announced Realm database",
-        "Designed proof of concept with agile user stories and class diagrams for company asset lifecycle management tool"
+        "- Developed the application from scratch",
+        "- Storing structured data with newly announced Realm database",
+        "- Designed proof of concept with agile user stories and class diagrams for company asset lifecycle management tool"
       ]
     },
     "skills-1": {

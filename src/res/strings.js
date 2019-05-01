@@ -114,8 +114,10 @@ export const en = {
     project: {
         icon: 'project',
         title: 'Project',
+        tooltip: 'Click to find more',
+        occupation: 'What I have done',
         item: 'Project Detail',
-        itemWIP: 'WIP',
+        itemWIP: 'WIP'
     },
     issuePage: {
         title: "I'll be back soon",

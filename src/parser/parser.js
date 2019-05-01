@@ -55,6 +55,7 @@ const parseProject = data => ({
     description: data.description,
     role: data.role,
     link: data.link,
+    icon: data.client_ico,
     playerRole: data.playerRole
 });
 
