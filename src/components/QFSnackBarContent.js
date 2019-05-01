@@ -9,6 +9,8 @@ import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
 import WarningIcon from '@material-ui/icons/Warning';
+import * as colors from '../res/colors';
+import * as dimens from '../res/dimens';
 
 const variantIcon = {
     success: CheckCircleIcon,
@@ -60,23 +62,23 @@ QFSnackBarContent.propTypes = {
 
 const styles = theme => ({
     success: {
-        backgroundColor: theme.palette.green[600]
+        backgroundColor: colors.secondaryDarkColor
     },
     error: {
-        backgroundColor: theme.palette.error.dark
+        backgroundColor: colors.errorColor
     },
     info: {
-        backgroundColor: theme.palette.primary.dark
+        backgroundColor: colors.accentColor
     },
     warning: {
-        backgroundColor: theme.palette.amber[700]
+        backgroundColor: colors.accentColorLight
     },
     icon: {
         fontSize: 20
     },
     iconVariant: {
         opacity: 0.9,
-        marginRight: theme.spacing.unit
+        marginRight: dimens.spacing.medium
     },
     message: {
         display: 'flex',

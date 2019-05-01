@@ -1,1 +1,1 @@
-export const endPoint = 'data.json';
+export const endPoint = 'https://qifanyang.com/resume/data.json';

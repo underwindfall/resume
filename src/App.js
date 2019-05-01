@@ -9,6 +9,7 @@ import Experience from './layout/Experience';
 import Skills from './layout/Skills';
 import Education from './layout/Education';
 import Contact from './layout/Contact';
+import IssuePage from './layout/IssuePage';
 import { getResumeData } from './repositories/mainRepository';
 import { QFLoader } from './components/QFLoader';
 import { ResumeTheme } from './res/theme';
@@ -21,7 +22,8 @@ class App extends Component {
         data: {},
         loading: true,
         open: false,
-        error: ''
+        error: false,
+        errorMessage: ''
     };
 
     handleClose = (event, reason) => {
@@ -37,7 +39,12 @@ class App extends Component {
         const { error, response } = await getResumeData();
         setTimeout(() => {
             if (error) {
-                this.setState({ loading: false, error: error, open: true });
+                this.setState({
+                    loading: false,
+                    error: true,
+                    open: true,
+                    errorMessage: response.message
+                });
             } else {
                 this.setState({ loading: false, data: response });
             }
@@ -45,7 +52,7 @@ class App extends Component {
     }
 
     render() {
-        const { loading, data, open, error } = this.state;
+        const { loading, data, open, error, errorMessage } = this.state;
         const { experiences, educations, projects, skills } = data;
         return (
             <MuiThemeProvider theme={ResumeTheme}>
@@ -55,26 +62,32 @@ class App extends Component {
                     <Fragment>
                         <Header />
                         <main style={{ flexGrow: 1 }}>
-                            <section id="sectionProfile">
-                                <Profile />
-                            </section>
-                            <section id="sectionExperience">
-                                <Experience experiences={projects} />
-                            </section>
-                            <section id="sectionSkills">
-                                <Skills skills={skills} />
-                            </section>
-                            <section id="sectionEducation">
-                                <Education education={educations} />
-                            </section>
-                            <section id="sectionContact">
-                                <Contact />
-                            </section>
+                            {error ? (
+                                <IssuePage />
+                            ) : (
+                                <Fragment>
+                                    <section id="sectionProfile">
+                                        <Profile />
+                                    </section>
+                                    <section id="sectionExperience">
+                                        <Experience experiences={projects} />
+                                    </section>
+                                    <section id="sectionSkills">
+                                        <Skills skills={skills} />
+                                    </section>
+                                    <section id="sectionEducation">
+                                        <Education education={educations} />
+                                    </section>
+                                    <section id="sectionContact">
+                                        <Contact />
+                                    </section>
+                                </Fragment>
+                            )}
                         </main>
                         <Footer />
                         <Snackbar
                             anchorOrigin={{
-                                vertical: 'bottom',
+                                vertical: 'top',
                                 horizontal: 'center'
                             }}
                             open={open}
@@ -84,7 +97,7 @@ class App extends Component {
                             <QFSnackBarContent
                                 onClose={this.handleClose}
                                 variant="error"
-                                message={error}
+                                message={errorMessage}
                             />
                         </Snackbar>
                     </Fragment>

@@ -2,11 +2,13 @@ import React from 'react';
 import Tag from '../Tag';
 import './style.css';
 
-export const Timeline = ({ items, ...remainProps }) => (
-    <div className="container">
-        {items.map((item, index) => <TimeLineItem {...item} key={index} />)}
-    </div>
-);
+export const Timeline = ({ items, ...remainProps }) => {
+    return (
+        <div className="container">
+            {items.map((item, index) => <TimeLineItem {...item} key={index} />)}
+        </div>
+    );
+};
 
 export const TimeLineItem = ({
     style,

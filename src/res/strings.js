@@ -115,5 +115,10 @@ export const en = {
     project: {
         icon: 'project',
         title: 'Project'
+    },
+    issuePage: {
+        title: "I'll be back soon",
+        content:
+            "The site is performing some maintenance at the moment, I'm trying to working on it"
     }
 };
