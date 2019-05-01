@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/java.f18eddfe.png"
   },
   {
-    "revision": "ff46fa7577fbc6cc6a5d",
+    "revision": "8974b2260cae9cfa3ed5",
     "url": "/resume/static/css/main.7a970f8e.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/resume/static/media/kotlin.bd5b7b39.png"
   },
   {
-    "revision": "ff46fa7577fbc6cc6a5d",
-    "url": "/resume/static/js/main.267f9f5f.chunk.js"
+    "revision": "8974b2260cae9cfa3ed5",
+    "url": "/resume/static/js/main.e0ac5a75.chunk.js"
   },
   {
     "revision": "d5cc2d8b2bbd43cffd82cd2464e578a7",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/jenkins.489912a1.png"
   },
   {
-    "revision": "20c648f7b0b541bd855d13476d0651a8",
+    "revision": "9e6faeaf4fa35e6cd6d89431af0bd70c",
     "url": "/resume/index.html"
   }
 ];
