@@ -3,6 +3,7 @@ export const resolver = {
     avatar: require('../assets/img/avatar.jpg'),
     arrowLeft: require('../assets/img/arrow-left.png'),
     lottie: require('../assets/animation/lottie.json'),
+    google: require('../assets/animation/google.json'),
     android: require('../assets/img/skills/android.png'),
     kotlin: require('../assets/img/skills/kotlin.png'),
     java: require('../assets/img/skills/java.png'),
