@@ -14,6 +14,7 @@ import { getResumeData } from './repositories/mainRepository';
 import { QFLoader } from './components/QFLoader';
 import { ResumeTheme } from './res/theme';
 import './App.css';
+import {getLanguage} from "./i18n";
 
 const DELAY_SHOW_LOADER = 4000;
 
@@ -36,7 +37,8 @@ class App extends Component {
 
     async componentDidMount() {
         this.setState({ loading: true });
-        const { error, response } = await getResumeData();
+        const language = getLanguage();
+        const { error, response } = await getResumeData(language);
         setTimeout(() => {
             if (error) {
                 this.setState({

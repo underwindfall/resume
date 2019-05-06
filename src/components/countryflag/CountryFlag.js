@@ -4,14 +4,14 @@ import { withStyles } from '@material-ui/core/styles';
 import QFButton from '../QFButton';
 import * as colors from '../../res/colors';
 
-const CountryFlag = ({ code, classes, styleProps }) => {
+const CountryFlag = ({ code, classes, styleProps, ...remainProps }) => {
     const emoji = code
         .toUpperCase()
         .replace(/./g, char =>
             String.fromCodePoint(char.charCodeAt(0) + 127397)
         );
     return (
-        <QFButton justIcon link className={classes.icon}>
+        <QFButton justIcon link className={classes.icon} {...remainProps}>
             <span
                 aria-label={code}
                 role="img"
