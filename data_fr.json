@@ -1,0 +1,234 @@
+{
+  "layer": {
+    "work": [
+      "work-1",
+      "work-2"
+    ],
+    "project": [
+      "project-1",
+      "project-2",
+      "project-3",
+      "project-4",
+      "project-5"
+    ],
+    "education": [
+      "education-1",
+      "education-2"
+    ],
+    "skills": [
+      "mobile",
+      "front",
+      "devops"
+    ],
+    "mobile": [
+      [
+        "skills-1",
+        "skills-2",
+        "skills-3"
+      ],
+      [
+        "skills-4",
+        "skills-5",
+        "skills-6"
+      ]
+    ],
+    "front": [
+      [
+        "skills-7",
+        "skills-8",
+        "skills-9"
+      ]
+    ],
+    "devops": [
+      "skills-10",
+      "skills-11",
+      "skills-12"
+    ]
+  },
+  "content": {
+    "work-1": {
+      "startYear": "Aujourd'hui",
+      "endYear": "2,2018",
+      "company": "Paris VISEO Technologies,France",
+      "title": "Développeur Mobile",
+      "description": "Responsable du développement de l'application Android par Kotlin et Java. Mon travail consiste principalement à créer une application mobile extrêmement efficace et réactive pour nos clients."
+    },
+    "work-2": {
+      "startYear": "2,2016",
+      "endYear": "9,2015",
+      "company": "Paris SIPCOM Society,France",
+      "title": ".Net Développeur Stage",
+      "description": "Je suis principalement responsable du site Web officiel de la société, du fonctionnement quotidien de la page, de l'optimisation de la gestion de la page d'arrière-plan. Le travail est très saturé, mais pour gagner du temps et apprendre beaucoup de nouveaux frameworks et bibliothèques, JQuery a une certaine compréhension. Durant ce stage, j'ai amélioré mes compétences, notamment en développement front-end et back-end."
+    },
+    "education-1": {
+      "year": "10,2017 - 09,2013",
+      "college": "Université de Technology de Troyes, France",
+      "title": "Diplôme d'ingénieur",
+      "branch": " Systems Engineering, Networks and Telecommunications",
+      "description": "Depuis que j'ai étudié en France, j'ai principalement appris comme les systèmes d'exploitation, les réseaux informatiques, JAVA, Android, le langage d'assemblage, l'apprentissage automatique, etc. Depuis mon université et surtout pendant mon programme d'ingénieur français, j'ai eu la chance de travailler avec chercheurs de divers horizons sur différents sujets, principalement en ce qui concerne les systèmes mobiles, les protocoles de réseau, le développement de sites Web par le biais de projets de recherche à l’école et de stages à temps plein dans une entreprise franchisée. Je suis heureux, au début de ma carrière, d’avoir pu découvrir ces projets passionnants qui ont également contribué à la planification de ma carrière."
+    },
+    "education-2": {
+      "year": "06,2014 - 09,2011",
+      "college": "Shanghai University, China",
+      "title": "Licence",
+      "branch": " Information and communication engineering",
+      "description": "J'ai principalement étudié le langage de programmation C / C ++, la structure de données, les principes de compilation, etc. au cours de mes trois années à l'université. Ces connaissances de base constituent une base solide pour mes études à l'étranger en France. En outre, j'ai participé à des activités associatives, notamment au concours d'innovation de 24 heures, au cours duquel j'ai obtenu la deuxième place dans la division Asie."
+    },
+    "project-1": {
+      "startYear": "Aujour d'hui",
+      "endYear": "2,2018",
+      "title": "Carrefour C-Zam & Carrefour Banque",
+      "description": "Application bancaire C-zam pour un client grand compte: Carrefour Banque",
+      "playerRole": [
+        "- A joué un rôle clé dans le développement et le déploiement de nouveaux produits métier critiques, ce qui m'a obligé à produire des cycles de développement rapides, suivis de plusieurs itérations hebdomadaires avec le client pour obtenir ses commentaires",
+        "- Change fondamental architecture de project remplaçant AsyncTaskLoader par Kotlin Coroutine et RxJava",
+        "- Etabli de nouvelles normes au niveau départemental en développant des modules Java et Kotlin que j'ai liés à deux projets en tant que dépendance du référentiel Futures commun"
+      ],
+      "client_ico": "czam",
+      "role": "Développeur Android",
+      "techstack": [
+        "Kotlin",
+        "RxJava",
+        "JetPack",
+        "Coroutines",
+        "Dagger",
+        "MVP",
+        "Retrofit",
+        "Accengage",
+        "Espresso",
+        "Robolectric"
+      ],
+      "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
+    },
+    "project-2": {
+      "startYear": "2,2018",
+      "endYear": "12,2017",
+      "title": "PSCP - Française des jeux (FDJ)",
+      "description": "L’application PSCP est à destination des clients professionnels et des équipes commerciales de FdJ. L’application permet de diffuser sur un canal dédié des informations commerciales (combi-bonus, pronostiques, actualités, informations sur les épreuves",
+      "client_ico": "fdj",
+      "role": "Développeur Mobile and Mini BackOffice",
+      "playerRole": [
+        "- Développement de l’application React Native",
+        "- Réalisation d’un back office en React JS (gestion des utilisateurs, suivi de l’activité des utilisateurs)",
+        "- Mise en place de Firebase Analytics (hit sur les articles et activité des utilisateurs)"
+      ],
+      "techstack": [
+        "React Native",
+        "React",
+        "Firebase",
+        "FireStore",
+        "Prismic",
+        "Redux",
+        "Jest"
+      ],
+      "link": ""
+    },
+    "project-3": {
+      "startYear": "3,2018",
+      "endYear": "11,2017",
+      "title": "Carrefour MarketPay",
+      "description": "Une application et une personne Web aident la personne à réaliser un nouveau paiement par interaction afin de créer de la valeur et d'entretenir les relations avec les clients.",
+      "client_ico": "carrefour",
+      "role": "Développeur Mobile and front",
+      "techstack": [
+        "React",
+        "React-Native",
+        "Rest API",
+        "Jest"
+      ],
+      "playerRole": [
+        "- Développement de l’application React Native",
+        "- Développement de web responsive React JS",
+        "- API Rest utilisée pour l'extraction des données utilisateur"
+      ],
+      "link": ""
+    },
+    "project-4": {
+      "startYear": "10,2017",
+      "endYear": "9,2017",
+      "title": "BEL-Sharing Cities",
+      "client_ico": "bel",
+      "description": "Réalisation d’une application de gestion des stocks et des ventes de produit fromager à\ndestination des pays en voies de développement.",
+      "role": "Développeur Mobile",
+      "techstack": [
+        "React Native",
+        "Redux",
+        "Node"
+      ],
+      "playerRole": [
+        "- Développement React Native (Front End Mobile)",
+        "- Développement backend en utilisant Node.js"
+      ],
+      "link": ""
+    },
+    "project-5": {
+      "startYear": "9,2017",
+      "endYear": "2,2017",
+      "title": "Jooboot",
+      "client_ico": "viseo",
+      "description": "Jooboot est le projet le plus important sur lequel j’ai eu la chance de travailler pendant mon stage au sein du groupe VISEO. En effet, nous ne sommes plus dans la réalisation de POC, mais dans le développement d’une application native, mobile et tablette. Jooboot est un projet permettant de consulter et de publier des offres. Ce projet, afin de maximiser l’impact de l’offre, utilise Twitter en tant que base de données (DBOT DataBase On Twitter).",
+      "role": "Développeur Mobile",
+      "techstack": [
+        "Kotlin",
+        "RxKotlin",
+        "Redux",
+        "Mapbox",
+        "Realm"
+      ],
+      "link": "",
+      "playerRole": [
+        "- Développement Kotlin from scratch",
+        "- Maintenance de l’application",
+        "- Développement de nouveaux écrans & utilisation de l’API de Service Twitter"
+      ]
+    },
+    "skills-1": {
+      "name": "Android",
+      "icon": "android"
+    },
+    "skills-2": {
+      "name": "Kotlin",
+      "icon": "kotlin"
+    },
+    "skills-3": {
+      "name": "Java",
+      "icon": "java"
+    },
+    "skills-4": {
+      "name": "React Native",
+      "icon": "react"
+    },
+    "skills-5": {
+      "name": "React JS",
+      "icon": "react"
+    },
+    "skills-6": {
+      "name": "JavaScript",
+      "icon": "javascript"
+    },
+    "skills-7": {
+      "name": "Css",
+      "icon": "css"
+    },
+    "skills-8": {
+      "name": "Html",
+      "icon": "html"
+    },
+    "skills-9": {
+      "name": "Ruby",
+      "icon": "ruby"
+    },
+    "skills-10": {
+      "name": "Git",
+      "icon": "git"
+    },
+    "skills-11": {
+      "name": "Heroku",
+      "icon": "heroku"
+    },
+    "skills-12": {
+      "name": "Jekyll",
+      "icon": "jekyll"
+    }
+  }
+}

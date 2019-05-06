@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/css.bc970b5c.png"
   },
   {
-    "revision": "9c1caebc66102e46c6f1",
+    "revision": "e6d3fcf8f5b37c752ee7",
     "url": "/resume/static/css/main.3a69e716.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/resume/static/js/runtime~main.32a5f7b9.js"
   },
   {
-    "revision": "d60f9903268d134a28e0",
-    "url": "/resume/static/js/2.0c6cd6d6.chunk.js"
+    "revision": "d3e93abd8876e1c6c5f6",
+    "url": "/resume/static/js/2.228202cf.chunk.js"
   },
   {
     "revision": "03a485c070109709a5e1f7fc1ce0368d",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/resume/static/media/rn.d5cc2d8b.jpeg"
   },
   {
-    "revision": "9c1caebc66102e46c6f1",
-    "url": "/resume/static/js/main.82837e48.chunk.js"
+    "revision": "e6d3fcf8f5b37c752ee7",
+    "url": "/resume/static/js/main.b9d0d972.chunk.js"
   },
   {
     "revision": "5744ba58167c3052307b0da70a031911",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/czam.3e4c2581.png"
   },
   {
-    "revision": "db6b1c310dfb71f0ac8ce92da6d40812",
+    "revision": "25a782dabcb2776731923930b2be2b68",
     "url": "/resume/index.html"
   }
 ];
