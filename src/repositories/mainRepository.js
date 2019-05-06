@@ -8,7 +8,7 @@ import {
 } from '../parser/parser';
 
 export const getResumeData = async language => {
-    const result = await Network.http.get(`endPoint_${language}`);
+    const result = await Network.http.get(endPoint(language));
     if (!result.error) {
         return parseData(result);
     }

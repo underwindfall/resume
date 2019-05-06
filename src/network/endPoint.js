@@ -1,1 +1,1 @@
-export const endPoint = 'data.json';
+export const endPoint = language => `data_${language}.json`;
