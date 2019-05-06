@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Hidden from '@material-ui/core/Hidden';
@@ -8,9 +9,10 @@ import HeaderLinks from './HeaderLinks';
 import IconButton from '@material-ui/core/es/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
-import { withStyles } from '@material-ui/core/styles';
+import CountryFlag from './countryflag/CountryFlag';
 import QFText from './QFText';
 import QFLogo from './QFLogo';
+import { countries } from './countryflag/countries';
 import { boxShadow, transition } from '../styles';
 import { resolver } from '../res/resolver';
 import { strings } from '../i18n';
@@ -57,6 +59,15 @@ class QFAppBar extends Component {
                         )}
                     </div>
                     <Hidden smDown>
+                        {countries.map((country, index) => (
+                            <CountryFlag
+                                key={index}
+                                code={country.iso2_cc}
+                                styleProps={{
+                                    fontSize: '2rem'
+                                }}
+                            />
+                        ))}
                         <HeaderLinks changeColor={mobileOpen} />
                     </Hidden>
                     <Hidden mdUp>
