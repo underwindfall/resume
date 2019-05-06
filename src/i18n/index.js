@@ -4,7 +4,7 @@ import { fr } from '../res/i18n/fr';
 import { zh } from '../res/i18n/zh';
 import { getValue, setValue } from '../utils/Storage';
 
-const supportLangues = {
+const supportLanguages = {
     fr: { fr },
     en: { en },
     zh: { zh }
@@ -21,8 +21,8 @@ class i18nImpl {
 
 const i18n = new i18nImpl();
 
-const getNavigatorLanguages = (langue => {
-    switch (langue) {
+const getNavigatorLanguages = (language => {
+    switch (language) {
         case 'fr-FR':
         case 'fr':
             return 'fr';
@@ -38,7 +38,7 @@ const getNavigatorLanguages = (langue => {
     }
 })(window.navigator.language);
 
-const getLanguage = () => {
+export const getLanguage = () => {
     if (!getValue()) {
         setValue(getNavigatorLanguages);
         return getNavigatorLanguages;
@@ -47,6 +47,6 @@ const getLanguage = () => {
     }
 };
 
-const messages = supportLangues[getLanguage()];
+const messages = supportLanguages[getLanguage()];
 i18n.setImplementation('en', messages);
 export const strings = i18n.resourceString;

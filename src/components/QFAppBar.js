@@ -18,6 +18,7 @@ import { resolver } from '../res/resolver';
 import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
+import { setValue } from '../utils/Storage';
 
 export const WEB_APP_BAR_HEIGHT = 50;
 
@@ -30,6 +31,11 @@ class QFAppBar extends Component {
         this.setState(state => ({
             mobileOpen: !state.mobileOpen
         }));
+    };
+
+    handleClickLanguage = language => () => {
+        setValue(language);
+        window.location.reload();
     };
 
     render() {
@@ -66,6 +72,9 @@ class QFAppBar extends Component {
                                 styleProps={{
                                     fontSize: '2rem'
                                 }}
+                                onClick={this.handleClickLanguage(
+                                    country.language
+                                )}
                             />
                         ))}
                         <HeaderLinks changeColor={mobileOpen} />

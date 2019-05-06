@@ -7,8 +7,8 @@ import {
     parseSkills
 } from '../parser/parser';
 
-export const getResumeData = async () => {
-    const result = await Network.http.get(endPoint);
+export const getResumeData = async language => {
+    const result = await Network.http.get(`endPoint_${language}`);
     if (!result.error) {
         return parseData(result);
     }
