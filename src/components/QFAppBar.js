@@ -12,13 +12,13 @@ import Drawer from '@material-ui/core/Drawer';
 import CountryFlag from './countryflag/CountryFlag';
 import QFText from './QFText';
 import QFLogo from './QFLogo';
+import { setValue } from '../utils/Storage';
 import { countries } from './countryflag/countries';
 import { boxShadow, transition } from '../styles';
 import { resolver } from '../res/resolver';
 import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
-import { setValue } from '../utils/Storage';
 
 export const WEB_APP_BAR_HEIGHT = 50;
 

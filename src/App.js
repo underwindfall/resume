@@ -13,8 +13,8 @@ import IssuePage from './layout/IssuePage';
 import { getResumeData } from './repositories/mainRepository';
 import { QFLoader } from './components/QFLoader';
 import { ResumeTheme } from './res/theme';
+import { getLanguage } from './i18n';
 import './App.css';
-import {getLanguage} from "./i18n";
 
 const DELAY_SHOW_LOADER = 4000;
 
