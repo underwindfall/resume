@@ -7,6 +7,22 @@ export const transition = {
     transition: 'all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)'
 };
 
+export const responsiveContainer = theme => ({
+    [theme.breakpoints.down('sm')]: {
+        width: '580px'
+    },
+    [theme.breakpoints.up('md')]: {
+        width: '970px'
+    },
+    [theme.breakpoints.up('lg')]: {
+        width: '1170px'
+    },
+    [theme.breakpoints.up('xl')]: {
+        width: '1170px'
+    },
+    maxWidth: '1080px',
+});
+
 export const conatinerFluid = {
     paddingRight: '15px',
     paddingLeft: '15px',

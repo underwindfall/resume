@@ -5,9 +5,9 @@ import GridContainer from '../../container/GridContainer';
 import QFText from '../QFText';
 import QFGridItem from '../QFGridItem';
 import SkillChip from './SkillChip';
+import { responsiveContainer } from '../../styles';
 import { resolver } from '../../res/resolver';
 import { strings } from '../../i18n';
-import * as dimens from '../../res/dimens';
 
 const SkillRow = ({ classes, items, ...props }) => (
     <Fragment>
@@ -184,19 +184,9 @@ const SkillInfo = ({ classes, items, ...remainProps }) => {
 };
 const styles = theme => ({
     root: {
-        paddingRight: dimens.spacing.sLarge,
-        paddingLeft: dimens.spacing.sLarge,
         marginRight: 'auto',
         marginLeft: 'auto',
-        [theme.breakpoints.down('sm')]: {
-            maxWidth: '400px'
-        },
-        [theme.breakpoints.up('md')]: {
-            maxWidth: '750px'
-        },
-        [theme.breakpoints.up('lg')]: {
-            maxWidth: '1084px'
-        }
+        ...responsiveContainer(theme)
     },
     infoContainer: {
         textAlign: 'center',

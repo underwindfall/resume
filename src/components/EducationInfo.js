@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Fade} from 'react-reveal';
-import {withStyles} from '@material-ui/core/styles';
+import { Fade } from 'react-reveal';
+import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import GridContainer from '../container/GridContainer';
 import QFGridItem from './QFGridItem';
 import QFText from './QFText';
+import { responsiveContainer } from '../styles';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
 
@@ -78,15 +79,7 @@ const styles = theme => ({
         paddingLeft: dimens.spacing.sLarge,
         marginRight: 'auto',
         marginLeft: 'auto',
-        [theme.breakpoints.down('sm')]: {
-            maxWidth: '400px'
-        },
-        [theme.breakpoints.up('md')]: {
-            maxWidth: '750px'
-        },
-        [theme.breakpoints.up('lg')]: {
-            maxWidth: '1084px'
-        }
+        ...responsiveContainer(theme)
     },
     container: {
         lineHeight: '27px',

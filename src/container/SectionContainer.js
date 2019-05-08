@@ -76,8 +76,7 @@ const styles = theme => ({
     itemContainer: {
         background: colors.white,
         position: 'relative',
-        marginLeft: dimens.spacing.xxLarge,
-        marginRight: dimens.spacing.xxLarge,
+        margin: '0 auto',
         marginTop: dimens.spacing.large,
         padding: dimens.spacing.large,
         borderRadius: '6px',

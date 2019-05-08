@@ -9,6 +9,7 @@ import GridContainer from '../container/GridContainer';
 import QFGridItem from '../components/QFGridItem';
 import QFButton from '../components/QFButton';
 import QFText from '../components/QFText';
+import { responsiveContainer } from '../styles';
 import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
@@ -107,15 +108,7 @@ const styles = theme => ({
         marginBottom: dimens.spacing.xxxLarge
     },
     grid: {
-        [theme.breakpoints.down('sm')]: {
-            width: '400px'
-        },
-        [theme.breakpoints.up('md')]: {
-            width: '750px'
-        },
-        [theme.breakpoints.up('lg')]: {
-            width: '1084px'
-        }
+        ...responsiveContainer(theme)
     },
     item: {
         textAlign: 'center'
