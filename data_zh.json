@@ -61,7 +61,7 @@
       "description": "实习期间主要负责前后端的开发，包括公司网页的重新创建，后台 .Net结合需求开发的CRUD的日常开发"
     },
     "education-1": {
-      "year": "10,2017 - 09,2013",
+      "year": "10,2017 - 09,2014",
       "college": "Université de Technology de Troyes, France",
       "title": "Engineer's Degree",
       "branch": " Systems Engineering, Networks and Telecommunications",
@@ -123,8 +123,8 @@
       "link": ""
     },
     "project-3": {
-      "startYear": "3,2018",
-      "endYear": "11,2017",
+      "startYear": "2,2018",
+      "endYear": "9,2017",
       "title": "Carrefour MarketPay",
       "description": "一个关于帮助用户安全使用他们的礼品卡的网页和手机端的开发项目.",
       "client_ico": "carrefour",
@@ -142,7 +142,7 @@
       "link": ""
     },
     "project-4": {
-      "startYear": "10,2017",
+      "startYear": "9,2017",
       "endYear": "9,2017",
       "title": "BEL-Sharing Cities",
       "client_ico": "bel",
