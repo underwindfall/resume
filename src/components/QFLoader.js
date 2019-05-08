@@ -8,7 +8,7 @@ import * as colors from '../res/colors';
 const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: resolver.lottie
+    animationData: resolver.google
 };
 
 export class QFLoader extends Component {
