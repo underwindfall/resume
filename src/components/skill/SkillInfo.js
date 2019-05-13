@@ -53,14 +53,6 @@ const SkillRow = ({ classes, items, ...props }) => (
                         icon={resolver.rn}
                         text={strings.skills.rn.name}
                     />
-                    <SkillChip
-                        icon={resolver.react}
-                        text={strings.skills.react.name}
-                    />
-                    <SkillChip
-                        icon={resolver.javascript}
-                        text={strings.skills.javascript.name}
-                    />
                 </QFGridItem>
             </GridContainer>
         </GridContainer>
@@ -104,6 +96,14 @@ const SkillRow = ({ classes, items, ...props }) => (
                     <SkillChip
                         icon={resolver.webpack}
                         text={strings.skills.webpack.name}
+                    />
+                    <SkillChip
+                        icon={resolver.react}
+                        text={strings.skills.react.name}
+                    />
+                    <SkillChip
+                        icon={resolver.javascript}
+                        text={strings.skills.javascript.name}
                     />
                 </QFGridItem>
             </GridContainer>
