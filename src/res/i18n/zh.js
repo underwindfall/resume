@@ -106,7 +106,7 @@ export const zh = {
     },
     education: {
         icon: 'education',
-        title: 'Education'
+        title: '教育'
     },
     project: {
         icon: 'project',
