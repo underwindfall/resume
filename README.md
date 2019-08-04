@@ -4,6 +4,9 @@ This project is my [resume project](https://underwindfall.github.io/resume) whic
 
 Feel free to contact me in github issues if you find any error in this project.
 
+## ScreenShot
+![](https://raw.githubusercontent.com/underwindfall/blogAssets/master/blog/resume/Screenshot.png)
+
 
 ## License
 
