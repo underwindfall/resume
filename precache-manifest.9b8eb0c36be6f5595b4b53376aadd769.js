@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/czam.3e4c2581.png"
   },
   {
-    "revision": "93e2f3dcaf8d4f62b1c1176b78265ba9",
+    "revision": "5dae9b85925f0cf5aa91fe36151d1714",
     "url": "/resume/index.html"
   }
 ];
