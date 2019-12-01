@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Avatar from '@material-ui/core/Avatar';
-import { withStyles } from '@material-ui/core/styles';
+import { Avatar, withStyles } from '@material-ui/core';
 import * as dimens from '../res/dimens';
 import classNames from 'classnames';
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { Typography, withStyles } from '@material-ui/core';
 
 const QFText = ({ text, classes, className, font = 'regular', ...props }) => {
     const textClass = classNames({

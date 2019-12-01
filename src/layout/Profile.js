@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Fade } from 'react-reveal';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core';
 import GridContainer from '../container/GridContainer';
 import PageContainer from '../container/PageContainer';
 import QFGridItem from '../components/QFGridItem';

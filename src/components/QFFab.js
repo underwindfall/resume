@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
-import Fab from '@material-ui/core/Fab';
+import { withStyles, Fab } from '@material-ui/core';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const DELAY_SCROLL = 300;
@@ -23,7 +22,7 @@ const QFFab = ({ classes, ...remainProps }) => {
 
 const styles = theme => ({
     fab: {
-        margin: theme.spacing.unit,
+        margin: theme.spacing(1),
         top: 'auto',
         right: 20,
         bottom: 20,

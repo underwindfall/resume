@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {withStyles} from '@material-ui/core/styles';
-import Chip from '@material-ui/core/Chip';
-import Avatar from '@material-ui/core/Avatar';
+import { withStyles, Chip, Avatar } from '@material-ui/core';
 import * as colors from '../../res/colors';
 
 const SkillChip = ({ icon, text, classes, className, ...remainProps }) => {
@@ -24,7 +22,7 @@ const SkillChip = ({ icon, text, classes, className, ...remainProps }) => {
 };
 const styles = theme => ({
     chip: {
-        margin: theme.spacing.unit,
+        margin: theme.spacing(1),
         color: colors.accentColor
         // background: colors.chipGradient
     }

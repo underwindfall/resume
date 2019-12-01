@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Hidden from '@material-ui/core/Hidden';
-import HeaderLinks from './HeaderLinks';
-import IconButton from '@material-ui/core/es/IconButton';
+import {
+    IconButton,
+    withStyles,
+    AppBar,
+    Toolbar,
+    Hidden,
+    Drawer
+} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import Drawer from '@material-ui/core/Drawer';
+import HeaderLinks from './HeaderLinks';
 import CountryFlag from './countryflag/CountryFlag';
 import QFText from './QFText';
 import QFLogo from './QFLogo';

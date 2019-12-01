@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
-import Chip from '@material-ui/core/es/Chip/Chip';
+import { withStyles, Chip } from '@material-ui/core';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 

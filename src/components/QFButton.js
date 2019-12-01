@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Button from '@material-ui/core/Button';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { Button, withStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 import * as colors from '../res/colors';
 
 const QFButton = ({
@@ -35,7 +35,7 @@ const QFButton = ({
     );
 };
 
-const styles = {
+const styles = makeStyles({
     button: {
         minHeight: 'auto',
         minWidth: 'auto',
@@ -216,7 +216,7 @@ const styles = {
     round: {
         borderRadius: '30px'
     }
-};
+});
 
 QFButton.propTypes = {
     classes: PropTypes.object.isRequired,

@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import Snackbar from '@material-ui/core/Snackbar';
+import { MuiThemeProvider, Snackbar } from '@material-ui/core';
 import QFSnackBarContent from './components/QFSnackBarContent';
 import Header from './layout/Header';
 import Footer from './layout/Footer';

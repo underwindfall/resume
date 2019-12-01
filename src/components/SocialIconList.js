@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
+import { Grid, withStyles } from '@material-ui/core';
 import { SocialIcon } from 'react-social-icons';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core';
 import PageContainer from '../container/PageContainer';
 import GridContainer from '../container/GridContainer';
 import QFGridItem from './QFGridItem';

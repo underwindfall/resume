@@ -1,7 +1,7 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-scroll';
-import {withStyles} from '@material-ui/core/styles';
+import { Link } from 'react-scroll';
+import { withStyles } from '@material-ui/core';
 import classNames from 'classnames';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';

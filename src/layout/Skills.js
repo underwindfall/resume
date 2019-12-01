@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Fade } from 'react-reveal';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core';
 import SectionContainer from '../container/SectionContainer';
 import PageContainer from '../container/PageContainer';
 import SkillInfo from '../components/skill/SkillInfo';

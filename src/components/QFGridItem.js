@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
+import { Grid, withStyles } from '@material-ui/core';
 import * as dimens from '../res/dimens';
 
 const QFGridItem = ({ classes, children, className, ...remainProps }) => {

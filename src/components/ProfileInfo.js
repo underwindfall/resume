@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core';
 import QFText from './QFText';
 import QFButton from './QFButton';
 import RowContainer from '../container/RowContainer';

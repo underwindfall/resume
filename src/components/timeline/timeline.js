@@ -1,7 +1,7 @@
 import React from 'react';
+import { Tooltip } from '@material-ui/core';
 import Tag from '../Tag';
 import './style.css';
-import Tooltip from '@material-ui/core/Tooltip';
 import QFText from '../QFText';
 import { strings } from '../../i18n';
 import { resolver } from '../../res/resolver';

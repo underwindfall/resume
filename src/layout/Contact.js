@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import { withStyles, CircularProgress } from '@material-ui/core';
 import SectionContainer from '../container/SectionContainer';
 import PageContainer from '../container/PageContainer';
 import GridContainer from '../container/GridContainer';

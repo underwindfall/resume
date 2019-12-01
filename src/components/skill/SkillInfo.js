@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core';
 import GridContainer from '../../container/GridContainer';
 import QFText from '../QFText';
 import QFGridItem from '../QFGridItem';

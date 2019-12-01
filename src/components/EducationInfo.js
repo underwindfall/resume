@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Fade } from 'react-reveal';
-import { withStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
+import { withStyles, List, ListItem } from '@material-ui/core';
 import GridContainer from '../container/GridContainer';
 import QFGridItem from './QFGridItem';
 import QFText from './QFText';

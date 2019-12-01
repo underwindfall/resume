@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import { withStyles, CircularProgress } from '@material-ui/core';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import GridContainer from '../container/GridContainer';
 import QFText from './QFText';
 import QFButton from './QFButton';
