@@ -1,22 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 
-const QFBanner = ({ classes, image, style, children, ...remainProps }) => {
-    return (
-        <div
-            className={classes.banner}
-            style={{ ...style, backgroundImage: 'url(' + image + ')' }}
-            {...remainProps}
-        >
-            {children}
-        </div>
-    );
-};
-
-const styles = {
+const useStyles = makeStyles({
     banner: {
         display: 'flex',
         alignItems: 'center',
@@ -42,10 +30,22 @@ const styles = {
             content: "''"
         }
     }
+});
+
+export const QFBanner = ({ image, style, children, ...remainProps }) => {
+    const classes = useStyles();
+    return (
+        <div
+            className={classes.banner}
+            style={{ ...style, backgroundImage: 'url(' + image + ')' }}
+            {...remainProps}
+        >
+            {children}
+        </div>
+    );
 };
 
 QFBanner.propTypes = {
-    classes: PropTypes.object.isRequired,
     style: PropTypes.object,
     image: PropTypes.string,
     children: PropTypes.node
@@ -55,5 +55,3 @@ QFBanner.defaultProps = {
     style: undefined,
     image: undefined
 };
-
-export default withStyles(styles)(QFBanner);

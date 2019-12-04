@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import QFButton from '../components/QFButton';
-import RowContainer from './RowContainer';
-import PageContainer from './PageContainer';
-import QFText from '../components/QFText';
+import { makeStyles } from '@material-ui/styles';
+import { QFButton } from '../components/QFButton';
+import { RowContainer } from './RowContainer';
+import { PageContainer } from './PageContainer';
+import { QFText } from '../components/QFText';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 
@@ -23,14 +23,46 @@ const iconClassName = sectionIcon => {
     }
 };
 
-const SectionContainer = ({
-    classes,
+const useStyles = makeStyles({
+    container: {
+        zIndex: '3',
+        alignItems: 'center'
+    },
+    icon: {
+        margin: dimens.spacing.mSmall,
+        color: colors.primaryColorDark
+    },
+    rowContainer: {
+        marginTop: dimens.spacing.mLarge,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    textIcon: {
+        fontWeight: 700,
+        padding: dimens.spacing.zero,
+        marginLeft: dimens.spacing.lMedium,
+        color: colors.primaryColorDark
+    },
+    itemContainer: {
+        background: colors.white,
+        position: 'relative',
+        margin: '0 auto',
+        marginTop: dimens.spacing.large,
+        padding: dimens.spacing.large,
+        borderRadius: '6px',
+        boxShadow:
+            '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
+    }
+});
+
+export const SectionContainer = ({
     style,
     sectionIcon,
     sectionTitle,
     children,
     ...remainProps
 }) => {
+    const classes = useStyles();
     return (
         <PageContainer
             className={classes.container}
@@ -54,39 +86,8 @@ const SectionContainer = ({
         </PageContainer>
     );
 };
-const styles = theme => ({
-    container: {
-        zIndex: '3',
-        alignItems: 'center'
-    },
-    icon: {
-        margin: dimens.spacing.mSmall,
-        color: colors.primaryColorDark
-    },
-    rowContainer: {
-        marginTop: dimens.spacing.mLarge,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    textIcon: {
-        fontWeight: 700,
-        padding: dimens.spacing.zero,
-        marginLeft: dimens.spacing.lMedium
-    },
-    itemContainer: {
-        background: colors.white,
-        position: 'relative',
-        margin: '0 auto',
-        marginTop: dimens.spacing.large,
-        padding: dimens.spacing.large,
-        borderRadius: '6px',
-        boxShadow:
-            '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
-    }
-});
 
 SectionContainer.propTypes = {
-    classes: PropTypes.object.isRequired,
     sectionTitle: PropTypes.string.isRequired,
     sectionIcon: PropTypes.oneOf([
         'experience',
@@ -101,5 +102,3 @@ SectionContainer.defaultProps = {
     style: {},
     className: undefined
 };
-
-export default withStyles(styles)(SectionContainer);

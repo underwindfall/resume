@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import throttle from 'lodash.throttle';
 import { withStyles } from '@material-ui/core';
-import PageContainer from '../container/PageContainer';
-import QFBanner from '../components/QFBanner';
-import QFAppBar, { WEB_APP_BAR_HEIGHT } from '../components/QFAppBar';
-import QFAvatar from '../components/QFAvatar';
-import QFFab from '../components/QFFab';
-import BannerInfo from '../components/BannerInfo';
+import { PageContainer } from '../container/PageContainer';
+import { QFBanner } from '../components/QFBanner';
+import { QFAppBar, WEB_APP_BAR_HEIGHT } from '../components/QFAppBar';
+import { QFAvatar } from '../components/QFAvatar';
+import { QFFab } from '../components/QFFab';
+import {BannerInfo} from '../components/BannerInfo';
 import { resolver } from '../res/resolver';
 import * as dimens from '../res/dimens';
 

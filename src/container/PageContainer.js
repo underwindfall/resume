@@ -1,15 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 
-const PageContainer = ({
-    classes,
+const useStyles = makeStyles({
+    container: {
+        flexGrow: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
+    }
+});
+
+export const PageContainer = ({
     className,
     style,
     children,
     ...remainProps
 }) => {
+    const classes = useStyles();
     const containerClasses = classNames({
         [classes.container]: true,
         [className]: className !== undefined
@@ -20,17 +29,8 @@ const PageContainer = ({
         </div>
     );
 };
-const styles = {
-    container: {
-        flexGrow: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-    }
-};
 
 PageContainer.propTypes = {
-    classes: PropTypes.object.isRequired,
     className: PropTypes.string,
     children: PropTypes.node,
     style: PropTypes.object
@@ -40,5 +40,3 @@ PageContainer.defaultProps = {
     style: {},
     className: undefined
 };
-
-export default withStyles(styles)(PageContainer);

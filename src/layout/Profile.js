@@ -1,53 +1,15 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { Fade } from 'react-reveal';
-import { withStyles } from '@material-ui/core';
-import GridContainer from '../container/GridContainer';
-import PageContainer from '../container/PageContainer';
-import QFGridItem from '../components/QFGridItem';
-import ProfileInfo from '../components/ProfileInfo';
-import QFText from '../components/QFText';
+import { makeStyles } from '@material-ui/styles';
+import { GridContainer } from '../container/GridContainer';
+import { PageContainer } from '../container/PageContainer';
+import { QFGridItem } from '../components/QFGridItem';
+import { ProfileInfo } from '../components/ProfileInfo';
+import { QFText } from '../components/QFText';
 import { strings } from '../i18n';
 import * as colors from '../res/colors';
 
-class Profile extends PureComponent {
-    render() {
-        const { classes, ...remainProps } = this.props;
-        return (
-            <PageContainer className={classes.container}>
-                <Fade left>
-                    <div className={classes.profile}>
-                        <GridContainer justify="center" {...remainProps}>
-                            <QFGridItem
-                                style={styles.textContainer}
-                                xs={12}
-                                sm={12}
-                                md={6}
-                            >
-                                <ProfileInfo />
-                            </QFGridItem>
-                        </GridContainer>
-                        <div className={classes.descriptionContainer}>
-                            <QFText
-                                text={strings.about.info.descriptionOne}
-                                font="regular"
-                                variant="h4"
-                                className={classes.description}
-                            />
-                            <QFText
-                                text={strings.about.info.descriptionTwo}
-                                font="regular"
-                                variant="h4"
-                                className={classes.description}
-                            />
-                        </div>
-                    </div>
-                </Fade>
-            </PageContainer>
-        );
-    }
-}
-const styles = {
+const useStyles = makeStyles({
     container: {
         flexGrow: 1,
         position: 'relative',
@@ -73,10 +35,42 @@ const styles = {
         color: colors.gray,
         fontWeight: 500
     }
+});
+
+export const Profile = ({ props }) => {
+    const classes = useStyles();
+    return (
+        <PageContainer className={classes.container}>
+            <Fade left>
+                <div className={classes.profile}>
+                    <GridContainer justify="center" {...props}>
+                        <QFGridItem
+                            className={classes.textContainer}
+                            xs={12}
+                            sm={12}
+                            md={6}
+                        >
+                            <ProfileInfo />
+                        </QFGridItem>
+                    </GridContainer>
+                    <div className={classes.descriptionContainer}>
+                        <QFText
+                            text={strings.about.info.descriptionOne}
+                            font="regular"
+                            variant="h4"
+                            className={classes.description}
+                        />
+                        <QFText
+                            text={strings.about.info.descriptionTwo}
+                            font="regular"
+                            variant="h4"
+                            className={classes.description}
+                        />
+                    </div>
+                </div>
+            </Fade>
+        </PageContainer>
+    );
 };
 
-Profile.propTypes = {
-    classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(Profile);
+Profile.propTypes = {};

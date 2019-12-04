@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles, IconButton, SnackbarContent } from '@material-ui/core';
+import { IconButton, SnackbarContent } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ErrorIcon from '@material-ui/icons/Error';
 import InfoIcon from '@material-ui/icons/Info';
@@ -16,9 +17,37 @@ const variantIcon = {
     error: ErrorIcon,
     info: InfoIcon
 };
-const QFSnackBarContent = props => {
-    const { classes, className, message, onClose, variant, ...other } = props;
+
+const useStyles = makeStyles({
+    success: {
+        backgroundColor: colors.secondaryDarkColor
+    },
+    error: {
+        backgroundColor: colors.errorColor
+    },
+    info: {
+        backgroundColor: colors.accentColor
+    },
+    warning: {
+        backgroundColor: colors.accentColorLight
+    },
+    icon: {
+        fontSize: 20
+    },
+    iconVariant: {
+        opacity: 0.9,
+        marginRight: dimens.spacing.medium
+    },
+    message: {
+        display: 'flex',
+        alignItems: 'center'
+    }
+});
+
+export const QFSnackBarContent = props => {
+    const { className, message, onClose, variant, ...other } = props;
     const Icon = variantIcon[variant];
+    const classes = useStyles();
     return (
         <SnackbarContent
             className={classNames(classes[variant], className)}
@@ -51,37 +80,8 @@ const QFSnackBarContent = props => {
 };
 
 QFSnackBarContent.propTypes = {
-    classes: PropTypes.object.isRequired,
     className: PropTypes.string,
     message: PropTypes.node,
     onClose: PropTypes.func,
     variant: PropTypes.oneOf(['success', 'warning', 'error', 'info']).isRequired
 };
-
-const styles = theme => ({
-    success: {
-        backgroundColor: colors.secondaryDarkColor
-    },
-    error: {
-        backgroundColor: colors.errorColor
-    },
-    info: {
-        backgroundColor: colors.accentColor
-    },
-    warning: {
-        backgroundColor: colors.accentColorLight
-    },
-    icon: {
-        fontSize: 20
-    },
-    iconVariant: {
-        opacity: 0.9,
-        marginRight: dimens.spacing.medium
-    },
-    message: {
-        display: 'flex',
-        alignItems: 'center'
-    }
-});
-
-export default withStyles(styles)(QFSnackBarContent);

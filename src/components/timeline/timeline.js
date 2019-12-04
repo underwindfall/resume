@@ -1,8 +1,8 @@
 import React from 'react';
 import { Tooltip } from '@material-ui/core';
-import Tag from '../Tag';
+import { Tag } from '../Tag';
+import { QFText } from '../QFText';
 import './style.css';
-import QFText from '../QFText';
 import { strings } from '../../i18n';
 import { resolver } from '../../res/resolver';
 import * as dimens from '../../res/dimens';

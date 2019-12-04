@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react';
 import { linkTo } from '@storybook/addon-links';
 import { Welcome } from '@storybook/react/demo';
 import { ScreenContainer } from './container/ScreenContainer';
-import Footer from '../layout/Footer';
+import {Footer }from '../layout/Footer';
 import Header from '../layout/Header';
 import { QFLoader } from '../components/QFLoader';
 import { mockTimeLine } from './mocks/mockTimeLine';
-import QFTimeLine from '../components/QFTimeLine';
-import SkillChip from '../components/skill/SkillChip';
+import {QFTimeLine} from '../components/QFTimeLine';
+import {SkillChip} from '../components/skill/SkillChip';
 import { resolver } from '../res/resolver';
 
 storiesOf('Welcome', module).add('to Storybook', () => (

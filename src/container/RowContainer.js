@@ -1,15 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 
-const RowContainer = ({
-    classes,
+const useStyles = makeStyles({
+    container: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+});
+
+export const RowContainer = ({
     style,
     children,
     className,
     ...remainProps
 }) => {
+    const classes = useStyles();
     const containerClasses = classNames({
         [classes.container]: true,
         [className]: className !== undefined
@@ -20,17 +29,8 @@ const RowContainer = ({
         </div>
     );
 };
-const styles = {
-    container: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-};
 
 RowContainer.propTypes = {
-    classes: PropTypes.object.isRequired,
     children: PropTypes.node,
     className: PropTypes.string,
     style: PropTypes.object
@@ -39,5 +39,3 @@ RowContainer.defaultProps = {
     style: {},
     className: undefined
 };
-
-export default withStyles(styles)(RowContainer);
