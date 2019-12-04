@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     }
 });
 
-const QFLogo = ({ className, image, style, ...remainProps }) => {
+export const QFLogo = ({ className, image, style, ...remainProps }) => {
     const classes = useStyles();
     const logoClasses = classNames({
         [classes.avatar]: true,
@@ -40,4 +40,3 @@ QFLogo.defaultProps = {
     style: {}
 };
 
-export default QFLogo;

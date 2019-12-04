@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 import { makeStyles } from '@material-ui/styles';
 import { SectionContainer } from '../container/SectionContainer';
 import { PageContainer } from '../container/PageContainer';

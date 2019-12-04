@@ -71,6 +71,7 @@ export const HeaderLinks = ({ changeColor, ...props }) => {
         [classes.listItem]: true,
         [classes.changeColor]: changeColor
     });
+
     return (
         <List className={classes.list} {...props}>
             <ListItem className={listItemClasses}>

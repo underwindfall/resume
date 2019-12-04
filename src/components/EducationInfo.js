@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 import { List, ListItem } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import { GridContainer } from '../container/GridContainer';
@@ -72,7 +72,7 @@ export const EducationInfo = ({ items, ...remainProps }) => {
                             md={4}
                             className={classes.educationYearContainer}
                         >
-                            <Fade left>
+                            <Fade direction="left">
                                 <QFText
                                     text={item.time}
                                     font="bold"
@@ -92,7 +92,7 @@ export const EducationInfo = ({ items, ...remainProps }) => {
                             md={8}
                             className={classes.desContainer}
                         >
-                            <Fade right>
+                            <Fade direction="right">
                                 <QFText
                                     text={item.collegeName}
                                     variant="h4"

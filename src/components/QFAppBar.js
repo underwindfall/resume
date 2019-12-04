@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { IconButton, AppBar, Toolbar, Hidden, Drawer } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import MenuIcon from '@material-ui/icons/Menu';
+import Menu from '@material-ui/icons/Menu';
 import { HeaderLinks } from './HeaderLinks';
-import CountryFlag from './countryflag/CountryFlag';
+import { CountryFlag } from './countryflag/CountryFlag';
 import { QFText } from './QFText';
-import QFLogo from './QFLogo';
+import { QFLogo } from './QFLogo';
 import { setValue } from '../utils/Storage';
 import { countries } from './countryflag/countries';
 import { boxShadow, transition } from '../styles';
@@ -140,7 +140,7 @@ export const QFAppBar = ({
                         aria-label="open drawer"
                         onClick={handleDrawerToggle}
                     >
-                        <MenuIcon />
+                        <Menu />
                     </IconButton>
                 </Hidden>
             </Toolbar>

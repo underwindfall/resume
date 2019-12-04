@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-scroll';
-import {QFText} from './QFText';
+import { QFText } from './QFText';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
 
@@ -55,7 +55,8 @@ export const QFLink = ({
 }) => {
     const [isLinkActive, setLinkActive] = useState(false);
 
-    const handleChangeActiveLink = () => setLinkActive(prevState => !prevState);
+    const handleChangeActiveLink = () =>
+        setLinkActive(prevLinkActive => !prevLinkActive);
 
     const classes = useStyles();
     return (

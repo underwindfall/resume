@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function CountryFlag({ code, styleProps, ...remainProps }) {
+export const CountryFlag = ({ code, styleProps, ...remainProps }) => {
     const classes = useStyles();
     const emoji = code
         .toUpperCase()
@@ -37,7 +37,7 @@ export default function CountryFlag({ code, styleProps, ...remainProps }) {
             </span>
         </QFButton>
     );
-}
+};
 
 CountryFlag.propTypes = {
     code: PropTypes.string.isRequired,

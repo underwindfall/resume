@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 import { makeStyles } from '@material-ui/styles';
 import { GridContainer } from '../container/GridContainer';
 import { PageContainer } from '../container/PageContainer';
@@ -41,7 +41,7 @@ export const Profile = ({ props }) => {
     const classes = useStyles();
     return (
         <PageContainer className={classes.container}>
-            <Fade left>
+            <Fade direction="left">
                 <div className={classes.profile}>
                     <GridContainer justify="center" {...props}>
                         <QFGridItem

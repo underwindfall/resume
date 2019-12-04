@@ -29,7 +29,7 @@ export const QFFab = ({ ...props }) => {
             className={classes.fab}
             onClick={scrollToTop}
         >
-            <ExpandLessIcon />
+            <ExpandLessIcon fontSize="large" />
         </Fab>
     );
 };
