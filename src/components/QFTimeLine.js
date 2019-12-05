@@ -122,7 +122,7 @@ const TimeLineItem = ({
     );
 };
 
-export const QFTimeLine = ({ items, ...remainProps }) => {
+export const QFTimeLine = ({ items = {}, ...remainProps }) => {
     const classes = useStyles();
     return (
         <PageContainer className={classes.container} {...remainProps}>
@@ -135,7 +135,4 @@ export const QFTimeLine = ({ items, ...remainProps }) => {
 
 QFTimeLine.propTypes = {
     items: PropTypes.array.isRequired
-};
-QFTimeLine.defaultProps = {
-    items: {}
 };

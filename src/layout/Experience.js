@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Fade } from 'react-awesome-reveal';
+import { Fade } from 'react-reveal';
 import { makeStyles } from '@material-ui/styles';
 import { SectionContainer } from '../container/SectionContainer';
 import { PageContainer } from '../container/PageContainer';
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     }
 });
 
-export const Experience = ({ experiences, ...remainProps }) => {
+export const Experience = ({ experiences = {}, ...remainProps }) => {
     const classes = useStyles();
     return (
         <Fade>
@@ -35,7 +35,4 @@ export const Experience = ({ experiences, ...remainProps }) => {
 
 Experience.propTypes = {
     experiences: PropTypes.array.isRequired
-};
-Experience.defaultProps = {
-    experiences: {}
 };

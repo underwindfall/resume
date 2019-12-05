@@ -13,9 +13,9 @@ const useStyles = makeStyles({
 });
 
 export const RowContainer = ({
-    style,
+    style = {},
     children,
-    className,
+    className = undefined,
     ...remainProps
 }) => {
     const classes = useStyles();
@@ -34,8 +34,4 @@ RowContainer.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     style: PropTypes.object
-};
-RowContainer.defaultProps = {
-    style: {},
-    className: undefined
 };

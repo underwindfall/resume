@@ -13,14 +13,11 @@ const useStyles = makeStyles({
     }
 });
 
-export const Tag = ({ text, ...props }) => {
+export const Tag = ({ text = '', ...props }) => {
     const classes = useStyles();
     return <Chip {...props} className={classes.tag} label={text} />;
 };
 
 Tag.propTypes = {
     text: PropTypes.string.isRequired
-};
-Tag.defaultProps = {
-    text: ''
 };

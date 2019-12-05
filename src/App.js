@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { MuiThemeProvider, Snackbar } from '@material-ui/core';
 import { QFSnackBarContent } from './components/QFSnackBarContent';
-import Header from './layout/Header';
+import { Header } from './layout/Header';
 import { Footer } from './layout/Footer';
 import { Profile } from './layout/Profile';
 import { Experience } from './layout/Experience';
@@ -67,21 +67,21 @@ class App extends Component {
                                 <IssuePage />
                             ) : (
                                 <Fragment>
-                                    <section id="sectionProfile">
+                                    <div id="sectionProfile">
                                         <Profile />
-                                    </section>
-                                    <section id="sectionExperience">
+                                    </div>
+                                    <div id="sectionExperience">
                                         <Experience experiences={projects} />
-                                    </section>
-                                    <section id="sectionSkills">
+                                    </div>
+                                    <div id="sectionSkills">
                                         <Skills skills={skills} />
-                                    </section>
-                                    <section id="sectionEducation">
+                                    </div>
+                                    <div id="sectionEducation">
                                         <Education education={educations} />
-                                    </section>
-                                    <section id="sectionContact">
+                                    </div>
+                                    <div id="sectionContact">
                                         <Contact />
-                                    </section>
+                                    </div>
                                 </Fragment>
                             )}
                         </main>

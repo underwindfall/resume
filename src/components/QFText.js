@@ -18,7 +18,12 @@ const useStyles = makeStyles({
     }
 });
 
-export const QFText = ({ text, className, font = 'regular', ...props }) => {
+export const QFText = ({
+    text,
+    className = undefined,
+    font = 'regular',
+    ...props
+}) => {
     const classes = useStyles();
     const textClass = classNames({
         [classes.textStyles[font]]: font,
@@ -35,7 +40,4 @@ QFText.propTypes = {
     ...Typography.propTypes,
     text: PropTypes.string.isRequired,
     className: PropTypes.string
-};
-QFText.defaultProps = {
-    className: undefined
 };

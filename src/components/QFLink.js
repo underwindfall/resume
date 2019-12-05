@@ -49,8 +49,8 @@ const useStyles = makeStyles(theme => ({
 export const QFLink = ({
     to,
     title,
-    enableNavigationItemClass,
-    offset,
+    enableNavigationItemClass = false,
+    offset = -120,
     ...remainProps
 }) => {
     const [isLinkActive, setLinkActive] = useState(false);
@@ -96,9 +96,4 @@ QFLink.propTypes = {
     title: PropTypes.string.isRequired,
     enableNavigationItemClass: PropTypes.bool.isRequired,
     offset: PropTypes.number.isRequired
-};
-
-QFLink.defaultProps = {
-    enableNavigationItemClass: false,
-    offset: -120
 };

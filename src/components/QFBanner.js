@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { makeStyles } from '@material-ui/styles';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
@@ -34,15 +35,19 @@ const useStyles = makeStyles({
 
 export const QFBanner = ({
     image = undefined,
-    style = undefined,
+    className = undefined,
     children,
     ...remainProps
 }) => {
     const classes = useStyles();
+    const bannerClasses = classNames({
+        [classes.banner]: true,
+        [className]: className !== undefined
+    });
     return (
         <div
-            className={classes.banner}
-            style={{ ...style, backgroundImage: 'url(' + image + ')' }}
+            className={bannerClasses}
+            style={{ backgroundImage: 'url(' + image + ')' }}
             {...remainProps}
         >
             {children}
@@ -51,7 +56,7 @@ export const QFBanner = ({
 };
 
 QFBanner.propTypes = {
-    style: PropTypes.object,
+    className: PropTypes.string,
     image: PropTypes.string,
     children: PropTypes.node
 };

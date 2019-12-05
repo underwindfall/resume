@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     }
 });
 
-export const QFAvatar = ({ image, style, ...remainProps }) => {
+export const QFAvatar = ({ image, style = {}, ...remainProps }) => {
     const classes = useStyles();
     return (
         <img
@@ -29,7 +29,4 @@ export const QFAvatar = ({ image, style, ...remainProps }) => {
 QFAvatar.propTypes = {
     image: PropTypes.string.isRequired,
     style: PropTypes.object
-};
-QFAvatar.defaultProps = {
-    style: {}
 };

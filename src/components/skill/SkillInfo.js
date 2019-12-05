@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const SkillRow = ({ items, ...props }) => {
+const SkillRow = ({ items = [], ...props }) => {
     const classes = useStyles();
     return (
         <Fragment>
@@ -182,7 +182,7 @@ const SkillRow = ({ items, ...props }) => {
     );
 };
 
-export const SkillInfo = ({ items, ...remainProps }) => {
+export const SkillInfo = ({ items = [], ...remainProps }) => {
     const classes = useStyles();
     return (
         <GridContainer
@@ -208,9 +208,5 @@ export const SkillInfo = ({ items, ...remainProps }) => {
 };
 
 SkillInfo.propTypes = {
-    items: PropTypes.array.isRequired
-};
-
-SkillInfo.defaultProps = {
-    items: []
+    items: PropTypes.array
 };

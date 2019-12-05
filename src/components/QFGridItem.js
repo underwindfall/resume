@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     }
 });
 
-export const QFGridItem = ({ children, className, ...remainProps }) => {
+export const QFGridItem = ({ children, className = '', ...remainProps }) => {
     const classes = useStyles();
     const containerClasses = classNames({
         [classes.grid]: true,
@@ -32,7 +32,4 @@ export const QFGridItem = ({ children, className, ...remainProps }) => {
 QFGridItem.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
-};
-QFGridItem.defaultProps = {
-    className: ''
 };

@@ -87,8 +87,8 @@ const useStyles = makeStyles({
 });
 
 export const QFAppBar = ({
-    shouldChangeColor,
-    showAvatarLogo,
+    shouldChangeColor = false,
+    showAvatarLogo = false,
     ...remainProps
 }) => {
     const classes = useStyles();
@@ -140,7 +140,7 @@ export const QFAppBar = ({
                         aria-label="open drawer"
                         onClick={handleDrawerToggle}
                     >
-                        <Menu />
+                        <Menu fontSize="large" />
                     </IconButton>
                 </Hidden>
             </Toolbar>
@@ -166,8 +166,4 @@ export const QFAppBar = ({
 QFAppBar.propTypes = {
     shouldChangeColor: PropTypes.bool,
     showAvatarLogo: PropTypes.bool
-};
-QFAppBar.defaultProps = {
-    shouldChangeColor: false,
-    showAvatarLogo: false
 };

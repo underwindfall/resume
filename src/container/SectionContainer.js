@@ -56,7 +56,7 @@ const useStyles = makeStyles({
 });
 
 export const SectionContainer = ({
-    style,
+    style = {},
     sectionIcon,
     sectionTitle,
     children,
@@ -97,8 +97,4 @@ SectionContainer.propTypes = {
     ]).isRequired,
     children: PropTypes.node,
     style: PropTypes.object
-};
-SectionContainer.defaultProps = {
-    style: {},
-    className: undefined
 };

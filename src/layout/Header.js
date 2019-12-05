@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import throttle from 'lodash.throttle';
-import { withStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+import { useSetState } from '../hooks/useSetState';
 import { PageContainer } from '../container/PageContainer';
 import { QFBanner } from '../components/QFBanner';
 import { QFAppBar, WEB_APP_BAR_HEIGHT } from '../components/QFAppBar';
@@ -14,96 +15,7 @@ import * as dimens from '../res/dimens';
 
 const SCROLL_THROTTLE_VALUE = 10;
 
-class Header extends Component {
-    avatarRef;
-    constructor(props) {
-        super(props);
-        this.state = {
-            shouldChangeColor: false,
-            shouldHideTitle: false,
-            showAvatarLogo: false,
-            showFAB: false
-        };
-        this.handleScroll = throttle(this.handleScroll, SCROLL_THROTTLE_VALUE);
-    }
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-        window.addEventListener('transitionend', this.handleTransitionEnd);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-        window.removeEventListener('transitionend', this.handleTransitionEnd);
-    }
-
-    handleScroll = () => {
-        const { changeColorOnScrollHeight } = this.props;
-        const windowsScrollTop = window.pageYOffset;
-        this.setState(state => ({
-            shouldChangeColor:
-                windowsScrollTop >
-                changeColorOnScrollHeight - WEB_APP_BAR_HEIGHT,
-            shouldHideTitle: windowsScrollTop > changeColorOnScrollHeight / 2,
-            showAvatarLogo: state.shouldHideTitle,
-            showFAB: windowsScrollTop > window.innerHeight * 1.2
-        }));
-    };
-
-    handleTransitionEnd = () => {
-        if (this.avatarRef) {
-            const { classes } = this.props;
-            const { shouldHideTitle } = this.state;
-            if (shouldHideTitle) {
-                this.avatarRef.classList.add(classes.none);
-            } else {
-                this.avatarRef.classList.remove(classes.none);
-            }
-            this.setState(state => ({
-                showAvatarLogo: state.shouldHideTitle
-            }));
-        }
-    };
-
-    render() {
-        const { classes } = this.props;
-        const {
-            shouldChangeColor,
-            shouldHideTitle,
-            showAvatarLogo,
-            showFAB
-        } = this.state;
-        const avatarClass = classNames({
-            [classes.avatar]: true,
-            [classes.hideAvatar]: shouldHideTitle,
-            [classes.showAvatar]: !shouldHideTitle
-        });
-        return (
-            <PageContainer>
-                <QFAppBar
-                    shouldChangeColor={shouldChangeColor}
-                    showAvatarLogo={showAvatarLogo}
-                />
-                <QFBanner
-                    image={resolver.bannerImage}
-                    style={styles.bannerStyle}
-                >
-                    <BannerInfo />
-                </QFBanner>
-                <div
-                    className={avatarClass}
-                    ref={ref => {
-                        this.avatarRef = ref;
-                    }}
-                >
-                    <QFAvatar image={resolver.avatar} />
-                </div>
-                {showFAB && <QFFab />}
-            </PageContainer>
-        );
-    }
-}
-
-const styles = {
+const useStyles = makeStyles({
     bannerStyle: {
         justifyContent: 'center'
     },
@@ -128,13 +40,87 @@ const styles = {
     none: {
         display: 'none'
     }
+});
+
+export const Header = ({
+    changeColorOnScrollHeight = dimens.fontSize.bannerSize,
+    ...remainProps
+}) => {
+    const avatarRef = useRef();
+    const classes = useStyles();
+    const [state, setState] = useSetState({
+        shouldChangeColor: false,
+        shouldHideTitle: false,
+        showAvatarLogo: false,
+        showFAB: false
+    });
+
+    const {
+        shouldChangeColor,
+        shouldHideTitle,
+        showAvatarLogo,
+        showFAB
+    } = state;
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('transitionend', handleTransitionEnd);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('transitionend', handleTransitionEnd);
+        };
+    });
+
+    const handleScroll = () => {
+        const windowsScrollTop = window.pageYOffset;
+        setState({
+            shouldChangeColor:
+                windowsScrollTop >
+                changeColorOnScrollHeight - WEB_APP_BAR_HEIGHT,
+            shouldHideTitle: windowsScrollTop > changeColorOnScrollHeight / 2,
+            showAvatarLogo: shouldHideTitle,
+            showFAB: windowsScrollTop > window.innerHeight * 1.2
+        });
+    };
+
+    const handleTransitionEnd = () =>
+        throttle(() => {
+            const { current } = avatarRef;
+            if (shouldHideTitle) {
+                current.classList.add(classes.none);
+            } else {
+                current.classList.remove(classes.none);
+            }
+            setState({ showAvatarLogo: shouldHideTitle });
+        }, SCROLL_THROTTLE_VALUE);
+
+    const avatarClass = classNames({
+        [classes.avatar]: true,
+        [classes.hideAvatar]: shouldHideTitle,
+        [classes.showAvatar]: !shouldHideTitle
+    });
+
+    return (
+        <PageContainer {...remainProps}>
+            <QFAppBar
+                shouldChangeColor={shouldChangeColor}
+                showAvatarLogo={showAvatarLogo}
+            />
+            <QFBanner
+                image={resolver.bannerImage}
+                className={classes.bannerStyle}
+            >
+                <BannerInfo />
+            </QFBanner>
+            <div className={avatarClass} ref={avatarRef}>
+                <QFAvatar image={resolver.avatar} />
+            </div>
+            {showFAB && <QFFab />}
+        </PageContainer>
+    );
 };
 
 Header.propTypes = {
-    classes: PropTypes.object.isRequired,
     changeColorOnScrollHeight: PropTypes.number
 };
-Header.defaultProps = {
-    changeColorOnScrollHeight: dimens.fontSize.bannerSize
-};
-export default withStyles(styles)(Header);
