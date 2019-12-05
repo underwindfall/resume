@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     }
 });
 
-export const Skills = ({ skills, ...remainProps }) => {
+export const Skills = ({ skills = [], ...remainProps }) => {
     const classes = useStyles();
     return (
         <Fade>
@@ -35,7 +35,4 @@ export const Skills = ({ skills, ...remainProps }) => {
 
 Skills.propTypes = {
     skills: PropTypes.object.isRequired
-};
-Skills.defaultProps = {
-    skills: []
 };

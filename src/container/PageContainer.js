@@ -13,8 +13,8 @@ const useStyles = makeStyles({
 });
 
 export const PageContainer = ({
-    className,
-    style,
+    className = undefined,
+    style = {},
     children,
     ...remainProps
 }) => {
@@ -34,9 +34,4 @@ PageContainer.propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
     style: PropTypes.object
-};
-
-PageContainer.defaultProps = {
-    style: {},
-    className: undefined
 };

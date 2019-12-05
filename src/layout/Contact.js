@@ -8,7 +8,7 @@ import { GridContainer } from '../container/GridContainer';
 import { QFGridItem } from '../components/QFGridItem';
 import { QFButton } from '../components/QFButton';
 import { QFText } from '../components/QFText';
-import { useTimeoutAction } from '../enhancer/useTimeoutAction';
+import { useTimeout } from '../hooks/useTimeout';
 import { responsiveContainer } from '../styles';
 import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export const Contact = ({ props }) => {
-    const { handleAction, loading, success } = useTimeoutAction(
+    const { handleAction, loading, success } = useTimeout(
         () =>
             (window.location = new URL(
                 'mailto:yangqifan02@gmail.com',

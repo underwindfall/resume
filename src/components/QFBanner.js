@@ -32,7 +32,12 @@ const useStyles = makeStyles({
     }
 });
 
-export const QFBanner = ({ image, style, children, ...remainProps }) => {
+export const QFBanner = ({
+    image = undefined,
+    style = undefined,
+    children,
+    ...remainProps
+}) => {
     const classes = useStyles();
     return (
         <div
@@ -49,9 +54,4 @@ QFBanner.propTypes = {
     style: PropTypes.object,
     image: PropTypes.string,
     children: PropTypes.node
-};
-
-QFBanner.defaultProps = {
-    style: undefined,
-    image: undefined
 };

@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export const EducationInfo = ({ items, ...remainProps }) => {
+export const EducationInfo = ({ items = [], ...remainProps }) => {
     const classes = useStyles();
     return (
         <List className={classes.root} {...remainProps}>
@@ -119,8 +119,4 @@ export const EducationInfo = ({ items, ...remainProps }) => {
 
 EducationInfo.propTypes = {
     items: PropTypes.array.isRequired
-};
-
-EducationInfo.defaultProps = {
-    items: []
 };

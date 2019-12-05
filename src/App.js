@@ -67,7 +67,7 @@ class App extends Component {
                                 <IssuePage />
                             ) : (
                                 <Fragment>
-                                    <section id="sectionProfile" >
+                                    <section id="sectionProfile">
                                         <Profile />
                                     </section>
                                     <section id="sectionExperience">

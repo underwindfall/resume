@@ -6,7 +6,7 @@ import { GridContainer } from '../container/GridContainer';
 import { QFText } from './QFText';
 import { QFButton } from './QFButton';
 import { QFGridItem } from './QFGridItem';
-import { useTimeoutAction } from '../enhancer/useTimeoutAction';
+import { useTimeout } from '../hooks/useTimeout';
 import { infoText } from '../styles';
 import { strings } from '../i18n';
 import * as colors from '../res/colors';
@@ -42,7 +42,7 @@ const useStyles = makeStyles({
 });
 
 export const BannerInfo = React.memo(({ props }) => {
-    const { handleAction, loading, success } = useTimeoutAction(() =>
+    const { handleAction, loading, success } = useTimeout(() =>
         window.open(`${process.env.PUBLIC_URL}/resume.pdf`, '_blank')
     );
 
