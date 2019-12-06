@@ -19,14 +19,12 @@ jobs:
       
       - name: Install
         run: |
-          yarn
-        env:
-          CI: true
+             npm install -g yarn
                
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3-test
         with:
-          GITHUB_TOKEN: ${{ secrets.CIResumeToken }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: build
           BUILD_SCRIPT: yarn install && yarn build
