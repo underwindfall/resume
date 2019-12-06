@@ -7,21 +7,11 @@ jobs:
 
   build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Use Node.js 8.x
-        uses: actions/setup-node@master
-        with:
-          node-version: 8.x
+    steps:        
       
-      - name: Install
-        run: |
-          yarn
-        env:
-          CI: true
-        
       - name: Checkout
-        uses: actions/checkout@master
-
+        uses: actions/checkout@v1
+           
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         env:
