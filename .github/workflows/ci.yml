@@ -15,7 +15,6 @@ jobs:
       - name: Install and Test
         run: |
           yarn
-          yarn test
         env:
           CI: true
 
@@ -28,7 +27,7 @@ jobs:
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.CIResumeToken }}
+          ACCESS_TOKEN: ${{ secrets.CIResumeToken }}
           BRANCH: gh-pages
           FOLDER: build
           BUILD_SCRIPT: yarn install && yarn build
