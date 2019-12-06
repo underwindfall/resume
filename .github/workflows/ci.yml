@@ -24,7 +24,7 @@ jobs:
           CI: true
                
       - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3.0.4
+        uses: JamesIves/github-pages-deploy-action@releases/v3-test
         env:
           GITHUB_TOKEN: ${{ secrets.CIResumeToken }}
           BRANCH: gh-pages
