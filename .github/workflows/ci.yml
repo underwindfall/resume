@@ -28,7 +28,7 @@ jobs:
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
-          ACCESS_TOKEN: ${{ secrets.CIResumeToken }}
+          GITHUB_TOKEN: ${{ secrets.CIResumeToken }}
           BRANCH: gh-pages
           FOLDER: build
-          BUILD_SCRIPT: yarn && yarn build
+          BUILD_SCRIPT: yarn install && yarn build
