@@ -11,9 +11,20 @@ jobs:
       
       - name: Checkout
         uses: actions/checkout@v1
-           
+      
+      - name: Use Node.js 8.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 8.x
+      
+      - name: Install
+        run: |
+          yarn
+        env:
+          CI: true
+               
       - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v3.0.4
         env:
           GITHUB_TOKEN: ${{ secrets.CIResumeToken }}
           BRANCH: gh-pages
