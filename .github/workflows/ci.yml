@@ -23,9 +23,9 @@ jobs:
         uses: actions/checkout@master
 
       - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         env:
-          ACCESS_TOKEN: ${{ secrets.CIResumeToken }}
+          GITHUB_TOKEN: ${{ secrets.CIResumeToken }}
           BRANCH: gh-pages
           FOLDER: build
           BUILD_SCRIPT: yarn install && yarn build
