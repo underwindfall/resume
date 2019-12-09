@@ -1,18 +1,41 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import QFText from './QFText';
-import QFButton from './QFButton';
-import RowContainer from '../container/RowContainer';
+import { makeStyles } from '@material-ui/styles';
+import { QFText } from './QFText';
+import { QFButton } from './QFButton';
+import { RowContainer } from '../container/RowContainer';
 import { infoText } from '../styles';
 import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 
 const handleClick = url => () => window.open(url, '_blank');
 
-const ProfileInfo = ({ classes, ...remainProps }) => {
+const useStyles = makeStyles({
+    infoContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        marginTop: dimens.spacing.zero
+    },
+    name: {
+        ...infoText,
+        marginTop: dimens.spacing.xxLarge,
+        fontWeight: 700
+    },
+    title: {
+        ...infoText
+    },
+    iconContainer: {
+        justifyContent: 'center'
+    },
+    icon: {
+        margin: dimens.spacing.mSmall
+    }
+});
+
+export const ProfileInfo = ({ ...props }) => {
+    const classes = useStyles();
     return (
-        <div className={classes.infoContainer} {...remainProps}>
+        <div className={classes.infoContainer} {...props}>
             <QFText
                 className={classes.name}
                 text={strings.about.info.author}
@@ -25,7 +48,7 @@ const ProfileInfo = ({ classes, ...remainProps }) => {
                 font="bold"
                 variant="h5"
             />
-            <RowContainer style={styles.iconContainer}>
+            <RowContainer className={classes.iconContainer}>
                 <QFButton
                     justIcon
                     link
@@ -48,31 +71,5 @@ const ProfileInfo = ({ classes, ...remainProps }) => {
         </div>
     );
 };
-const styles = {
-    infoContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        marginTop: dimens.spacing.zero
-    },
-    name: {
-        ...infoText,
-        marginTop: dimens.spacing.xxLarge,
-        fontWeight: 700
-    },
-    title: {
-        ...infoText
-    },
-    iconContainer: {
-        justifyContent: 'center'
-    },
-    icon: {
-        margin: dimens.spacing.mSmall
-    }
-};
 
-ProfileInfo.propTypes = {
-    classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(ProfileInfo);
+ProfileInfo.propTypes = {};

@@ -1,11 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
-import PageContainer from '../container/PageContainer';
-import QFText from '../components/QFText';
+import { makeStyles } from '@material-ui/styles';
+import { PageContainer } from '../container/PageContainer';
+import { QFText } from '../components/QFText';
 import { strings } from '../i18n';
 
-const IssuePage = ({ classes, ...props }) => {
+const useStyles = makeStyles({
+    root: {
+        textAlign: 'center'
+    }
+});
+
+export const IssuePage = ({ props }) => {
+    const classes = useStyles();
     return (
         <PageContainer className={classes.root} {...props}>
             <QFText variant="h3" text={strings.issuePage.title} />
@@ -14,13 +20,4 @@ const IssuePage = ({ classes, ...props }) => {
     );
 };
 
-const styles = {
-    root: {
-        textAlign: 'center'
-    }
-};
-IssuePage.propTypes = {
-    classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(IssuePage);
+IssuePage.propTypes = {};

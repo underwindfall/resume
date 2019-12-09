@@ -1,104 +1,20 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import SectionContainer from '../container/SectionContainer';
-import PageContainer from '../container/PageContainer';
-import GridContainer from '../container/GridContainer';
-import QFGridItem from '../components/QFGridItem';
-import QFButton from '../components/QFButton';
-import QFText from '../components/QFText';
+import { CircularProgress } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+import { SectionContainer } from '../container/SectionContainer';
+import { PageContainer } from '../container/PageContainer';
+import { GridContainer } from '../container/GridContainer';
+import { QFGridItem } from '../components/QFGridItem';
+import { QFButton } from '../components/QFButton';
+import { QFText } from '../components/QFText';
+import { useTimeout } from '../hooks/useTimeout';
 import { responsiveContainer } from '../styles';
 import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
 
-class Contact extends Component {
-    state = {
-        loading: false,
-        success: false
-    };
-
-    componentWillUnmount() {
-        clearTimeout(this.timer);
-    }
-
-    handleButtonClick = () => {
-        if (!this.state.loading) {
-            this.setState(
-                {
-                    success: false,
-                    loading: true
-                },
-                () => {
-                    this.timer = setTimeout(() => {
-                        this.setState({
-                            loading: false,
-                            success: true
-                        });
-                        window.location = new URL(
-                            'mailto:yangqifan02@gmail.com',
-                            window.location
-                        ).toString();
-                    }, 2000);
-                }
-            );
-        }
-    };
-
-    render() {
-        const { loading, success } = this.state;
-        const { classes, ...remainProps } = this.props;
-        const buttonClassname = classNames({
-            [classes.buttonSuccess]: success
-        });
-        return (
-            <PageContainer className={classes.container}>
-                <SectionContainer
-                    sectionIcon={strings.contact.icon}
-                    sectionTitle={strings.contact.title}
-                >
-                    <div className={classes.section} {...remainProps}>
-                        <GridContainer
-                            justify="center"
-                            alignItems="center"
-                            className={classes.grid}
-                        >
-                            <QFGridItem
-                                cs={12}
-                                sm={12}
-                                md={8}
-                                className={classes.item}
-                            >
-                                <QFText
-                                    text={strings.contact.description}
-                                    className={classes.description}
-                                    variant="h4"
-                                />
-                                <QFButton
-                                    color="download"
-                                    disabled={loading}
-                                    className={buttonClassname}
-                                    onClick={this.handleButtonClick}
-                                >
-                                    SEND
-                                </QFButton>
-                                {loading && (
-                                    <CircularProgress
-                                        size={24}
-                                        className={classes.buttonProgress}
-                                    />
-                                )}
-                            </QFGridItem>
-                        </GridContainer>
-                    </div>
-                </SectionContainer>
-            </PageContainer>
-        );
-    }
-}
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -146,9 +62,64 @@ const styles = theme => ({
             backgroundColor: colors.secondaryDarkColor
         }
     }
-});
-Contact.propTypes = {
-    classes: PropTypes.object.isRequired
+}));
+
+export const Contact = ({ props }) => {
+    const { handleAction, loading, success } = useTimeout(
+        () =>
+            (window.location = new URL(
+                'mailto:yangqifan02@gmail.com',
+                window.location
+            ).toString())
+    );
+    const classes = useStyles();
+    const buttonClassname = classNames({
+        [classes.buttonSuccess]: success
+    });
+
+    return (
+        <PageContainer className={classes.container}>
+            <SectionContainer
+                sectionIcon={strings.contact.icon}
+                sectionTitle={strings.contact.title}
+            >
+                <div className={classes.section} {...props}>
+                    <GridContainer
+                        justify="center"
+                        alignItems="center"
+                        className={classes.grid}
+                    >
+                        <QFGridItem
+                            cs={12}
+                            sm={12}
+                            md={8}
+                            className={classes.item}
+                        >
+                            <QFText
+                                text={strings.contact.description}
+                                className={classes.description}
+                                variant="h4"
+                            />
+                            <QFButton
+                                color="download"
+                                disabled={loading}
+                                className={buttonClassname}
+                                onClick={handleAction}
+                            >
+                                SEND
+                            </QFButton>
+                            {loading && (
+                                <CircularProgress
+                                    size={24}
+                                    className={classes.buttonProgress}
+                                />
+                            )}
+                        </QFGridItem>
+                    </GridContainer>
+                </div>
+            </SectionContainer>
+        </PageContainer>
+    );
 };
 
-export default withStyles(styles)(Contact);
+Contact.propTypes = {};

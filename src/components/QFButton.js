@@ -1,41 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Button from '@material-ui/core/Button';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 import * as colors from '../res/colors';
 
-const QFButton = ({
-    classes,
-    color,
-    size,
-    round,
-    simple,
-    link,
-    justIcon,
-    children,
-    className,
-    ...remainProps
-}) => {
-    const buttonClasses = classNames({
-        [classes.button]: true,
-        [classes[size]]: size,
-        [classes[color]]: color,
-        [classes.round]: round,
-        [classes.link]: link,
-        [classes.justIcon]: justIcon,
-        [classes[color]]: color,
-        [classes.simple]: simple,
-        [className]: className
-    });
-    return (
-        <Button {...remainProps} className={buttonClasses}>
-            {children}
-        </Button>
-    );
-};
-
-const styles = {
+const useStyles = makeStyles({
     button: {
         minHeight: 'auto',
         minWidth: 'auto',
@@ -216,10 +186,43 @@ const styles = {
     round: {
         borderRadius: '30px'
     }
-};
+});
+
+export const QFButton = React.forwardRef((props, ref) => {
+    const {
+        color,
+        size,
+        round,
+        simple,
+        link,
+        justIcon,
+        children,
+        className,
+        ...remainProps
+    } = props;
+
+    const classes = useStyles();
+
+    const buttonClasses = classNames({
+        [classes.button]: true,
+        [classes[size]]: size,
+        [classes[color]]: color,
+        [classes.round]: round,
+        [classes.link]: link,
+        [classes.justIcon]: justIcon,
+        [classes[color]]: color,
+        [classes.simple]: simple,
+        [className]: className
+    });
+    return (
+        <Button {...remainProps} ref={ref} className={buttonClasses}>
+            {children}
+        </Button>
+    );
+});
 
 QFButton.propTypes = {
-    classes: PropTypes.object.isRequired,
+    className: PropTypes.string,
     color: PropTypes.oneOf(['linkedin', 'github', 'download']),
     size: PropTypes.oneOf(['sm', 'lg']),
     simple: PropTypes.bool,
@@ -227,5 +230,3 @@ QFButton.propTypes = {
     link: PropTypes.bool,
     justIcon: PropTypes.bool
 };
-
-export default withStyles(styles)(QFButton);

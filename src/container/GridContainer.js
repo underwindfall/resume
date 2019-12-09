@@ -1,43 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { Grid } from '@material-ui/core';
 import * as dimens from '../res/dimens';
+import { makeStyles } from '@material-ui/styles';
 
-const styles = {
+const useStyles = makeStyles({
     grid: {
         marginRight: dimens.spacing.zero,
         marginLeft: dimens.spacing.zero,
         width: 'auto'
     }
-};
+});
 
-const GridContainer = ({
-    classes,
+export const GridContainer = ({
     children,
     style,
-    className,
+    className = '',
     ...remainProps
-}) => (
-    <Grid
-        container
-        {...remainProps}
-        className={classes.grid + ' ' + className}
-        style={style}
-    >
-        {children}
-    </Grid>
-);
-
-GridContainer.defaultProps = {
-    className: ''
+}) => {
+    const classes = useStyles();
+    return (
+        <Grid
+            container
+            {...remainProps}
+            className={classes.grid + ' ' + className}
+            style={style}
+        >
+            {children}
+        </Grid>
+    );
 };
 
 GridContainer.propTypes = {
-    classes: PropTypes.object.isRequired,
     children: PropTypes.node,
     className: PropTypes.string,
     style: PropTypes.object
 };
-
-export default withStyles(styles)(GridContainer);
