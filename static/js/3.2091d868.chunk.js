@@ -1,0 +1,2 @@
+(this.webpackJsonpresume=this.webpackJsonpresume||[]).push([[3],{187:function(e,t,a){"use strict";a.r(t),a.d(t,"IssuePage",(function(){return p}));var n=a(0),s=a.n(n),r=a(55),c=a(19),i=a(11),u=a(6),o=Object(r.a)({root:{textAlign:"center"}}),p=function(e){var t=e.props,a=o();return s.a.createElement(c.a,Object.assign({className:a.root},t),s.a.createElement(i.a,{variant:"h3",text:u.b.issuePage.title}),s.a.createElement(i.a,{variant:"h4",text:u.b.issuePage.content}))}}}]);
+//# sourceMappingURL=3.2091d868.chunk.js.map
