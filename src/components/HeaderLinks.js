@@ -1,70 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import QFText from './QFText';
+import { List, ListItem } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+import { QFText } from './QFText';
 import { strings } from '../i18n';
 import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 
-const HeaderLinks = ({ classes, changeColor, ...props }) => {
-    const listItemClasses = classNames({
-        [classes.listItem]: true,
-        [classes.changeColor]: changeColor
-    });
-    return (
-        <List className={classes.list} {...props}>
-            <ListItem className={listItemClasses}>
-                <a href="#sectionProfile">
-                    <QFText
-                        text={strings.header.list.About}
-                        className={classes.navLink}
-                        font="regular"
-                    />
-                </a>
-            </ListItem>
-            <ListItem className={listItemClasses}>
-                <a href="#sectionExperience">
-                    <QFText
-                        text={strings.header.list.Experience}
-                        className={classes.navLink}
-                        font="regular"
-                    />
-                </a>
-            </ListItem>
-            <ListItem className={listItemClasses}>
-                <a href="#sectionSkills">
-                    <QFText
-                        text={strings.header.list.Skills}
-                        className={classes.navLink}
-                        font="regular"
-                    />
-                </a>
-            </ListItem>
-            <ListItem className={listItemClasses}>
-                <a href="#sectionEducation">
-                    <QFText
-                        text={strings.header.list.Education}
-                        className={classes.navLink}
-                        font="regular"
-                    />
-                </a>
-            </ListItem>
-            <ListItem className={listItemClasses}>
-                <a href="#sectionContact">
-                    <QFText
-                        text={strings.header.list.Contact}
-                        className={classes.navLink}
-                        font="regular"
-                    />
-                </a>
-            </ListItem>
-        </List>
-    );
-};
-const headerLinksStyle = theme => ({
+const useStyles = makeStyles(theme => ({
     list: {
         listStyle: 'none',
         margin: dimens.spacing.zero,
@@ -119,11 +63,66 @@ const headerLinksStyle = theme => ({
     changeColor: {
         color: colors.secondaryDarkColor
     }
-});
+}));
 
-HeaderLinks.propTypes = {
-    changeColor: PropTypes.bool.isRequired,
-    classes: PropTypes.object.isRequired
+export const HeaderLinks = ({ changeColor, ...props }) => {
+    const classes = useStyles();
+    const listItemClasses = classNames({
+        [classes.listItem]: true,
+        [classes.changeColor]: changeColor
+    });
+
+    return (
+        <List className={classes.list} {...props}>
+            <ListItem className={listItemClasses}>
+                <a href="#sectionProfile">
+                    <QFText
+                        text={strings.header.list.About}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
+            </ListItem>
+            <ListItem className={listItemClasses}>
+                <a href="#sectionExperience">
+                    <QFText
+                        text={strings.header.list.Experience}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
+            </ListItem>
+            <ListItem className={listItemClasses}>
+                <a href="#sectionSkills">
+                    <QFText
+                        text={strings.header.list.Skills}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
+            </ListItem>
+            <ListItem className={listItemClasses}>
+                <a href="#sectionEducation">
+                    <QFText
+                        text={strings.header.list.Education}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
+            </ListItem>
+            <ListItem className={listItemClasses}>
+                <a href="#sectionContact">
+                    <QFText
+                        text={strings.header.list.Contact}
+                        className={classes.navLink}
+                        font="regular"
+                    />
+                </a>
+            </ListItem>
+        </List>
+    );
 };
 
-export default withStyles(headerLinksStyle)(HeaderLinks);
+HeaderLinks.propTypes = {
+    changeColor: PropTypes.bool.isRequired
+};

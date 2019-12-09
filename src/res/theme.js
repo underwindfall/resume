@@ -1,4 +1,4 @@
-import {createMuiTheme} from '@material-ui/core/es/styles';
+import { createMuiTheme } from '@material-ui/core';
 import * as colors from './colors';
 
 export const ResumeTheme = createMuiTheme({
@@ -16,9 +16,7 @@ export const ResumeTheme = createMuiTheme({
             // }
         }
     },
-    typography: {
-        useNextVariants: true
-    },
+    typography: {},
     palette: {
         primary: {
             light: colors.primaryColorLight,

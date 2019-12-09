@@ -1,10 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import QFButton from '../QFButton';
+import { makeStyles } from '@material-ui/core/styles';
+import { QFButton } from '../QFButton';
 import * as colors from '../../res/colors';
 
-const CountryFlag = ({ code, classes, styleProps, ...remainProps }) => {
+const useStyles = makeStyles({
+    icon: {
+        width: 'auto',
+        height: 'auto',
+        '&:hover,&:focus': {
+            color: 'inherit',
+            background: colors.backgroundGrey
+        }
+    }
+});
+
+export const CountryFlag = ({ code, styleProps, ...remainProps }) => {
+    const classes = useStyles();
     const emoji = code
         .toUpperCase()
         .replace(/./g, char =>
@@ -27,20 +39,7 @@ const CountryFlag = ({ code, classes, styleProps, ...remainProps }) => {
     );
 };
 
-const styles = {
-    icon: {
-        width: 'auto',
-        height: 'auto',
-        '&:hover,&:focus': {
-            color: 'inherit',
-            background: colors.backgroundGrey
-        }
-    }
-};
-
 CountryFlag.propTypes = {
     code: PropTypes.string.isRequired,
     styleProps: PropTypes.object
 };
-
-export default withStyles(styles)(CountryFlag);

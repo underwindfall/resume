@@ -1,11 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Avatar from '@material-ui/core/Avatar';
-import { withStyles } from '@material-ui/core/styles';
-import * as dimens from '../res/dimens';
 import classNames from 'classnames';
+import { Avatar } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+import * as dimens from '../res/dimens';
 
-const QFLogo = ({ classes, className, image, style, ...remainProps }) => {
+const useStyles = makeStyles({
+    avatar: {
+        width: dimens.spacing.logo,
+        height: dimens.spacing.logo,
+        borderRadius: '50% !important',
+        boxShadow:
+            '0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
+    }
+});
+
+export const QFLogo = ({ className, image, style = {}, ...remainProps }) => {
+    const classes = useStyles();
     const logoClasses = classNames({
         [classes.avatar]: true,
         [className]: className
@@ -21,23 +32,7 @@ const QFLogo = ({ classes, className, image, style, ...remainProps }) => {
     );
 };
 
-const styles = {
-    avatar: {
-        width: dimens.spacing.logo,
-        height: dimens.spacing.logo,
-        borderRadius: '50% !important',
-        boxShadow:
-            '0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
-    }
-};
 QFLogo.propTypes = {
-    ...Avatar.propTypes,
     image: PropTypes.string.isRequired,
-    classes: PropTypes.object.isRequired,
     style: PropTypes.object
 };
-QFLogo.defaultProps = {
-    style: {}
-};
-
-export default withStyles(styles)(QFLogo);

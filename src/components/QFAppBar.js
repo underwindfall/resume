@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Hidden from '@material-ui/core/Hidden';
-import HeaderLinks from './HeaderLinks';
-import IconButton from '@material-ui/core/es/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Drawer from '@material-ui/core/Drawer';
-import CountryFlag from './countryflag/CountryFlag';
-import QFText from './QFText';
-import QFLogo from './QFLogo';
+import { IconButton, AppBar, Toolbar, Hidden, Drawer } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+import Menu from '@material-ui/icons/Menu';
+import { HeaderLinks } from './HeaderLinks';
+import { CountryFlag } from './countryflag/CountryFlag';
+import { QFText } from './QFText';
+import { QFLogo } from './QFLogo';
 import { setValue } from '../utils/Storage';
 import { countries } from './countryflag/countries';
 import { boxShadow, transition } from '../styles';
@@ -22,94 +18,7 @@ import * as colors from '../res/colors';
 
 export const WEB_APP_BAR_HEIGHT = 50;
 
-class QFAppBar extends Component {
-    state = {
-        mobileOpen: false
-    };
-
-    handleDrawerToggle = () => {
-        this.setState(state => ({
-            mobileOpen: !state.mobileOpen
-        }));
-    };
-
-    handleClickLanguage = language => () => {
-        setValue(language);
-        window.location.reload();
-    };
-
-    render() {
-        const { mobileOpen } = this.state;
-        const {
-            classes,
-            shouldChangeColor,
-            showAvatarLogo,
-            ...remainProps
-        } = this.props;
-        const appBarClasses = classNames({
-            [classes.appBar]: true,
-            [classes.changeColor]: shouldChangeColor
-        });
-        return (
-            <AppBar className={appBarClasses} {...remainProps}>
-                <Toolbar className={classes.container}>
-                    <div className={classes.flex}>
-                        {showAvatarLogo ? (
-                            <QFLogo image={resolver.avatar} />
-                        ) : (
-                            <QFText
-                                text={strings.header.title}
-                                className={classes.title}
-                                font="bold"
-                            />
-                        )}
-                    </div>
-                    <Hidden smDown>
-                        {countries.map((country, index) => (
-                            <CountryFlag
-                                key={index}
-                                code={country.iso2_cc}
-                                styleProps={{
-                                    fontSize: '2rem'
-                                }}
-                                onClick={this.handleClickLanguage(
-                                    country.language
-                                )}
-                            />
-                        ))}
-                        <HeaderLinks changeColor={mobileOpen} />
-                    </Hidden>
-                    <Hidden mdUp>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            onClick={this.handleDrawerToggle}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    </Hidden>
-                </Toolbar>
-                <Hidden mdUp>
-                    <Drawer
-                        variant="temporary"
-                        anchor="right"
-                        open={mobileOpen}
-                        classes={{
-                            paper: classes.drawerPaper
-                        }}
-                        onClose={this.handleDrawerToggle}
-                    >
-                        <div className={classes.appResponsive}>
-                            <HeaderLinks changeColor={mobileOpen} />
-                        </div>
-                    </Drawer>
-                </Hidden>
-            </AppBar>
-        );
-    }
-}
-
-const styles = {
+const useStyles = makeStyles({
     appBar: {
         display: 'flex',
         border: '0',
@@ -175,16 +84,86 @@ const styles = {
         color: '#555',
         backgroundColor: '#fff !important'
     }
+});
+
+export const QFAppBar = ({
+    shouldChangeColor = false,
+    showAvatarLogo = false,
+    ...remainProps
+}) => {
+    const classes = useStyles();
+    const [mobileOpen, setMobileOpen] = useState(false);
+
+    const handleDrawerToggle = () =>
+        setMobileOpen(prevMobileOpen => !prevMobileOpen);
+
+    const handleClickLanguage = language => () => {
+        setValue(language);
+        window.location.reload();
+    };
+
+    const appBarClasses = classNames({
+        [classes.appBar]: true,
+        [classes.changeColor]: shouldChangeColor
+    });
+
+    return (
+        <AppBar className={appBarClasses} {...remainProps}>
+            <Toolbar className={classes.container}>
+                <div className={classes.flex}>
+                    {showAvatarLogo ? (
+                        <QFLogo image={resolver.avatar} />
+                    ) : (
+                        <QFText
+                            text={strings.header.title}
+                            className={classes.title}
+                            font="bold"
+                        />
+                    )}
+                </div>
+                <Hidden smDown>
+                    {countries.map((country, index) => (
+                        <CountryFlag
+                            key={index}
+                            code={country.iso2_cc}
+                            styleProps={{
+                                fontSize: '2rem'
+                            }}
+                            onClick={handleClickLanguage(country.language)}
+                        />
+                    ))}
+                    <HeaderLinks changeColor={mobileOpen} />
+                </Hidden>
+                <Hidden mdUp>
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        onClick={handleDrawerToggle}
+                    >
+                        <Menu fontSize="large" />
+                    </IconButton>
+                </Hidden>
+            </Toolbar>
+            <Hidden mdUp>
+                <Drawer
+                    variant="temporary"
+                    anchor="right"
+                    open={mobileOpen}
+                    classes={{
+                        paper: classes.drawerPaper
+                    }}
+                    onClose={handleDrawerToggle}
+                >
+                    <div className={classes.appResponsive}>
+                        <HeaderLinks changeColor={mobileOpen} />
+                    </div>
+                </Drawer>
+            </Hidden>
+        </AppBar>
+    );
 };
 
 QFAppBar.propTypes = {
-    classes: PropTypes.object.isRequired,
     shouldChangeColor: PropTypes.bool,
     showAvatarLogo: PropTypes.bool
 };
-QFAppBar.defaultProps = {
-    shouldChangeColor: false,
-    showAvatarLogo: false
-};
-
-export default withStyles(styles)(QFAppBar);

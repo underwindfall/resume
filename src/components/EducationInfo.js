@@ -1,17 +1,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Fade } from 'react-reveal';
-import { withStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import GridContainer from '../container/GridContainer';
-import QFGridItem from './QFGridItem';
-import QFText from './QFText';
+import { List, ListItem } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+import { GridContainer } from '../container/GridContainer';
+import { QFGridItem } from './QFGridItem';
+import { QFText } from './QFText';
 import { responsiveContainer } from '../styles';
 import * as dimens from '../res/dimens';
 import * as colors from '../res/colors';
 
-const EducationInfo = ({ classes, items, ...remainProps }) => {
+const useStyles = makeStyles(theme => ({
+    root: {
+        paddingRight: dimens.spacing.sLarge,
+        paddingLeft: dimens.spacing.sLarge,
+        marginRight: 'auto',
+        marginLeft: 'auto',
+        ...responsiveContainer(theme)
+    },
+    container: {
+        lineHeight: '27px',
+        width: 'inherit',
+        margin: '0 auto',
+        paddingLeft: '40px',
+        paddingRight: '40px'
+    },
+    educationYearContainer: {
+        background: colors.accentColor,
+        textAlign: 'center'
+    },
+    desContainer: {
+        [theme.breakpoints.up('md')]: {
+            paddingRight: dimens.spacing.sLarge,
+            paddingLeft: dimens.spacing.sLarge
+        },
+        textAlign: 'start'
+    },
+    collegeName: {
+        color: colors.primaryColorDark
+    },
+    branch: {
+        color: colors.primaryColorLight
+    },
+    description: {
+        fontSize: dimens.spacing.sLarge,
+        color: colors.primaryColorLight
+    },
+    header: {
+        color: colors.primaryTextColor,
+        fontSize: dimens.spacing.large,
+        fontWeight: 'bold'
+    }
+}));
+
+export const EducationInfo = ({ items = [], ...remainProps }) => {
+    const classes = useStyles();
     return (
         <List className={classes.root} {...remainProps}>
             {items.map((item, index) => (
@@ -20,7 +63,7 @@ const EducationInfo = ({ classes, items, ...remainProps }) => {
                         justify="center"
                         alignItems="center"
                         container
-                        spacing={40}
+                        spacing={5}
                         className={classes.container}
                     >
                         <QFGridItem
@@ -73,56 +116,7 @@ const EducationInfo = ({ classes, items, ...remainProps }) => {
         </List>
     );
 };
-const styles = theme => ({
-    root: {
-        paddingRight: dimens.spacing.sLarge,
-        paddingLeft: dimens.spacing.sLarge,
-        marginRight: 'auto',
-        marginLeft: 'auto',
-        ...responsiveContainer(theme)
-    },
-    container: {
-        lineHeight: '27px',
-        width: 'inherit',
-        margin: '0 auto',
-        paddingLeft: '40px',
-        paddingRight: '40px'
-    },
-    educationYearContainer: {
-        background: colors.accentColor,
-        textAlign: 'center'
-    },
-    desContainer: {
-        [theme.breakpoints.up('md')]: {
-            paddingRight: dimens.spacing.sLarge,
-            paddingLeft: dimens.spacing.sLarge
-        },
-        textAlign: 'start'
-    },
-    collegeName: {
-        color: colors.primaryColorDark
-    },
-    branch: {
-        color: colors.primaryColorLight
-    },
-    description: {
-        fontSize: dimens.spacing.sLarge,
-        color: colors.primaryColorLight
-    },
-    header: {
-        color: colors.primaryTextColor,
-        fontSize: dimens.spacing.large,
-        fontWeight: 'bold'
-    }
-});
 
 EducationInfo.propTypes = {
-    classes: PropTypes.object.isRequired,
     items: PropTypes.array.isRequired
 };
-
-EducationInfo.defaultProps = {
-    items: []
-};
-
-export default withStyles(styles)(EducationInfo);

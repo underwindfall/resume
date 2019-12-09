@@ -9,18 +9,20 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/icons": "^3.0.2",
+    "@material-ui/codemod": "^4.5.0",
+    "@material-ui/core": "^4.7.1",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/styles": "^4.6.0",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
     "lodash.throttle": "^4.1.1",
-    "lottie-web": "^5.5.2",
+    "lottie-web": "^5.5.10",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-localization": "^1.0.13",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-localization": "^1.0.15",
     "react-reveal": "^1.2.2",
-    "react-scripts": "2.1.8",
+    "react-scripts": "3.3.0",
     "react-social-icons": "^4.1.0",
     "recompose": "^0.30.0"
   },
@@ -44,12 +46,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@storybook/addon-actions": "^5.0.6",
-    "@storybook/addon-links": "^5.0.6",
-    "@storybook/addons": "^5.0.6",
-    "@storybook/react": "^5.0.6",
-    "babel-loader": "^8.0.5",
-    "gh-pages": "^2.0.1"
+    "@babel/core": "^7.7.4",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "babel-loader": "^8.0.6",
+    "gh-pages": "^2.1.1"
   }
 }
