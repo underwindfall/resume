@@ -27,5 +27,5 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.CI_RESUME_TOKEN }}
           BASE_BRANCH: master
           BRANCH: gh-pages
-          FOLDER: public
-          BUILD_SCRIPT: yarn install && yarn build
+          FOLDER: build
+          BUILD_SCRIPT: yarn install && yarn predeploy
