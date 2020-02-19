@@ -2,14 +2,16 @@
   "layer": {
     "work": [
       "work-1",
-      "work-2"
+      "work-2",
+      "work-3"
     ],
     "project": [
       "project-1",
       "project-2",
       "project-3",
       "project-4",
-      "project-5"
+      "project-5",
+      "project-6"
     ],
     "education": [
       "education-1",
@@ -54,6 +56,13 @@
       "description": "Responsable du développement de l'application Android par Kotlin et Java. Mon travail consiste principalement à créer une application mobile extrêmement efficace et réactive pour nos clients."
     },
     "work-2": {
+      "startYear": "Aujourd'hui",
+      "endYear": "2,2018",
+      "company": "Paris VISEO Technologies,France",
+      "title": "Développeur Mobile",
+      "description": "Responsable du développement de l'application Android par Kotlin et Java. Mon travail consiste principalement à créer une application mobile extrêmement efficace et réactive pour nos clients."
+    },
+    "work-3": {
       "startYear": "2,2016",
       "endYear": "9,2015",
       "company": "Paris SIPCOM Society,France",
@@ -76,6 +85,26 @@
     },
     "project-1": {
       "startYear": "Aujour d'hui",
+      "endYear": "1,2020",
+      "title": "Netatmo",
+      "description": "Application iOT qui manager  l'écosystème de sécurité de la maison",
+      "playerRole": [
+        "- A joué un rôle clé dans le développement et le déploiement de nouveaux produits métier critiques, "
+      ],
+      "client_ico": "netatmo",
+      "role": "Développeur Android",
+      "techstack": [
+        "Kotlin",
+        "Java",
+        "Dagger",
+        "MVP",
+        "OkHttp",
+        "Robolectric"
+      ],
+      "link": "https://play.google.com/store/apps/details?id=com.netatmo.camera&hl=fr"
+    },
+    "project-2": {
+      "startYear": "12,2019",
       "endYear": "2,2018",
       "title": "Carrefour C-Zam & Carrefour Banque",
       "description": "Application bancaire C-zam pour un client grand compte: Carrefour Banque",
@@ -100,7 +129,7 @@
       ],
       "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
     },
-    "project-2": {
+    "project-3": {
       "startYear": "2,2018",
       "endYear": "12,2017",
       "title": "PSCP - Française des jeux (FDJ)",
@@ -121,9 +150,9 @@
         "Redux",
         "Jest"
       ],
-      "link": ""
+      "link": "https://play.google.com/store/apps/details?id=fr.fdj.clientpro"
     },
-    "project-3": {
+    "project-4": {
       "startYear": "2,2018",
       "endYear": "9,2017",
       "title": "Carrefour MarketPay",
@@ -143,7 +172,7 @@
       ],
       "link": ""
     },
-    "project-4": {
+    "project-5": {
       "startYear": "9,2017",
       "endYear": "9,2017",
       "title": "BEL-Sharing Cities",
@@ -161,7 +190,7 @@
       ],
       "link": ""
     },
-    "project-5": {
+    "project-6": {
       "startYear": "9,2017",
       "endYear": "2,2017",
       "title": "Jooboot",
