@@ -2,14 +2,16 @@
   "layer": {
     "work": [
       "work-1",
-      "work-2"
+      "work-2",
+      "work-3"
     ],
     "project": [
       "project-1",
       "project-2",
       "project-3",
       "project-4",
-      "project-5"
+      "project-5",
+      "project-6"
     ],
     "education": [
       "education-1",
@@ -48,12 +50,19 @@
   "content": {
     "work-1": {
       "startYear": "直到现在",
+      "endYear": "2,2020",
+      "company": "Netatmo",
+      "title": "Mobile Developer",
+      "description": "负责App线上功能优化，需求开发，产品迭代"
+    },
+    "work-2": {
+      "startYear": "12,2019",
       "endYear": "2,2018",
       "company": "Paris VISEO Technologies,France",
       "title": "Mobile Developer",
       "description": "负责App线上功能优化，需求开发，产品迭代和客户保持紧密联系以确保 APP 的运行无误"
     },
-    "work-2": {
+    "work-3": {
       "startYear": "2,2016",
       "endYear": "9,2015",
       "company": "Paris SIPCOM Society,France",
@@ -75,6 +84,26 @@
       "description": "在校期间，积极参与了需要的各项活动并掌握一定计算机的基础知识，努力学习的同时为自己去法国进一步深造打下了坚实的基础."
     },
     "project-1": {
+      "startYear": "Until Now",
+      "endYear": "1,2020",
+      "title": "Netatmo",
+      "description": "Netatmo安全系统，让家更安全",
+      "playerRole": [
+        "- 在团队期间完成了日常产品的迭代和嵌入式产品完成紧密联系"
+      ],
+      "client_ico": "netatmo",
+      "role": "Developer Android",
+      "techstack": [
+        "Kotlin",
+        "Java",
+        "Dagger",
+        "MVP",
+        "OkHttp",
+        "Robolectric"
+      ],
+      "link": "https://play.google.com/store/apps/details?id=com.netatmo.camera"
+    },
+    "project-2": {
       "startYear": "Until Now",
       "endYear": "2,2018",
       "title": "Carrefour C-Zam & Carrefour Banque",
@@ -98,9 +127,9 @@
         "Espresso",
         "Robolectric"
       ],
-      "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
+      "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android"
     },
-    "project-2": {
+    "project-3": {
       "startYear": "2,2018",
       "endYear": "12,2017",
       "title": "PSCP - Française des jeux (FDJ)",
@@ -120,9 +149,9 @@
         "Redux",
         "Jest"
       ],
-      "link": ""
+      "link": "https://play.google.com/store/apps/details?id=fr.fdj.clientpro"
     },
-    "project-3": {
+    "project-4": {
       "startYear": "2,2018",
       "endYear": "9,2017",
       "title": "Carrefour MarketPay",
@@ -141,7 +170,7 @@
       ],
       "link": ""
     },
-    "project-4": {
+    "project-5": {
       "startYear": "9,2017",
       "endYear": "9,2017",
       "title": "BEL-Sharing Cities",
@@ -159,7 +188,7 @@
       ],
       "link": ""
     },
-    "project-5": {
+    "project-6": {
       "startYear": "9,2017",
       "endYear": "2,2017",
       "title": "Jooboot",
