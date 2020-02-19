@@ -2,14 +2,16 @@
   "layer": {
     "work": [
       "work-1",
-      "work-2"
+      "work-2",
+      "work-3"
     ],
     "project": [
       "project-1",
       "project-2",
       "project-3",
       "project-4",
-      "project-5"
+      "project-5",
+      "project-6"
     ],
     "education": [
       "education-1",
@@ -48,12 +50,19 @@
   "content": {
     "work-1": {
       "startYear": "Until Now",
+      "endYear": "1,2020",
+      "company": "Netatmo,France",
+      "title": "Mobile Developer",
+      "description": "Responsible for developing the android application by kotlin and java. The application aimed to exchange interactions with IOT products."
+    },
+    "work-2": {
+      "startYear": "12,2019",
       "endYear": "2,2018",
       "company": "Paris VISEO Technologies,France",
       "title": "Mobile Developer",
       "description": "Responsible for developing the android application by kotlin and java. The most time of my work is trying to build a highly efficient and responsive mobile application for our clients."
     },
-    "work-2": {
+    "work-3": {
       "startYear": "2,2016",
       "endYear": "9,2015",
       "company": "Paris SIPCOM Society,France",
@@ -75,6 +84,26 @@
       "description": "I mainly studied such as C / C + + programming language, data structure, compilation principles etc during my three years in university. These basic knowledge lay a solid foundation for my study abroad in France- Besides, during the school I participated in community activities particularly in the 24-hour innovation contest, I won the second place in Asia's division."
     },
     "project-1": {
+      "startYear": "Until Now",
+      "endYear": "1,2020",
+      "title": "Netatmo",
+      "description": "The application is trying to use Netatmo security ecosystem that makes your home safer",
+      "playerRole": [
+        "- Played key role in developing and deploying new critical business product via some iOT System"
+      ],
+      "client_ico": "netatmo",
+      "role": "Developer Android",
+      "techstack": [
+        "Kotlin",
+        "Java",
+        "Dagger",
+        "MVP",
+        "OkHttp",
+        "Robolectric"
+      ],
+      "link": "https://play.google.com/store/apps/details?id=com.netatmo.camera&hl=fr"
+    },
+    "project-2": {
       "startYear": "Until Now",
       "endYear": "2,2018",
       "title": "Carrefour C-Zam & Carrefour Banque",
@@ -100,7 +129,7 @@
       ],
       "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
     },
-    "project-2": {
+    "project-3": {
       "startYear": "2,2018",
       "endYear": "12,2017",
       "title": "PSCP - Française des jeux (FDJ)",
@@ -121,9 +150,9 @@
         "Redux",
         "Jest"
       ],
-      "link": ""
+      "link": "https://play.google.com/store/apps/details?id=fr.fdj.clientpro"
     },
-    "project-3": {
+    "project-4": {
       "startYear": "2,2018",
       "endYear": "9,2017",
       "title": "Carrefour MarketPay",
@@ -143,7 +172,7 @@
       ],
       "link": ""
     },
-    "project-4": {
+    "project-5": {
       "startYear": "9,2017",
       "endYear": "9,2017",
       "title": "BEL-Sharing Cities",
@@ -161,7 +190,7 @@
       ],
       "link": ""
     },
-    "project-5": {
+    "project-6": {
       "startYear": "9,2017",
       "endYear": "2,2017",
       "title": "Jooboot",

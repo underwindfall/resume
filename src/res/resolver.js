@@ -24,5 +24,6 @@ export const resolver = {
     fdj: require('../assets/img/fdj.png'),
     viseo: require('../assets/img/viseo.png'),
     bel: require('../assets/img/bel.png'),
-    czam: require('../assets/img/czam.png')
+    czam: require('../assets/img/czam.png'),
+    netatmo: require('../assets/img/netatmo.jpg')
 };
