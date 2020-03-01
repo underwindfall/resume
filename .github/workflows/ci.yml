@@ -47,8 +47,9 @@ jobs:
         if: success()
         env:    
             SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-            SLACK_USERNAME : "Personal Resume"
-            SLACK_AVATAR: repository
+            SLACK_USERNAME : "Resume"
+            SLACK_AVATAR: sender
+	    SLACK_CUSTOM_PAYLOAD: '{"text":"Personal Resum has deployed Successfully {{ GITHUB_REPOSITORY }} \\n *with* `new` _line_ escaped","username": "{{ GITHUB_ACTOR }}"}' 	
         uses: Ilshidur/action-slack@master    
         with:
           args: 'Success deploying :rocket:'    
