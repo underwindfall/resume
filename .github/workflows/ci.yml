@@ -34,22 +34,15 @@ jobs:
           FOLDER: build
 
       - name : Notification Error
-        if: failure()
-        env:    
-            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-            SLACK_USERNAME : "Personal Resume"
-            SLACK_AVATAR: repository
-        uses: Ilshidur/action-slack@master    
+        if: always()
+        uses: homoluctus/slatify@master    
         with:
-          args: 'Error deploying :bug:'
-
-      - name : Notification Success
-        if: success()
-        env:    
-            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-            SLACK_USERNAME : "Resume"
-            SLACK_AVATAR: sender
-	    SLACK_CUSTOM_PAYLOAD: '{"text":"Personal Resum has deployed Successfully {{ GITHUB_REPOSITORY }} \\n *with* `new` _line_ escaped","username": "{{ GITHUB_ACTOR }}"}' 	
-        uses: Ilshidur/action-slack@master    
-        with:
-          args: 'Success deploying :rocket:'    
+          type: ${{ job.status }}
+	  job_name: '*Deploying Check*'
+	  mention: 'here'
+	  mention_if: 'failure'
+	  channel: '#ci'
+	  url: ${{ secrets.SLACK_WEBHOOK }}
+	  commit: true
+	  token: ${{ secrets.CI_RESUME_TOKEN }}
+   
