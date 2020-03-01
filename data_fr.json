@@ -50,21 +50,21 @@
   "content": {
     "work-1": {
       "startYear": "Aujourd'hui",
-      "endYear": "2,2018",
+      "endYear": "02,2018",
       "company": "Paris VISEO Technologies,France",
       "title": "Développeur Mobile",
       "description": "Responsable du développement de l'application Android par Kotlin et Java. Mon travail consiste principalement à créer une application mobile extrêmement efficace et réactive pour nos clients."
     },
     "work-2": {
       "startYear": "12,2019",
-      "endYear": "2,2018",
+      "endYear": "02,2018",
       "company": "Paris VISEO Technologies,France",
       "title": "Développeur Mobile",
       "description": "Responsable du développement de l'application Android par Kotlin et Java. Mon travail consiste principalement à créer une application mobile extrêmement efficace et réactive pour nos clients."
     },
     "work-3": {
-      "startYear": "2,2016",
-      "endYear": "9,2015",
+      "startYear": "02,2016",
+      "endYear": "09,2015",
       "company": "Paris SIPCOM Society,France",
       "title": ".Net Développeur Stage",
       "description": "Je suis principalement responsable du site Web officiel de la société, du fonctionnement quotidien de la page, de l'optimisation de la gestion de la page d'arrière-plan. Le travail est très saturé, mais pour gagner du temps et apprendre beaucoup de nouveaux frameworks et bibliothèques, JQuery a une certaine compréhension. Durant ce stage, j'ai amélioré mes compétences, notamment en développement front-end et back-end."
@@ -85,7 +85,7 @@
     },
     "project-1": {
       "startYear": "Aujour d'hui",
-      "endYear": "1,2020",
+      "endYear": "01,2020",
       "title": "Netatmo",
       "description": "Application iOT qui manager  l'écosystème de sécurité de la maison",
       "playerRole": [
@@ -105,7 +105,7 @@
     },
     "project-2": {
       "startYear": "12,2019",
-      "endYear": "2,2018",
+      "endYear": "02,2018",
       "title": "Carrefour C-Zam & Carrefour Banque",
       "description": "Application bancaire C-zam pour un client grand compte: Carrefour Banque",
       "playerRole": [
@@ -130,7 +130,7 @@
       "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
     },
     "project-3": {
-      "startYear": "2,2018",
+      "startYear": "02,2018",
       "endYear": "12,2017",
       "title": "PSCP - Française des jeux (FDJ)",
       "description": "L’application PSCP est à destination des clients professionnels et des équipes commerciales de FdJ. L’application permet de diffuser sur un canal dédié des informations commerciales (combi-bonus, pronostiques, actualités, informations sur les épreuves",
@@ -153,8 +153,8 @@
       "link": "https://play.google.com/store/apps/details?id=fr.fdj.clientpro"
     },
     "project-4": {
-      "startYear": "2,2018",
-      "endYear": "9,2017",
+      "startYear": "02,2018",
+      "endYear": "09,2017",
       "title": "Carrefour MarketPay",
       "description": "Une application et une personne Web aident la personne à réaliser un nouveau paiement par interaction afin de créer de la valeur et d'entretenir les relations avec les clients.",
       "client_ico": "carrefour",
@@ -173,8 +173,8 @@
       "link": ""
     },
     "project-5": {
-      "startYear": "9,2017",
-      "endYear": "9,2017",
+      "startYear": "09,2017",
+      "endYear": "09,2017",
       "title": "BEL-Sharing Cities",
       "client_ico": "bel",
       "description": "Réalisation d’une application de gestion des stocks et des ventes de produit fromager à\ndestination des pays en voies de développement.",
@@ -191,8 +191,8 @@
       "link": ""
     },
     "project-6": {
-      "startYear": "9,2017",
-      "endYear": "2,2017",
+      "startYear": "09,2017",
+      "endYear": "02,2017",
       "title": "Jooboot",
       "client_ico": "viseo",
       "description": "Jooboot est le projet le plus important sur lequel j’ai eu la chance de travailler pendant mon stage au sein du groupe VISEO. En effet, nous ne sommes plus dans la réalisation de POC, mais dans le développement d’une application native, mobile et tablette. Jooboot est un projet permettant de consulter et de publier des offres. Ce projet, afin de maximiser l’impact de l’offre, utilise Twitter en tant que base de données (DBOT DataBase On Twitter).",

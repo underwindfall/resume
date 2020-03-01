@@ -50,21 +50,21 @@
   "content": {
     "work-1": {
       "startYear": "Until Now",
-      "endYear": "1,2020",
+      "endYear": "01,2020",
       "company": "Netatmo,France",
       "title": "Mobile Developer",
       "description": "Responsible for developing the android application by kotlin and java. The application aimed to exchange interactions with IOT products."
     },
     "work-2": {
       "startYear": "12,2019",
-      "endYear": "2,2018",
+      "endYear": "02,2018",
       "company": "Paris VISEO Technologies,France",
       "title": "Mobile Developer",
       "description": "Responsible for developing the android application by kotlin and java. The most time of my work is trying to build a highly efficient and responsive mobile application for our clients."
     },
     "work-3": {
-      "startYear": "2,2016",
-      "endYear": "9,2015",
+      "startYear": "02,2016",
+      "endYear": "09,2015",
       "company": "Paris SIPCOM Society,France",
       "title": ".Net Developer Internship",
       "description": "I am mainly responsible for the company's official website, the daily operation of the page, management background page optimization. Work is very saturated, but in time to spare time to learn a lot of new frameworks and libraries and JQuery have a certain understanding-During this internship, I've improved my skills especially in developing front-end and back-end."
@@ -85,7 +85,7 @@
     },
     "project-1": {
       "startYear": "Until Now",
-      "endYear": "1,2020",
+      "endYear": "01,2020",
       "title": "Netatmo",
       "description": "The application is trying to use Netatmo security ecosystem that makes your home safer",
       "playerRole": [
@@ -105,7 +105,7 @@
     },
     "project-2": {
       "startYear": "12,2019",
-      "endYear": "2,2018",
+      "endYear": "02,2018",
       "title": "Carrefour C-Zam & Carrefour Banque",
       "description": "The application allows you to activate, consult and manage your bank account as your wish.",
       "playerRole": [
@@ -130,7 +130,7 @@
       "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
     },
     "project-3": {
-      "startYear": "2,2018",
+      "startYear": "02,2018",
       "endYear": "12,2017",
       "title": "PSCP - Française des jeux (FDJ)",
       "description": "The PSCP application is intended for FDJ business clients and sales teams. The application allows to broadcast on a dedicated channel commercial information (combi bonus, prognosis, news, information on events)",
@@ -153,8 +153,8 @@
       "link": "https://play.google.com/store/apps/details?id=fr.fdj.clientpro"
     },
     "project-4": {
-      "startYear": "2,2018",
-      "endYear": "9,2017",
+      "startYear": "02,2018",
+      "endYear": "09,2017",
       "title": "Carrefour MarketPay",
       "description": "An application and web help person to achieve a new interaction payment to create value and nurture customer relationships.",
       "client_ico": "carrefour",
@@ -173,8 +173,8 @@
       "link": ""
     },
     "project-5": {
-      "startYear": "9,2017",
-      "endYear": "9,2017",
+      "startYear": "09,2017",
+      "endYear": "09,2017",
       "title": "BEL-Sharing Cities",
       "client_ico": "bel",
       "description": "An internal application about implementation of an inventory management application and sales of cheese products for developing countries.",
@@ -191,8 +191,8 @@
       "link": ""
     },
     "project-6": {
-      "startYear": "9,2017",
-      "endYear": "2,2017",
+      "startYear": "09,2017",
+      "endYear": "02,2017",
       "title": "Jooboot",
       "client_ico": "viseo",
       "description": "Jooboot is an internal project to view and publish offers and uses Twitter as a database.",
