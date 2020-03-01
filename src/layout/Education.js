@@ -9,30 +9,30 @@ import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 
 const useStyles = makeStyles({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: dimens.spacing.xxxLarge
-    }
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: dimens.spacing.xxxLarge,
+  },
 });
 
 export const Education = ({ education = [], ...remainProps }) => {
-    const classes = useStyles();
-    return (
-        <Fade>
-            <PageContainer className={classes.container} {...remainProps}>
-                <SectionContainer
-                    sectionIcon={strings.education.icon}
-                    sectionTitle={strings.education.title}
-                >
-                    <EducationInfo items={education} />
-                </SectionContainer>
-            </PageContainer>
-        </Fade>
-    );
+  const classes = useStyles();
+  return (
+    <Fade>
+      <PageContainer className={classes.container} {...remainProps}>
+        <SectionContainer
+          sectionIcon={strings.education.icon}
+          sectionTitle={strings.education.title}
+        >
+          <EducationInfo items={education} />
+        </SectionContainer>
+      </PageContainer>
+    </Fade>
+  );
 };
 
 Education.propTypes = {
-    education: PropTypes.array.isRequired
+  education: PropTypes.array.isRequired,
 };

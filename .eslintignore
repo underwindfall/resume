@@ -1,0 +1,12 @@
+/.git
+/docs/.next
+/coverage
+/docs/export
+/resume/src/serviceWorker.js
+/resume/src/public/
+/resume/src/scripts
+/resume/src/*/*.test
+/resume/src/*/*.test.js
+/tmp
+build
+node_modules

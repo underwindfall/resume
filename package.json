@@ -33,6 +33,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "prettier": "node ./scripts/prettier.js",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
@@ -52,6 +53,8 @@
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "babel-loader": "^8.0.6",
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.1.1",
+    "glob-gitignore": "^1.0.14",
+    "prettier": "^1.19.1"
   }
 }
