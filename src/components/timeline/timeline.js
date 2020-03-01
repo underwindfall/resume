@@ -7,6 +7,7 @@ import { strings } from '../../i18n';
 import { resolver } from '../../res/resolver';
 import * as dimens from '../../res/dimens';
 import * as colors from '../../res/colors';
+import { Fade } from 'react-reveal';
 
 const handleClick = url => () => {
   if (url) {
@@ -18,7 +19,9 @@ export const Timeline = ({ items, ...remainProps }) => {
   return (
     <div className="container">
       {items.map((item, index) => (
-        <TimeLineItem {...item} key={index} />
+        <Fade bottom>
+          <TimeLineItem {...item} key={index} />
+        </Fade>
       ))}
     </div>
   );
