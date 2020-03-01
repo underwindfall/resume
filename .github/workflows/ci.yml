@@ -33,7 +33,7 @@ jobs:
           BRANCH: gh-pages
           FOLDER: build
 
-      - name : Notification Error
+      - name : Notification Slack
         uses: homoluctus/slatify@v2.1.2   
         if: always()	
         with:
@@ -41,6 +41,7 @@ jobs:
           job_name: 'Deployment Notification'
           mention: 'here'
           mention_if: 'failure'
+          icon_emoji: ':rocket:'
           channel: '#ci'
           url: ${{secrets.SLACK_WEBHOOK}}
           commit: true
