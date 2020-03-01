@@ -50,21 +50,21 @@
   "content": {
     "work-1": {
       "startYear": "直到现在",
-      "endYear": "2,2020",
+      "endYear": "01,2020",
       "company": "Netatmo",
       "title": "Mobile Developer",
       "description": "负责App线上功能优化，需求开发，产品迭代"
     },
     "work-2": {
       "startYear": "12,2019",
-      "endYear": "2,2018",
+      "endYear": "02,2018",
       "company": "Paris VISEO Technologies,France",
       "title": "Mobile Developer",
       "description": "负责App线上功能优化，需求开发，产品迭代和客户保持紧密联系以确保 APP 的运行无误"
     },
     "work-3": {
-      "startYear": "2,2016",
-      "endYear": "9,2015",
+      "startYear": "02,2016",
+      "endYear": "09,2015",
       "company": "Paris SIPCOM Society,France",
       "title": ".Net Developer 实习",
       "description": "实习期间主要负责前后端的开发，包括公司网页的重新创建，后台 .Net结合需求开发的CRUD的日常开发"
@@ -85,7 +85,7 @@
     },
     "project-1": {
       "startYear": "Until Now",
-      "endYear": "1,2020",
+      "endYear": "01,2020",
       "title": "Netatmo",
       "description": "Netatmo安全系统，让家更安全",
       "playerRole": [
@@ -105,7 +105,7 @@
     },
     "project-2": {
       "startYear": "12,2019",
-      "endYear": "2,2018",
+      "endYear": "02,2018",
       "title": "Carrefour C-Zam & Carrefour Banque",
       "description": "一个经典的银行移动支付项目，主要的客户是家乐福银行",
       "playerRole": [
@@ -130,7 +130,7 @@
       "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android"
     },
     "project-3": {
-      "startYear": "2,2018",
+      "startYear": "02,2018",
       "endYear": "12,2017",
       "title": "PSCP - Française des jeux (FDJ)",
       "description": "APP的主要功能是为了FDJ的营销和运营团队，他可以通过此APP获取到最新的商业资讯，包括各种竞猜信息(预测比赛, 比赛状况, 选手消息等)",
@@ -152,8 +152,8 @@
       "link": "https://play.google.com/store/apps/details?id=fr.fdj.clientpro"
     },
     "project-4": {
-      "startYear": "2,2018",
-      "endYear": "9,2017",
+      "startYear": "02,2018",
+      "endYear": "09,2017",
       "title": "Carrefour MarketPay",
       "description": "一个关于帮助用户安全使用他们的礼品卡的网页和手机端的开发项目.",
       "client_ico": "carrefour",
@@ -171,8 +171,8 @@
       "link": ""
     },
     "project-5": {
-      "startYear": "9,2017",
-      "endYear": "9,2017",
+      "startYear": "09,2017",
+      "endYear": "09,2017",
       "title": "BEL-Sharing Cities",
       "client_ico": "bel",
       "description": "一个内部使用的关于查看产品的库存，销售情况的国际化项目APP. 此项目横跨多个国家，项目的难点在于如何实践同步问题",
@@ -189,8 +189,8 @@
       "link": ""
     },
     "project-6": {
-      "startYear": "9,2017",
-      "endYear": "2,2017",
+      "startYear": "09,2017",
+      "endYear": "02,2017",
       "title": "Jooboot",
       "client_ico": "viseo",
       "description": "参与该公司一个关于求职 App 研发,独立负责 Android 部分开发。此 App 的特点是基于 Twitter 作为数据库,以 Twitter 采用 REST架构使用起 API,采用 Redux 响应框架从而实习响应式编程, 使得用户能通过手机 APP 来查询所有与工作 Twitter 机器人相关发布的所有求职岗位,并能在地图上显示和实时与相关求职岗位信息进行互动 ",

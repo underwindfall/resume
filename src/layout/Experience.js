@@ -20,16 +20,14 @@ const useStyles = makeStyles({
 export const Experience = ({ experiences = {}, ...remainProps }) => {
   const classes = useStyles();
   return (
-    <Fade>
-      <PageContainer className={classes.container}>
-        <SectionContainer
-          sectionIcon={strings.experience.icon}
-          sectionTitle={strings.experience.title}
-        >
-          <Timeline items={experiences} {...remainProps} />
-        </SectionContainer>
-      </PageContainer>
-    </Fade>
+    <PageContainer className={classes.container}>
+      <SectionContainer
+        sectionIcon={strings.experience.icon}
+        sectionTitle={strings.experience.title}
+      >
+        <Timeline items={experiences} {...remainProps} />
+      </SectionContainer>
+    </PageContainer>
   );
 };
 
