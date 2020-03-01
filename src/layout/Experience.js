@@ -9,30 +9,30 @@ import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 
 const useStyles = makeStyles({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: dimens.spacing.xxxLarge
-    }
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: dimens.spacing.xxxLarge,
+  },
 });
 
 export const Experience = ({ experiences = {}, ...remainProps }) => {
-    const classes = useStyles();
-    return (
-        <Fade>
-            <PageContainer className={classes.container}>
-                <SectionContainer
-                    sectionIcon={strings.experience.icon}
-                    sectionTitle={strings.experience.title}
-                >
-                    <Timeline items={experiences} {...remainProps} />
-                </SectionContainer>
-            </PageContainer>
-        </Fade>
-    );
+  const classes = useStyles();
+  return (
+    <Fade>
+      <PageContainer className={classes.container}>
+        <SectionContainer
+          sectionIcon={strings.experience.icon}
+          sectionTitle={strings.experience.title}
+        >
+          <Timeline items={experiences} {...remainProps} />
+        </SectionContainer>
+      </PageContainer>
+    </Fade>
+  );
 };
 
 Experience.propTypes = {
-    experiences: PropTypes.array.isRequired
+  experiences: PropTypes.array.isRequired,
 };

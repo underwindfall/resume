@@ -6,30 +6,30 @@ import { makeStyles } from '@material-ui/styles';
 import * as dimens from '../res/dimens';
 
 const useStyles = makeStyles({
-    grid: {
-        position: 'relative',
-        width: '100vh',
-        minHeight: '1px',
-        paddingRight: dimens.spacing.sLarge,
-        paddingLeft: dimens.spacing.sLarge,
-        flexBasis: 'auto'
-    }
+  grid: {
+    position: 'relative',
+    width: '100vh',
+    minHeight: '1px',
+    paddingRight: dimens.spacing.sLarge,
+    paddingLeft: dimens.spacing.sLarge,
+    flexBasis: 'auto',
+  },
 });
 
 export const QFGridItem = ({ children, className = '', ...remainProps }) => {
-    const classes = useStyles();
-    const containerClasses = classNames({
-        [classes.grid]: true,
-        [className]: className !== undefined
-    });
-    return (
-        <Grid item {...remainProps} className={containerClasses}>
-            {children}
-        </Grid>
-    );
+  const classes = useStyles();
+  const containerClasses = classNames({
+    [classes.grid]: true,
+    [className]: className !== undefined,
+  });
+  return (
+    <Grid item {...remainProps} className={containerClasses}>
+      {children}
+    </Grid>
+  );
 };
 
 QFGridItem.propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string
+  children: PropTypes.node,
+  className: PropTypes.string,
 };

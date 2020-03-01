@@ -6,18 +6,18 @@ import * as colors from '../res/colors';
 import * as dimens from '../res/dimens';
 
 const useStyles = makeStyles({
-    tag: {
-        color: colors.secondaryDarkColor,
-        marginTop: dimens.spacing.mSmall,
-        marginRight: dimens.spacing.mSmall
-    }
+  tag: {
+    color: colors.secondaryDarkColor,
+    marginTop: dimens.spacing.mSmall,
+    marginRight: dimens.spacing.mSmall,
+  },
 });
 
 export const Tag = ({ text = '', ...props }) => {
-    const classes = useStyles();
-    return <Chip {...props} className={classes.tag} label={text} />;
+  const classes = useStyles();
+  return <Chip {...props} className={classes.tag} label={text} />;
 };
 
 Tag.propTypes = {
-    text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };

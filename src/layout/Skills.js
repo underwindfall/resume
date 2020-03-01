@@ -9,30 +9,27 @@ import { strings } from '../i18n';
 import * as dimens from '../res/dimens';
 
 const useStyles = makeStyles({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: dimens.spacing.xxxLarge
-    }
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: dimens.spacing.xxxLarge,
+  },
 });
 
 export const Skills = ({ skills = [], ...remainProps }) => {
-    const classes = useStyles();
-    return (
-        <Fade>
-            <PageContainer className={classes.container}>
-                <SectionContainer
-                    sectionIcon={strings.skills.icon}
-                    sectionTitle={strings.skills.title}
-                >
-                    <SkillInfo />
-                </SectionContainer>
-            </PageContainer>
-        </Fade>
-    );
+  const classes = useStyles();
+  return (
+    <Fade>
+      <PageContainer className={classes.container}>
+        <SectionContainer sectionIcon={strings.skills.icon} sectionTitle={strings.skills.title}>
+          <SkillInfo />
+        </SectionContainer>
+      </PageContainer>
+    </Fade>
+  );
 };
 
 Skills.propTypes = {
-    skills: PropTypes.object.isRequired
+  skills: PropTypes.object.isRequired,
 };

@@ -5,7 +5,7 @@ import { GridContainer } from '../../container/GridContainer';
 import { QFText } from '../QFText';
 import { QFGridItem } from '../QFGridItem';
 import { SkillChip } from './SkillChip';
-import { responsiveContainer,title } from '../../styles';
+import { responsiveContainer, title } from '../../styles';
 import { resolver } from '../../res/resolver';
 import { strings } from '../../i18n';
 

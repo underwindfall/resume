@@ -6,31 +6,31 @@ import { makeStyles } from '@material-ui/styles';
 import * as colors from '../../res/colors';
 
 const useStyles = makeStyles(theme => ({
-    chip: {
-        margin: theme.spacing(1),
-        color: colors.accentColor
-    }
+  chip: {
+    margin: theme.spacing(1),
+    color: colors.accentColor,
+  },
 }));
 
 export const SkillChip = ({ icon, text, className, ...remainProps }) => {
-    const classes = useStyles();
-    const chipClasses = classNames({
-        [classes.chip]: true,
-        [className]: className !== undefined
-    });
-    return (
-        <Chip
-            {...remainProps}
-            avatar={<Avatar src={icon} />}
-            label={text}
-            className={chipClasses}
-            variant="outlined"
-            component="div"
-        />
-    );
+  const classes = useStyles();
+  const chipClasses = classNames({
+    [classes.chip]: true,
+    [className]: className !== undefined,
+  });
+  return (
+    <Chip
+      {...remainProps}
+      avatar={<Avatar src={icon} />}
+      label={text}
+      className={chipClasses}
+      variant="outlined"
+      component="div"
+    />
+  );
 };
 
 SkillChip.propTypes = {
-    icon: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
+  icon: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
