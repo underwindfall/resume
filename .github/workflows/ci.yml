@@ -34,15 +34,16 @@ jobs:
           FOLDER: build
 
       - name : Notification Error
-        if: always()
-        uses: homoluctus/slatify@master    
+        uses: homoluctus/slatify@v2.1.2   
+        if: always()	
         with:
           type: ${{ job.status }}
-	  job_name: '*Deploying Check*'
-	  mention: 'here'
-	  mention_if: 'failure'
-	  channel: '#ci'
-	  url: ${{ secrets.SLACK_WEBHOOK }}
-	  commit: true
-	  token: ${{ secrets.CI_RESUME_TOKEN }}
+          job_name: 'Deployment Notification'
+          mention: 'here'
+          mention_if: 'failure'
+          channel: '#ci'
+          url: ${{secrets.SLACK_WEBHOOK}}
+          commit: true
+          token: ${{secrets.CI_RESUME_TOKEN}}
+        
    
