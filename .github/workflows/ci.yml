@@ -24,6 +24,7 @@ jobs:
       - name: Build
         run: |
              yarn install && yarn build
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3-test
         with:
@@ -31,3 +32,23 @@ jobs:
           BASE_BRANCH: master
           BRANCH: gh-pages
           FOLDER: build
+
+      - name : Notification Error
+        if: failure()
+        env:    
+            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+            SLACK_USERNAME : "Personal Resume"
+            SLACK_AVATAR: repository
+        uses: Ilshidur/action-slack@master    
+        with:
+          args: 'Error deploying :bug:'
+
+      - name : Notification Success
+        if: success()
+        env:    
+            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+            SLACK_USERNAME : "Personal Resume"
+            SLACK_AVATAR: repository
+        uses: Ilshidur/action-slack@master    
+        with:
+          args: 'Success deploying :rocket:'    
