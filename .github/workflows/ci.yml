@@ -19,7 +19,7 @@ jobs:
       
       - name: Install
         run: |
-             npm install -g yarn
+             npm install -g yarn@v1.19.2
 
       - name: Build
         run: |
@@ -31,19 +31,5 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.CI_RESUME_TOKEN }}
           BRANCH: gh-pages
           FOLDER: build
-
-      - name : Notification Slack
-        uses: homoluctus/slatify@v2.1.2   
-        if: always()	
-        with:
-          type: ${{ job.status }}
-          job_name: 'Deployment Notification'
-          mention: 'here'
-          mention_if: 'failure'
-          icon_emoji: ':rocket:'
-          channel: '#ci'
-          url: ${{secrets.SLACK_WEBHOOK}}
-          commit: true
-          token: ${{secrets.CI_RESUME_TOKEN}}
         
    
