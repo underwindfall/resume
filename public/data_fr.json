@@ -89,7 +89,10 @@
       "title": "Netatmo",
       "description": "Application iOT qui manager  l'écosystème de sécurité de la maison",
       "playerRole": [
-        "- A joué un rôle clé dans le développement et le déploiement de nouveaux produits métier critiques, "
+        "- Travaillé dans l'écosystème logiciel et matériel de Netatmo, beaucoup de ces produits iOT ont des technologies multi-plateformes telles que (WebRTC, Wifi-Scanning, etc.)",
+         "- A participé à la création de certaines applications à partir de zéro et a acquis une excellente réputation grâce au Playstore",
+         "- Publication et amélioration de magnifiques outils internes et bibliothèques pour l'application",
+         "- A joué un rôle clé dans le développement et le déploiement de nouveaux produits commerciaux critiques via un système iOT"
       ],
       "client_ico": "netatmo",
       "role": "Développeur Android",

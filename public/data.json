@@ -89,10 +89,10 @@
       "title": "Netatmo",
       "description": "The application is trying to use Netatmo security ecosystem that makes your home safer",
       "playerRole": [
-        "- Played key role in developing and deploying new critical business product via some iOT System",
-        "- Worked in Netatmo's eco system of software and hardware, many of these iOT products have cross plateform technologies such as (WebRTC, Wifi-Scanning etc.)"
+        "- Worked in Netatmo's eco system of software and hardware, many of these iOT products have cross plateform technologies such as (WebRTC, Wifi-Scanning etc.)",
         "- Took part in building some apps from scratch and gain great reputations from playstore",
-        "- Published and improved magnificiant internal tools and libraries for application"
+        "- Published and improved magnificiant internal tools and libraries for application",
+        "- Played key role in developing and deploying new critical business product via some iOT System"
       ],
       "client_ico": "netatmo",
       "role": "Developer Android",
