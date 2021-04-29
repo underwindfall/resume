@@ -3,10 +3,13 @@ on:
   push:
     branches:
       - master
+
 jobs:
 
   build-and-deploy:
     runs-on: macos-latest
+    env: 
+      CI: false 
     steps:        
       
       - name: Checkout
