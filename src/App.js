@@ -17,7 +17,7 @@ import './App.css';
 
 const DELAY_SHOW_LOADER = 2000;
 
-const IssuePage = React.lazy(() => import('./layout/IssuePage'));
+const IssuePage = React.lazy(() => import('./layout/IssuePage').then(module => ({ default: module.IssuePage })));
 
 export const App = () => {
   const [state, setState] = useSetState({
