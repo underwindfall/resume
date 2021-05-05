@@ -18,7 +18,7 @@ export const fr = {
     },
   },
   footer: {
-    title: 'All Rights Reserved By Qifan YANG © 2019',
+    title: `All Rights Reserved By Qifan YANG © ${new Date().getFullYear()}`,
   },
   about: {
     info: {
