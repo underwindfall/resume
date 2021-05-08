@@ -47,6 +47,8 @@ const SkillRow = ({ items = [], ...props }) => {
           </QFGridItem>
 
           <QFGridItem xs={12} sm={6} md={6}>
+            <SkillChip icon={resolver.swift} text={strings.skills.swift.name} />
+            <SkillChip icon={resolver.flutter} text={strings.skills.flutter.name} />
             <SkillChip icon={resolver.rn} text={strings.skills.rn.name} />
           </QFGridItem>
         </GridContainer>

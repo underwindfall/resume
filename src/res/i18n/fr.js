@@ -72,6 +72,14 @@ export const fr = {
       name: 'Css',
       icon: 'css',
     },
+    swift: {
+      name: 'Swift (Learning)',
+      icon: 'swift',
+    },
+    flutter: {
+      name: 'Flutter (Learning)',
+      icon: 'flutter',
+    },
     html: {
       name: 'Html',
       icon: 'html',

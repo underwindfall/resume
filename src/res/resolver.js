@@ -9,6 +9,8 @@ export const resolver = {
   kotlin: require('../assets/img/skills/kotlin.png'),
   java: require('../assets/img/skills/java.png'),
   rn: require('../assets/img/skills/rn.jpeg'),
+  swift: require('../assets/img/skills/swift.png'),
+  flutter: require('../assets/img/skills/flutter.png'),
   react: require('../assets/img/skills/react.png'),
   css: require('../assets/img/skills/css.png'),
   webpack: require('../assets/img/skills/webpack.png'),

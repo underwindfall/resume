@@ -67,6 +67,14 @@ export const zh = {
       name: 'JavaScript',
       icon: 'javascript',
     },
+    swift: {
+      name: 'Swift (Learning)',
+      icon: 'swift',
+    },
+    flutter: {
+      name: 'Flutter (Learning)',
+      icon: 'flutter',
+    },
     css: {
       name: 'Css',
       icon: 'css',

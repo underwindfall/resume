@@ -54,6 +54,12 @@
     "@storybook/react": "5.2.8",
     "gh-pages": "2.1.1",
     "glob-gitignore": "1.0.14",
+    "husky": "^6.0.0",
     "prettier": "1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier"
+    }
   }
 }
