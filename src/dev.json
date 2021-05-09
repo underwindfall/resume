@@ -1,0 +1,266 @@
+{
+  "layer": {
+    "work": [
+      "work-1",
+      "work-2",
+      "work-3"
+    ],
+    "project": [
+      "project-1",
+      "project-2",
+      "project-3",
+      "project-4",
+      "project-5",
+      "project-6"
+    ],
+    "education": [
+      "education-1",
+      "education-2"
+    ],
+    "skills": [
+      "mobile",
+      "front",
+      "devops"
+    ],
+    "mobile": [
+      [
+        "skills-1",
+        "skills-2",
+        "skills-3"
+      ],
+      [
+        "skills-4",
+        "skills-5",
+        "skills-6"
+      ]
+    ],
+    "front": [
+      [
+        "skills-7",
+        "skills-8",
+        "skills-9"
+      ]
+    ],
+    "devops": [
+      "skills-10",
+      "skills-11",
+      "skills-12"
+    ]
+  },
+  "content": {
+    "work-1": {
+      "startYear": "Until Now",
+      "endYear": "01,2020",
+      "company": "Netatmo,France",
+      "title": "Mobile Developer",
+      "description": "Responsible for developing the android application by kotlin and java. The application aimed to exchange interactions with IOT products."
+    },
+    "work-2": {
+      "startYear": "12,2019",
+      "endYear": "02,2018",
+      "company": "Paris VISEO Technologies,France",
+      "title": "Mobile Developer",
+      "description": "Responsible for developing the android application by kotlin and java. The most time of my work is trying to build a highly efficient and responsive mobile application for our clients."
+    },
+    "work-3": {
+      "startYear": "02,2016",
+      "endYear": "09,2015",
+      "company": "Paris SIPCOM Society,France",
+      "title": ".Net Developer Internship",
+      "description": "I am mainly responsible for the company's official website, the daily operation of the page, management background page optimization. Work is very saturated, but in time to spare time to learn a lot of new frameworks and libraries and JQuery have a certain understanding-During this internship, I've improved my skills especially in developing front-end and back-end."
+    },
+    "education-1": {
+      "year": "10,2017 - 09,2014",
+      "college": "Université de Technology de Troyes, France",
+      "title": "Engineer's Degree",
+      "branch": " Systems Engineering, Networks and Telecommunications",
+      "description": "Ever since I studied in France, I mainly learned such as operating systems, computer networks, JAVA, Android, assembly language, machine learning and so on.Since university and especially during my French Engineer Program, I've had the chance to work with researchers of various backgrounds on different subjects, mainly regarding systems mobiles,network protocols,website development through research projects at school. It's my pleasure, at an early point of my career, to have been able to discover these exciting projects which has also been helpful to my career planning."
+    },
+    "education-2": {
+      "year": "06,2014 - 09,2011",
+      "college": "Shanghai University, China",
+      "title": "Bachelor's Degree",
+      "branch": " Information and communication engineering",
+      "description": "I mainly studied such as C / C + + programming language, data structure, compilation principles etc during my three years in university. These basic knowledge lay a solid foundation for my study abroad in France- Besides, during the school I participated in community activities particularly in the 24-hour innovation contest, I won the second place in Asia's division."
+    },
+    "project-1": {
+      "startYear": "Until Now",
+      "endYear": "01,2020",
+      "title": "Netatmo",
+      "description": "The application is trying to use Netatmo security ecosystem that makes your home safer",
+      "playerRole": [
+        "- Worked in Netatmo's eco system of software and hardware, many of these iOT products have cross plateform technologies such as (WebRTC, Wifi-Scanning etc.)",
+        "- Took part in building some apps from scratch and gain great reputations from playstore",
+        "- Published and improved magnificiant internal tools and libraries for application",
+        "- Played key role in developing and deploying new critical business product via some iOT System"
+      ],
+      "client_ico": "netatmo",
+      "role": "Developer Android",
+      "techstack": [
+        "Kotlin",
+        "Java",
+        "Dagger",
+        "MVP",
+        "OkHttp",
+        "Robolectric"
+      ],
+      "link": "https://play.google.com/store/apps/details?id=com.netatmo.camera&hl=fr"
+    },
+    "project-2": {
+      "startYear": "12,2019",
+      "endYear": "02,2018",
+      "title": "Carrefour C-Zam & Carrefour Banque",
+      "description": "The application allows you to activate, consult and manage your bank account as your wish.",
+      "playerRole": [
+        "- Played key role in developing and deploying new critical business product which required me to produce in fast development cycles followed by multiple weekly iterations with client for feedback",
+        "- Did fundamental architectural change major project by replacing AsyncTaskLoader by Kotlin Coroutine and RxJAVA",
+        "- Established new standards on departmental level by developing Java & Kotlin modules that I linked to two projects as dependency from common Futures repository"
+      ],
+      "client_ico": "czam",
+      "role": "Developer Android",
+      "techstack": [
+        "Kotlin",
+        "RxJava",
+        "JetPack",
+        "Coroutines",
+        "Dagger",
+        "MVP",
+        "Retrofit",
+        "Accengage",
+        "Espresso",
+        "Robolectric"
+      ],
+      "link": "https://play.google.com/store/apps/details?id=com.carrefour.czam.android&hl=fr"
+    },
+    "project-3": {
+      "startYear": "02,2018",
+      "endYear": "12,2017",
+      "title": "PSCP - Française des jeux (FDJ)",
+      "description": "The PSCP application is intended for FDJ business clients and sales teams. The application allows to broadcast on a dedicated channel commercial information (combi bonus, prognosis, news, information on events)",
+      "client_ico": "fdj",
+      "role": "Developer Mobile and Mini BackOffice",
+      "playerRole": [
+        "- Developed the application by React Native",
+        "- Realized a back office in React JS (management of the users, follow-up of the activity of the users)",
+        "- Implemented of Firebase Analytics (hit on articles and user activity)"
+      ],
+      "techstack": [
+        "React Native",
+        "React",
+        "Firebase",
+        "FireStore",
+        "Prismic",
+        "Redux",
+        "Jest"
+      ],
+      "link": "https://play.google.com/store/apps/details?id=fr.fdj.clientpro"
+    },
+    "project-4": {
+      "startYear": "02,2018",
+      "endYear": "09,2017",
+      "title": "Carrefour MarketPay",
+      "description": "An application and web help person to achieve a new interaction payment to create value and nurture customer relationships.",
+      "client_ico": "carrefour",
+      "role": "Developer Mobile and front",
+      "techstack": [
+        "React",
+        "React-Native",
+        "Rest API",
+        "Jest"
+      ],
+      "playerRole": [
+        "- Developed the application by React Native",
+        "- Realization a responsive web by React JS",
+        "- Used Rest API for extraction of user data"
+      ],
+      "link": ""
+    },
+    "project-5": {
+      "startYear": "09,2017",
+      "endYear": "09,2017",
+      "title": "BEL-Sharing Cities",
+      "client_ico": "bel",
+      "description": "An internal application about implementation of an inventory management application and sales of cheese products for developing countries.",
+      "role": "Mobile Developer",
+      "techstack": [
+        "React Native",
+        "Redux",
+        "Node"
+      ],
+      "playerRole": [
+        "- Developed the application by React Native",
+        "- Developed backend by Node.js"
+      ],
+      "link": ""
+    },
+    "project-6": {
+      "startYear": "09,2017",
+      "endYear": "02,2017",
+      "title": "Jooboot",
+      "client_ico": "viseo",
+      "description": "Jooboot is an internal project to view and publish offers and uses Twitter as a database.",
+      "role": "Developer Android",
+      "techstack": [
+        "Kotlin",
+        "RxKotlin",
+        "Redux",
+        "Mapbox",
+        "Realm"
+      ],
+      "link": "",
+      "playerRole": [
+        "- Developed the application from scratch",
+        "- Storing structured data with newly announced Realm database",
+        "- Designed proof of concept with agile user stories and class diagrams for company asset lifecycle management tool"
+      ]
+    },
+    "skills-1": {
+      "name": "Android",
+      "icon": "android"
+    },
+    "skills-2": {
+      "name": "Kotlin",
+      "icon": "kotlin"
+    },
+    "skills-3": {
+      "name": "Java",
+      "icon": "java"
+    },
+    "skills-4": {
+      "name": "React Native",
+      "icon": "react"
+    },
+    "skills-5": {
+      "name": "React JS",
+      "icon": "react"
+    },
+    "skills-6": {
+      "name": "JavaScript",
+      "icon": "javascript"
+    },
+    "skills-7": {
+      "name": "Css",
+      "icon": "css"
+    },
+    "skills-8": {
+      "name": "Html",
+      "icon": "html"
+    },
+    "skills-9": {
+      "name": "Ruby",
+      "icon": "ruby"
+    },
+    "skills-10": {
+      "name": "Git",
+      "icon": "git"
+    },
+    "skills-11": {
+      "name": "Heroku",
+      "icon": "heroku"
+    },
+    "skills-12": {
+      "name": "Jekyll",
+      "icon": "jekyll"
+    }
+  }
+}

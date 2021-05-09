@@ -57,6 +57,14 @@ export const en = {
       name: 'Java',
       icon: 'java',
     },
+    swift: {
+      name: 'Swift (Learning)',
+      icon: 'swift',
+    },
+    flutter: {
+      name: 'Flutter (Learning)',
+      icon: 'flutter',
+    },
     rn: {
       name: 'React Native',
       icon: 'react',
