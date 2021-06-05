@@ -13,7 +13,7 @@ export const zh = {
       Contact: '联系',
     },
     bannerInfo: {
-      word: 'Never Settle',
+      word: "Hi I'm Qifan",
       download: '下载简历',
     },
   },
@@ -23,8 +23,8 @@ export const zh = {
   about: {
     info: {
       author: 'Qifan YANG',
-      title: '移动开发工程师',
-      descriptionOne: 'I explain with words and code',
+      title: 'Software Engineer',
+      descriptionOne: 'Software Engineer',
       descriptionTwo: '求职中....',
     },
   },

@@ -14,7 +14,7 @@ export const en = {
       Contact: 'Contact',
     },
     bannerInfo: {
-      word: 'Never Settle',
+      word: "Hi I'm Qifan",
       download: 'Download Resume',
     },
   },
@@ -24,8 +24,8 @@ export const en = {
   about: {
     info: {
       author: 'Qifan YANG',
-      title: 'Mobile Engineer',
-      descriptionOne: 'I explain with words and code',
+      title: 'Software Engineer',
+      descriptionOne: 'Software Engineer',
       descriptionTwo: "I'm currently looking for a CDI job in Paris.",
     },
   },
