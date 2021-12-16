@@ -43,7 +43,7 @@ const useStyles = makeStyles({
 
 export const BannerInfo = React.memo(({ props }) => {
   const { handleAction, loading, success } = useTimeout(() =>
-    window.open(`${process.env.PUBLIC_URL}/resume.pdf`, '_blank'),
+    window.open(`https://qifanyang.notion.site/Resume-c0fd67a7fbb64d8ba0d3ea9ede459d95`, '_blank'),
   );
 
   const classes = useStyles();
