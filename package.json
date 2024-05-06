@@ -52,7 +52,7 @@
     "@storybook/addon-links": "5.2.8",
     "@storybook/addons": "5.2.8",
     "@storybook/react": "5.2.8",
-    "gh-pages": "2.1.1",
+    "gh-pages": "5.0.0",
     "glob-gitignore": "1.0.14",
     "husky": "^6.0.0",
     "prettier": "1.19.1"
