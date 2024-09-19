@@ -28,4 +28,5 @@ export const resolver = {
   bel: require('../assets/img/bel.png'),
   czam: require('../assets/img/czam.png'),
   netatmo: require('../assets/img/netatmo.jpg'),
+  tiktok: require('../assets/img/tiktok.png'),
 };
