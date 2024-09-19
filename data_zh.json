@@ -1,11 +1,13 @@
 {
   "layer": {
     "work": [
+      "work-0",
       "work-1",
       "work-2",
       "work-3"
     ],
     "project": [
+      "project-0",
       "project-1",
       "project-2",
       "project-3",
@@ -48,8 +50,15 @@
     ]
   },
   "content": {
-    "work-1": {
+    "work-0": {
       "startYear": "直到现在",
+      "endYear": "10,2022",
+      "company": "TikTok",
+      "title": "Android Senior Engineer",
+      "description": "负责App线上功能优化，需求开发，产品迭代"
+    },
+    "work-1": {
+      "startYear": "08,2022",
       "endYear": "01,2020",
       "company": "Netatmo",
       "title": "Mobile Developer",
@@ -82,6 +91,29 @@
       "title": "Bachelor's Degree",
       "branch": " Information and communication engineering",
       "description": "在校期间，积极参与了需要的各项活动并掌握一定计算机的基础知识，努力学习的同时为自己去法国进一步深造打下了坚实的基础."
+    },
+    "project-0": {
+      "startYear": "Until Now",
+      "endYear": "10,2022",
+      "title": "TikTok",
+      "description": "Tiktok Photos & TikTok Notes",
+      "playerRole": [
+        "- Deeply involved in the development of TikTok Notes from scratch, improved the average latency of feeds from 1400ms to 100ms",
+        "- TActively involved in enhancing user perceptions of QoS (Quality of Service) and QoE (Quality of Experience) through various methods, which successfully reduced the average image load time from 1000ms to 300ms",
+        "- Developed a tool using GPT to assist operations staff in automatically labelling various posts automatically and significantly optimize content selection from TikTok",
+        "- Took Charge of developing a framework to produce an efficiency score for all components in photos genre. The score can then be used for determining the priority and integration standards of components",
+        "- Served as the Android Tech Interviewer and trained new staff as a mentor within the team"
+      ],
+      "client_ico": "tiktok",
+      "role": "Android Senior Engineer",
+      "techstack": [
+        "Kotlin",
+        "Java",
+        "MVVM",
+        "Jetpack",
+        "Compose"
+      ],
+      "link": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en_US"
     },
     "project-1": {
       "startYear": "Until Now",
