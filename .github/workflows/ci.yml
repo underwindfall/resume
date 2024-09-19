@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '15'
+          architecture: 'x64'
       
       
       - name: Install
