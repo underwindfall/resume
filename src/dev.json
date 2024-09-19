@@ -1,11 +1,13 @@
 {
   "layer": {
     "work": [
+      "work-0",
       "work-1",
       "work-2",
       "work-3"
     ],
     "project": [
+      "project-0",
       "project-1",
       "project-2",
       "project-3",
@@ -48,8 +50,15 @@
     ]
   },
   "content": {
-    "work-1": {
+    "work-0": {
       "startYear": "Until Now",
+      "endYear": "10,2022",
+      "company": "ByteDance, China",
+      "title": "Senior Android Developer",
+      "description": "Responsible for developing the TikTok products for Photos Genre"
+    },
+    "work-1": {
+      "startYear": "08.2022",
       "endYear": "01,2020",
       "company": "Netatmo,France",
       "title": "Mobile Developer",
@@ -83,8 +92,31 @@
       "branch": " Information and communication engineering",
       "description": "I mainly studied such as C / C + + programming language, data structure, compilation principles etc during my three years in university. These basic knowledge lay a solid foundation for my study abroad in France- Besides, during the school I participated in community activities particularly in the 24-hour innovation contest, I won the second place in Asia's division."
     },
-    "project-1": {
+    "project-0": {
       "startYear": "Until Now",
+      "endYear": "10,2022",
+      "title": "TikTok",
+      "description": "Tiktok Photos & TikTok Notes",
+      "playerRole": [
+        "- Deeply involved in the development of TikTok Notes from scratch, improved the average latency of feeds from 1400ms to 100ms",
+        "- TActively involved in enhancing user perceptions of QoS (Quality of Service) and QoE (Quality of Experience) through various methods, which successfully reduced the average image load time from 1000ms to 300ms",
+        "- Developed a tool using GPT to assist operations staff in automatically labelling various posts automatically and significantly optimize content selection from TikTok",
+        "- Took Charge of developing a framework to produce an efficiency score for all components in photos genre. The score can then be used for determining the priority and integration standards of components",
+        "- Served as the Android Tech Interviewer and trained new staff as a mentor within the team"
+      ],
+      "client_ico": "tiktok",
+      "role": "Android Senior Engineer",
+      "techstack": [
+        "Kotlin",
+        "Java",
+        "MVVM",
+        "Jetpack",
+        "Compose"
+      ],
+      "link": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en_US"
+    },
+    "project-1": {
+      "startYear": "08 2022",
       "endYear": "01,2020",
       "title": "Netatmo",
       "description": "The application is trying to use Netatmo security ecosystem that makes your home safer",
