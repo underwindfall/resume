@@ -99,7 +99,7 @@
       "description": "Tiktok Photos & TikTok Notes",
       "playerRole": [
         "- Deeply involved in the development of TikTok Notes from scratch, improved the average latency of feeds from 1400ms to 100ms",
-        "- TActively involved in enhancing user perceptions of QoS (Quality of Service) and QoE (Quality of Experience) through various methods, which successfully reduced the average image load time from 1000ms to 300ms",
+        "- Actively involved in enhancing user perceptions of QoS (Quality of Service) and QoE (Quality of Experience) through various methods, which successfully reduced the average image load time from 1000ms to 300ms",
         "- Developed a tool using GPT to assist operations staff in automatically labelling various posts automatically and significantly optimize content selection from TikTok",
         "- Took Charge of developing a framework to produce an efficiency score for all components in photos genre. The score can then be used for determining the priority and integration standards of components",
         "- Served as the Android Tech Interviewer and trained new staff as a mentor within the team"
