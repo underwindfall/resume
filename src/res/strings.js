@@ -26,7 +26,7 @@ export const en = {
       author: 'Qifan YANG',
       title: 'Software Engineer',
       descriptionOne: 'Software Engineer',
-      descriptionTwo: "I'm currently looking for a CDI job in Paris.",
+      descriptionTwo: "Looking for opportunities",
     },
   },
   experience: {
